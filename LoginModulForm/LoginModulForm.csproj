@@ -88,12 +88,6 @@
     <Compile Include="DersYonetimi.Designer.cs">
       <DependentUpon>DersYonetimi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="HocaModul.cs">
       <SubType>Form</SubType>
     </Compile>
