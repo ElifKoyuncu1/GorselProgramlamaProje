@@ -121,6 +121,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeviyeArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeviyeArama.Designer.cs">
+      <DependentUpon>SeviyeArama.cs</DependentUpon>
+    </Compile>
     <Compile Include="SinifYonetimi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SeviyeArama.resx">
+      <DependentUpon>SeviyeArama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SinifYonetimi.resx">
       <DependentUpon>SinifYonetimi.cs</DependentUpon>
     </EmbeddedResource>

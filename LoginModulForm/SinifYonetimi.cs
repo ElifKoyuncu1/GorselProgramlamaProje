@@ -57,5 +57,26 @@ namespace LoginModulForm
             cmb_blmek.SelectedIndex = -1;
 
         }
+
+        private void label_seviyegeri_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+        }
+
+        private void btn_seviyelistele_Click(object sender, EventArgs e)
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
+            string query = "SELECT ss.SinifSeviyeID, ss.SeviyeNo, ss.SinifMevcudu, b.BolumAd FROM SinifSeviyesi ss INNER JOIN Bolum b ON ss.BolumID = b.BolumID";
+            DataTable dt = db.ExecuteQuery(query);
+            dataGrid_seviyelistele.DataSource = dt;
+
+        }
+
+        private void btn_seviyesil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
