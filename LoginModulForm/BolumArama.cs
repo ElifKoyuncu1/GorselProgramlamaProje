@@ -18,34 +18,44 @@ namespace LoginModulForm
             InitializeComponent();
         }
         public string islemTipi;
+        public int secilenBolumId;
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
 
         private void btn_arabolum_Click(object sender, EventArgs e)
         {
-            BolumYonetimi bytm = new BolumYonetimi();
             DataBaseClass db = new DataBaseClass(connectionString);
-            string b_ad = cmb_bolum.Text;
-            string query = @"SELECT BolumAd FROM Bolum WHERE BolumAd=@b_ad";
+
+            int b_id = (int)cmb_bolum.SelectedValue;
+
+            string query = @"SELECT BolumID, BolumAd FROM Bolum WHERE BolumID=@id";
+
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@b_ad", b_ad)
+                new SqlParameter("@id", b_id)
             };
+
             DataTable dt = db.ExecuteQuery(query, parameters);
+
             if (dt.Rows.Count > 0)
             {
-                bytm.Show();
-                this.Hide();
+                BolumYonetimi bytm = new BolumYonetimi();
+
+                // 🔥 ID TAŞI
+                bytm.secilenBolumId = Convert.ToInt32(dt.Rows[0]["BolumID"]);
+
+                string bolumAd = dt.Rows[0]["BolumAd"].ToString();
 
                 if (islemTipi == "sil")
                 {
-                    bytm.text_silbolum.Text = dt.Rows[0][0].ToString();
-                    
+                    bytm.text_silbolum.Text = bolumAd;
                 }
                 else if (islemTipi == "guncelle")
                 {
-                    bytm.text_guncellebolum.Text = dt.Rows[0][0].ToString();
-                   
+                    bytm.text_guncellebolum.Text = bolumAd;
                 }
+
+                bytm.Show();
+                this.Hide();
             }
             else
             {

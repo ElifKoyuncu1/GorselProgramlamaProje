@@ -20,6 +20,7 @@ namespace LoginModulForm
         int bolum_id;
         int tip_id;
         int seviye_id;
+        public int secilenTipId;
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
         private void btn_ekle_Click(object sender, EventArgs e)
         {
@@ -74,8 +75,20 @@ namespace LoginModulForm
             {
                 MessageBox.Show("Ders eklenemedi (eşleşen veri yok olabilir).");
             }
+        }
 
+        void DersTipleriniYukle()
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
 
+            string query = "SELECT TipAd FROM DersTipi";
+            DataTable dtTip = db.ExecuteQuery(query);
+
+            cmb_ekletip.DataSource = null; // eskiyi temizle
+            cmb_ekletip.DataSource = dtTip;
+            cmb_ekletip.DisplayMember = "TipAd";
+
+            cmb_ekletip.SelectedIndex = -1;
         }
 
         private void DersYonetimi_Load(object sender, EventArgs e)
@@ -98,6 +111,7 @@ namespace LoginModulForm
             {
                 cmb_ekletip.Items.Add(dtTip.Rows[i][0].ToString());
             }
+            DersTipleriniYukle();
 
             ToolTip mesaj = new ToolTip();
             mesaj.ToolTipTitle = "Arama";
@@ -109,6 +123,8 @@ namespace LoginModulForm
 
         private void cmb_eklebolum_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmb_eklebolum.SelectedIndex == -1)
+                return;
             DataBaseClass db = new DataBaseClass(connectionString);
             string b_ad = cmb_eklebolum.Text.Trim();
             string query1 = "select BolumID from Bolum where BolumAd=@B_Ad";
@@ -116,7 +132,10 @@ namespace LoginModulForm
              new SqlParameter("@B_Ad", b_ad),
             };
             DataTable dt1 = db.ExecuteQuery(query1, parameters);
-            bolum_id=Convert.ToInt32(dt1.Rows[0][0]);
+
+            if (dt1.Rows.Count == 0)
+                return;
+            bolum_id =Convert.ToInt32(dt1.Rows[0][0]);
 
             cmb_ekleseviye.Items.Clear();
 
@@ -147,6 +166,8 @@ namespace LoginModulForm
             {
                 MessageBox.Show("Ders Tipi Eklendi");
                 text_tipekle.Clear();
+
+                DersTipleriniYukle();
             }
             else
             {
@@ -157,6 +178,8 @@ namespace LoginModulForm
 
         private void cmb_ekletip_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmb_ekletip.SelectedIndex == -1)
+                return;
             DataBaseClass db = new DataBaseClass(connectionString);
             string tad = cmb_ekletip.Text.Trim();
             string query1 = "SELECT DersTipiID FROM DersTipi WHERE TipAd=@t_ad";
@@ -164,7 +187,10 @@ namespace LoginModulForm
              new SqlParameter("@t_ad", tad)
             };
             DataTable dt1 = db.ExecuteQuery(query1, parameters);
-            tip_id= Convert.ToInt32(dt1.Rows[0][0]);
+            if (dt1.Rows.Count > 0)
+            {
+                tip_id = Convert.ToInt32(dt1.Rows[0][0]);
+            }
         }
 
         private void cmb_ekleseviye_SelectedIndexChanged(object sender, EventArgs e)
@@ -241,21 +267,28 @@ namespace LoginModulForm
         private void btn_tipguncelle_Click(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
-            string t_ad = text_tipguncelle.Text.Trim();
-            string query="UPDATE DersTipi SET TipAd=@t_ad WHERE DersTipiID=@t_id";
-            SqlParameter[] parameters = new SqlParameter[] {
+            DialogResult mesaj = MessageBox.Show(" Bu kaydı güncellemek stediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (mesaj == DialogResult.Yes)
+            {
+                string t_ad = text_tipguncelle.Text.Trim();
+                string query = "UPDATE DersTipi SET TipAd=@t_ad WHERE DersTipiID=@t_id";
+                SqlParameter[] parameters = new SqlParameter[] {
                 new SqlParameter("@t_ad", t_ad),
+                new SqlParameter("@t_id", secilenTipId)
             };
-            int sonuc = db.ExecuteNonQuery(query, parameters);
-            if (sonuc > 0)
-            {
-                MessageBox.Show("Ders Tipi Güncellendi");
-                text_tipguncelle.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Hata");
-            }
+                int sonuc = db.ExecuteNonQuery(query, parameters);
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Ders Tipi Güncellendi");
+                    text_tipguncelle.Clear();
+
+                    DersTipleriniYukle();
+                }
+                else
+                {
+                    MessageBox.Show("Hata");
+                }
+            }           
         }
 
         private void text_tipguncelle_KeyDown(object sender, KeyEventArgs e)
@@ -279,6 +312,35 @@ namespace LoginModulForm
                 dfrm.Show();
                 this.Hide();
             }
+        }
+
+        private void btn_tipsil_Click(object sender, EventArgs e)
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
+            DialogResult mesaj = MessageBox.Show(" Bu kaydı silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (mesaj == DialogResult.Yes)
+            { 
+                string t_ad = text_tipsil.Text.Trim();
+                string query = "DELETE FROM DersTipi WHERE TipAd=@t_ad";
+                SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@t_ad", t_ad)
+            };
+                int sonuc = db.ExecuteNonQuery(query, parameters);
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Ders Tipi Silindi");
+                    text_tipsil.Clear();
+
+                    DersTipleriniYukle();
+                }
+                else
+                {
+                    MessageBox.Show("Hata");
+                }
+
+
+            }
+
         }
     }
 }

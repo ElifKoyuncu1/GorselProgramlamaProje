@@ -25,7 +25,7 @@ namespace LoginModulForm
             DersYonetimi dytm = new DersYonetimi();
             DataBaseClass db = new DataBaseClass(connectionString);
             string d_tip = cmb_tipara.Text;
-            string query = @"SELECT TipAd FROM DersTipi WHERE TipAd=@t_ad ";
+            string query = @"SELECT DersTipiID, TipAd FROM DersTipi WHERE TipAd=@t_ad ";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@t_ad", d_tip)
@@ -33,17 +33,18 @@ namespace LoginModulForm
             DataTable dt = db.ExecuteQuery(query, parameters);
             if (dt.Rows.Count > 0)
             {
+                dytm.secilenTipId = Convert.ToInt32(dt.Rows[0]["DersTipiID"]);
                 dytm.Show();
                 this.Hide();
 
                 if (islemTipi == "sil")
                 {
-                    dytm.text_tipsil.Text = dt.Rows[0][0].ToString();
+                    dytm.text_tipsil.Text = dt.Rows[0]["TipAd"].ToString();
 
                 }
                 else if (islemTipi == "guncelle")
                 {
-                    dytm.text_tipguncelle.Text = dt.Rows[0][0].ToString();
+                    dytm.text_tipguncelle.Text = dt.Rows[0]["TipAd"].ToString();
 
                 }
             }

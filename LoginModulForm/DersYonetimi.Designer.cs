@@ -825,6 +825,7 @@
             this.btn_tipsil.TabIndex = 11;
             this.btn_tipsil.Text = "Sil";
             this.btn_tipsil.UseVisualStyleBackColor = true;
+            this.btn_tipsil.Click += new System.EventHandler(this.btn_tipsil_Click);
             // 
             // groupBox2
             // 

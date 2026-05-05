@@ -19,6 +19,7 @@ namespace LoginModulForm
             InitializeComponent();
         }
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
+        public int secilenBolumId;
 
         private void btn_bolumekle_Click(object sender, EventArgs e)
         {
@@ -78,22 +79,28 @@ namespace LoginModulForm
         private void btn_guncellebolum_Click(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
-            string b_ad = text_guncellebolum.Text.Trim();
-            string query = "UPDATE Bolum SET BolumAd=@b_ad WHERE BolumAd=@b_ad";
-            SqlParameter[] parameters = new SqlParameter[]
+            DialogResult mesaj = MessageBox.Show(" Bu kaydı silmek stediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (mesaj == DialogResult.Yes)
             {
-                new SqlParameter("@b_ad", b_ad)
-            };
-            int g_kyt_say = db.ExecuteNonQuery(query, parameters);
-            if (g_kyt_say > 0)
-            {
-                MessageBox.Show("Kayıt Güncellendi");
-                text_guncellebolum.Clear(); 
+                string b_ad = text_guncellebolum.Text.Trim();
+                string query = "UPDATE Bolum SET BolumAd=@b_ad WHERE BolumID=@b_id";
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+                new SqlParameter("@b_ad", b_ad),
+                new SqlParameter("@b_id", secilenBolumId)
+                };
+                int g_kyt_say = db.ExecuteNonQuery(query, parameters);
+                if (g_kyt_say > 0)
+                {
+                    MessageBox.Show("Kayıt Güncellendi");
+                    text_guncellebolum.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt Güncellenmedi");
+                }
             }
-            else
-            {
-                MessageBox.Show("Kayıt Güncellenmedi");
-            }
+            
         }
 
         private void btn_bolumlistele_Click(object sender, EventArgs e)
@@ -146,10 +153,13 @@ namespace LoginModulForm
 
         private void text_guncellebolum_KeyDown(object sender, KeyEventArgs e)
         {
-            BolumArama bfrm = new BolumArama();
-            bfrm.islemTipi = "guncelle";
-            bfrm.Show();
-            this.Hide();
+            if (e.KeyCode == Keys.F4)
+            {
+                BolumArama bfrm = new BolumArama();
+                bfrm.islemTipi = "guncelle";
+                bfrm.Show();
+                this.Hide();
+            }
         }
 
         private void BolumYonetimi_Load(object sender, EventArgs e)
