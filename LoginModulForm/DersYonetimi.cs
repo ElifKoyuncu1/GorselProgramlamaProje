@@ -173,5 +173,62 @@ namespace LoginModulForm
             seviye_id = Convert.ToInt32(dt2.Rows[0][0]);
 
         }
+
+        private void btn_listele_Click(object sender, EventArgs e)
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
+            string query = @"
+            SELECT 
+                d.DersID,
+                d.DersAdi,
+                b.BolumAd,
+                t.TipAd,
+                s.SeviyeNo,
+                d.Kredi,
+                d.SinavSuresi,
+                d.DersiAlanOgrenciSayisi
+            FROM Ders d
+            INNER JOIN Bolum b ON d.BolumID = b.BolumID
+            INNER JOIN DersTipi t ON d.DersTipiID = t.DersTipiID
+            INNER JOIN SinifSeviyesi s ON d.SinifSeviyeID = s.SinifSeviyeID";
+            DataTable dt = db.ExecuteQuery(query);
+            dataGridView_derslistele.DataSource = dt;
+        }
+
+        private void label_geri_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+        }
     }
 }
