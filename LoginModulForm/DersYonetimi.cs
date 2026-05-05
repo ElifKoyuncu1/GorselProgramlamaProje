@@ -230,5 +230,25 @@ namespace LoginModulForm
             YoneticiModul ymdl = new YoneticiModul();
             ymdl.Show();
         }
+
+        private void btn_tipguncelle_Click(object sender, EventArgs e)
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
+            string t_ad = text_tipguncelle.Text.Trim();
+            string query="UPDATE DersTipi SET TipAd=@t_ad WHERE DersTipiID=@t_id";
+            SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@t_ad", t_ad),
+            };
+            int sonuc = db.ExecuteNonQuery(query, parameters);
+            if (sonuc > 0)
+            {
+                MessageBox.Show("Ders Tipi Güncellendi");
+                text_tipguncelle.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Hata");
+            }
+        }
     }
 }

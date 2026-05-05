@@ -808,6 +808,7 @@
             this.btn_tipguncelle.TabIndex = 11;
             this.btn_tipguncelle.Text = "Güncelle";
             this.btn_tipguncelle.UseVisualStyleBackColor = true;
+            this.btn_tipguncelle.Click += new System.EventHandler(this.btn_tipguncelle_Click);
             // 
             // groupBox1
             // 

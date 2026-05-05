@@ -82,6 +82,12 @@
     </Compile>
     <Compile Include="DataBaseClass.cs" />
     <Compile Include="DerslerClass.cs" />
+    <Compile Include="DersTipiArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DersTipiArama.Designer.cs">
+      <DependentUpon>DersTipiArama.cs</DependentUpon>
+    </Compile>
     <Compile Include="DersYonetimi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BolumYonetimi.resx">
       <DependentUpon>BolumYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DersTipiArama.resx">
+      <DependentUpon>DersTipiArama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DersYonetimi.resx">
       <DependentUpon>DersYonetimi.cs</DependentUpon>
