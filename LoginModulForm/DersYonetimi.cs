@@ -98,6 +98,13 @@ namespace LoginModulForm
             {
                 cmb_ekletip.Items.Add(dtTip.Rows[i][0].ToString());
             }
+
+            ToolTip mesaj = new ToolTip();
+            mesaj.ToolTipTitle = "Arama";
+            mesaj.ToolTipIcon = ToolTipIcon.Info;
+            mesaj.ShowAlways = true;
+            mesaj.SetToolTip(text_tipguncelle, "Arama için F4 tuşuna basınız");
+            mesaj.SetToolTip(text_tipsil, "Arama için F4 tuşuna basınız");
         }
 
         private void cmb_eklebolum_SelectedIndexChanged(object sender, EventArgs e)
@@ -248,6 +255,29 @@ namespace LoginModulForm
             else
             {
                 MessageBox.Show("Hata");
+            }
+        }
+
+        private void text_tipguncelle_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                DersTipiArama dfrm = new DersTipiArama();
+                dfrm.islemTipi = "guncelle";
+                dfrm.Show();
+                this.Hide();
+            }
+
+        }
+
+        private void text_tipsil_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                DersTipiArama dfrm = new DersTipiArama();
+                dfrm.islemTipi = "sil";
+                dfrm.Show();
+                this.Hide();
             }
         }
     }

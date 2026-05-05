@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DersYonetimi));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label_geri = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.cmb_eklebolum = new System.Windows.Forms.ComboBox();
             this.text_eklead = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,6 +65,7 @@
             this.cmb_silbolum = new System.Windows.Forms.ComboBox();
             this.text_silad = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -79,9 +82,11 @@
             this.cmb_guncellebolum = new System.Windows.Forms.ComboBox();
             this.text_guncellead = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
             this.btn_listele = new System.Windows.Forms.Button();
             this.dataGridView_derslistele = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.text_tipsil = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -94,11 +99,6 @@
             this.text_tipekle = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.btn_tipekle = new System.Windows.Forms.Button();
-            this.label_geri = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_eklesayi)).BeginInit();
@@ -162,6 +162,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ders Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label_geri
+            // 
+            this.label_geri.AutoSize = true;
+            this.label_geri.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_geri.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_geri.Location = new System.Drawing.Point(3, 3);
+            this.label_geri.Name = "label_geri";
+            this.label_geri.Size = new System.Drawing.Size(34, 26);
+            this.label_geri.TabIndex = 22;
+            this.label_geri.Text = "←";
+            this.label_geri.Click += new System.EventHandler(this.label_geri_Click);
             // 
             // label7
             // 
@@ -343,6 +355,18 @@
             this.tabPage2.Text = "Ders Sil";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label25.Location = new System.Drawing.Point(3, 3);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(34, 26);
+            this.label25.TabIndex = 30;
+            this.label25.Text = "←";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -519,6 +543,18 @@
             this.tabPage3.Text = "Ders Güncelle";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label26.Location = new System.Drawing.Point(6, 3);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(34, 26);
+            this.label26.TabIndex = 48;
+            this.label26.Text = "←";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -682,6 +718,18 @@
             this.tabPage4.Text = "Ders Listele";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label27.Location = new System.Drawing.Point(3, 3);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(34, 26);
+            this.label27.TabIndex = 22;
+            this.label27.Text = "←";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
+            // 
             // btn_listele
             // 
             this.btn_listele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -721,6 +769,18 @@
             this.tabPage5.Text = "Ders Tipi İşlemleri";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label28.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label28.Location = new System.Drawing.Point(3, 3);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(34, 26);
+            this.label28.TabIndex = 22;
+            this.label28.Text = "←";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.text_tipsil);
@@ -741,6 +801,7 @@
             this.text_tipsil.Name = "text_tipsil";
             this.text_tipsil.Size = new System.Drawing.Size(116, 20);
             this.text_tipsil.TabIndex = 9;
+            this.text_tipsil.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_tipsil_KeyDown);
             // 
             // label24
             // 
@@ -785,6 +846,7 @@
             this.text_tipguncelle.Name = "text_tipguncelle";
             this.text_tipguncelle.Size = new System.Drawing.Size(116, 20);
             this.text_tipguncelle.TabIndex = 9;
+            this.text_tipguncelle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_tipguncelle_KeyDown);
             // 
             // label16
             // 
@@ -854,66 +916,6 @@
             this.btn_tipekle.Text = "Ekle";
             this.btn_tipekle.UseVisualStyleBackColor = true;
             this.btn_tipekle.Click += new System.EventHandler(this.btn_tipekle_Click);
-            // 
-            // label_geri
-            // 
-            this.label_geri.AutoSize = true;
-            this.label_geri.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_geri.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_geri.Location = new System.Drawing.Point(3, 3);
-            this.label_geri.Name = "label_geri";
-            this.label_geri.Size = new System.Drawing.Size(34, 26);
-            this.label_geri.TabIndex = 22;
-            this.label_geri.Text = "←";
-            this.label_geri.Click += new System.EventHandler(this.label_geri_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label25.Location = new System.Drawing.Point(3, 3);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(34, 26);
-            this.label25.TabIndex = 30;
-            this.label25.Text = "←";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label26.Location = new System.Drawing.Point(6, 3);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(34, 26);
-            this.label26.TabIndex = 48;
-            this.label26.Text = "←";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label27.Location = new System.Drawing.Point(3, 3);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(34, 26);
-            this.label27.TabIndex = 22;
-            this.label27.Text = "←";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label28.Location = new System.Drawing.Point(3, 3);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(34, 26);
-            this.label28.TabIndex = 22;
-            this.label28.Text = "←";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // DersYonetimi
             // 
@@ -1014,11 +1016,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox text_tipekle;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox text_tipsil;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button btn_tipsil;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox text_tipguncelle;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btn_tipguncelle;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1027,5 +1027,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
+        public System.Windows.Forms.TextBox text_tipsil;
+        public System.Windows.Forms.TextBox text_tipguncelle;
     }
 }

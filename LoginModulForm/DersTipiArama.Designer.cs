@@ -48,6 +48,7 @@
             this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 43;
             this.label1.Text = "←";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox3
             // 
@@ -95,6 +96,7 @@
             this.btn_aratip.TabIndex = 38;
             this.btn_aratip.Text = "Ara";
             this.btn_aratip.UseVisualStyleBackColor = true;
+            this.btn_aratip.Click += new System.EventHandler(this.btn_aratip_Click);
             // 
             // DersTipiArama
             // 
@@ -108,6 +110,7 @@
             this.DoubleBuffered = true;
             this.Name = "DersTipiArama";
             this.Text = "DersTipiArama";
+            this.Load += new System.EventHandler(this.DersTipiArama_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);

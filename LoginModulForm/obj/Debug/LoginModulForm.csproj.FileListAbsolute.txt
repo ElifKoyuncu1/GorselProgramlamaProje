@@ -140,3 +140,4 @@ C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModu
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginMod.AD267D31.Up2Date
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.exe
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.pdb
+C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.DersTipiArama.resources
