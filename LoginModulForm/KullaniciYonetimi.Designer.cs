@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullaniciYonetimi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGrid_listele = new System.Windows.Forms.DataGridView();
             this.label_geri4 = new System.Windows.Forms.Label();
@@ -43,7 +43,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_gıncelle = new System.Windows.Forms.Button();
             this.cmb_guncellebolum = new System.Windows.Forms.ComboBox();
-            this.text_guncellerol = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label_geri3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -69,6 +68,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_geri = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.cmb_guncellerol = new System.Windows.Forms.ComboBox();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_listele)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -100,34 +100,34 @@
             // 
             this.dataGrid_listele.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGrid_listele.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_listele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_listele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGrid_listele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid_listele.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid_listele.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGrid_listele.Enabled = false;
             this.dataGrid_listele.Location = new System.Drawing.Point(65, 49);
             this.dataGrid_listele.Name = "dataGrid_listele";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_listele.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_listele.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGrid_listele.Size = new System.Drawing.Size(485, 256);
             this.dataGrid_listele.TabIndex = 40;
             // 
@@ -174,12 +174,12 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cmb_guncellerol);
             this.groupBox3.Controls.Add(this.text_guncellead);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btn_gıncelle);
             this.groupBox3.Controls.Add(this.cmb_guncellebolum);
-            this.groupBox3.Controls.Add(this.text_guncellerol);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Location = new System.Drawing.Point(139, 51);
@@ -244,14 +244,6 @@
             this.cmb_guncellebolum.Name = "cmb_guncellebolum";
             this.cmb_guncellebolum.Size = new System.Drawing.Size(137, 21);
             this.cmb_guncellebolum.TabIndex = 38;
-            // 
-            // text_guncellerol
-            // 
-            this.text_guncellerol.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.text_guncellerol.Location = new System.Drawing.Point(172, 114);
-            this.text_guncellerol.Name = "text_guncellerol";
-            this.text_guncellerol.Size = new System.Drawing.Size(137, 20);
-            this.text_guncellerol.TabIndex = 32;
             // 
             // label13
             // 
@@ -419,9 +411,9 @@
             this.groupBox2.Controls.Add(this.text_eklesifre);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(140, 64);
+            this.groupBox2.Location = new System.Drawing.Point(123, 63);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(333, 268);
+            this.groupBox2.Size = new System.Drawing.Size(367, 294);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kullanıcı Ekle";
@@ -431,7 +423,7 @@
             this.text_eklead.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.text_eklead.Location = new System.Drawing.Point(174, 49);
             this.text_eklead.Name = "text_eklead";
-            this.text_eklead.Size = new System.Drawing.Size(100, 20);
+            this.text_eklead.Size = new System.Drawing.Size(152, 20);
             this.text_eklead.TabIndex = 17;
             // 
             // cmb_eklebolum
@@ -441,7 +433,7 @@
             this.cmb_eklebolum.FormattingEnabled = true;
             this.cmb_eklebolum.Location = new System.Drawing.Point(174, 168);
             this.cmb_eklebolum.Name = "cmb_eklebolum";
-            this.cmb_eklebolum.Size = new System.Drawing.Size(100, 21);
+            this.cmb_eklebolum.Size = new System.Drawing.Size(152, 21);
             this.cmb_eklebolum.TabIndex = 22;
             this.cmb_eklebolum.SelectedIndexChanged += new System.EventHandler(this.cmb_eklebolum_SelectedIndexChanged);
             // 
@@ -449,7 +441,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(51, 52);
+            this.label1.Location = new System.Drawing.Point(43, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 11;
@@ -459,7 +451,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(51, 171);
+            this.label9.Location = new System.Drawing.Point(43, 171);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 13);
             this.label9.TabIndex = 21;
@@ -472,7 +464,7 @@
             this.btn_ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ekle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_ekle.Location = new System.Drawing.Point(71, 226);
+            this.btn_ekle.Location = new System.Drawing.Point(90, 245);
             this.btn_ekle.Name = "btn_ekle";
             this.btn_ekle.Size = new System.Drawing.Size(186, 23);
             this.btn_ekle.TabIndex = 15;
@@ -484,7 +476,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(51, 90);
+            this.label4.Location = new System.Drawing.Point(43, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 13);
             this.label4.TabIndex = 14;
@@ -500,22 +492,23 @@
             "hoca"});
             this.cmb_eklerol.Location = new System.Drawing.Point(174, 129);
             this.cmb_eklerol.Name = "cmb_eklerol";
-            this.cmb_eklerol.Size = new System.Drawing.Size(100, 21);
+            this.cmb_eklerol.Size = new System.Drawing.Size(152, 21);
             this.cmb_eklerol.TabIndex = 20;
             this.cmb_eklerol.SelectedIndexChanged += new System.EventHandler(this.cmb_eklerol_SelectedIndexChanged);
             // 
             // text_eklesifre
             // 
+            this.text_eklesifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.text_eklesifre.Location = new System.Drawing.Point(174, 87);
             this.text_eklesifre.Name = "text_eklesifre";
-            this.text_eklesifre.Size = new System.Drawing.Size(100, 20);
+            this.text_eklesifre.Size = new System.Drawing.Size(152, 20);
             this.text_eklesifre.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(51, 129);
+            this.label2.Location = new System.Drawing.Point(43, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 19;
@@ -546,6 +539,20 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(633, 444);
             this.tabControl1.TabIndex = 0;
+            // 
+            // cmb_guncellerol
+            // 
+            this.cmb_guncellerol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_guncellerol.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmb_guncellerol.FormattingEnabled = true;
+            this.cmb_guncellerol.Items.AddRange(new object[] {
+            "admin",
+            "hoca"});
+            this.cmb_guncellerol.Location = new System.Drawing.Point(172, 114);
+            this.cmb_guncellerol.Name = "cmb_guncellerol";
+            this.cmb_guncellerol.Size = new System.Drawing.Size(137, 21);
+            this.cmb_guncellerol.TabIndex = 41;
+            this.cmb_guncellerol.SelectedIndexChanged += new System.EventHandler(this.cmb_guncellerol_SelectedIndexChanged);
             // 
             // KullaniciYonetimi
             // 
@@ -612,8 +619,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.TextBox text_guncellerol;
         public System.Windows.Forms.ComboBox cmb_guncellebolum;
         public System.Windows.Forms.TextBox text_guncellead;
+        public System.Windows.Forms.ComboBox cmb_guncellerol;
     }
 }

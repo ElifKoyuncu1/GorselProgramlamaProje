@@ -56,7 +56,7 @@ namespace LoginModulForm
                 else if (islemTipi == "guncelle")
                 {
                     klytm.text_guncellead.Text = dt.Rows[0][0].ToString();
-                    klytm.text_guncellerol.Text = dt.Rows[0][1].ToString();
+                    klytm.cmb_guncellerol.SelectedItem = dt.Rows[0][1].ToString();
                     klytm.cmb_guncellebolum.Text = dt.Rows[0][2].ToString();
                 }
             }

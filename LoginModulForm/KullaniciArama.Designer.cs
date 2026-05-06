@@ -43,9 +43,9 @@
             // 
             // text_aramaad
             // 
-            this.text_aramaad.Location = new System.Drawing.Point(179, 67);
+            this.text_aramaad.Location = new System.Drawing.Point(165, 67);
             this.text_aramaad.Name = "text_aramaad";
-            this.text_aramaad.Size = new System.Drawing.Size(100, 20);
+            this.text_aramaad.Size = new System.Drawing.Size(137, 20);
             this.text_aramaad.TabIndex = 1;
             // 
             // button1
@@ -86,7 +86,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(61, 105);
+            this.label2.Location = new System.Drawing.Point(47, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 34;
@@ -94,9 +94,9 @@
             // 
             // text_aramarol
             // 
-            this.text_aramarol.Location = new System.Drawing.Point(179, 102);
+            this.text_aramarol.Location = new System.Drawing.Point(165, 102);
             this.text_aramarol.Name = "text_aramarol";
-            this.text_aramarol.Size = new System.Drawing.Size(100, 20);
+            this.text_aramarol.Size = new System.Drawing.Size(137, 20);
             this.text_aramarol.TabIndex = 33;
             // 
             // label1
@@ -104,7 +104,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(61, 141);
+            this.label1.Location = new System.Drawing.Point(47, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 13);
             this.label1.TabIndex = 32;
@@ -112,9 +112,9 @@
             // 
             // text_aramabolum
             // 
-            this.text_aramabolum.Location = new System.Drawing.Point(179, 138);
+            this.text_aramabolum.Location = new System.Drawing.Point(165, 138);
             this.text_aramabolum.Name = "text_aramabolum";
-            this.text_aramabolum.Size = new System.Drawing.Size(100, 20);
+            this.text_aramabolum.Size = new System.Drawing.Size(137, 20);
             this.text_aramabolum.TabIndex = 31;
             // 
             // label11
@@ -122,7 +122,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(61, 70);
+            this.label11.Location = new System.Drawing.Point(47, 70);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 13);
             this.label11.TabIndex = 30;

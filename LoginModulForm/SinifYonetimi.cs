@@ -78,5 +78,26 @@ namespace LoginModulForm
         {
 
         }
+
+        private void label2_bolum_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+        }
+
+        private void label6_bolum_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+        }
+
+        private void label_geri4_bolum_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            YoneticiModul ymdl = new YoneticiModul();
+            ymdl.Show();
+        }
     }
 }

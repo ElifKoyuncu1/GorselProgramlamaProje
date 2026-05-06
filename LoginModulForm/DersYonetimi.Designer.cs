@@ -455,6 +455,7 @@
             this.btn_sil.TabIndex = 22;
             this.btn_sil.Text = "Sil";
             this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // nmup_silogrsayisi
             // 

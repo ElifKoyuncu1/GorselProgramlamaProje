@@ -153,12 +153,26 @@ namespace LoginModulForm
             if(mesaj== DialogResult.Yes)
             {
                 string ad = text_guncellead.Text.Trim();
-                string rol = text_guncellerol.Text.Trim();     
+                string rol = cmb_guncellerol.SelectedItem?.ToString();
                 object bolumID = DBNull.Value;
 
                 if (rol.ToLower() == "hoca")
                 {
-                    bolumID = cmb_guncellebolum.SelectedValue;
+                    string bolumAd = cmb_guncellebolum.Text;
+
+                    string queryBolum = "SELECT BolumID FROM Bolum WHERE BolumAd=@ad";
+
+                    SqlParameter[] parameters1=new SqlParameter[]
+                    {
+                        new SqlParameter("@ad", bolumAd)
+                    };
+
+                    DataTable dtBolum = db.ExecuteQuery(queryBolum,parameters1);
+
+                    if (dtBolum.Rows.Count > 0)
+                    {
+                        bolumID = dtBolum.Rows[0][0];
+                    }
                 }
 
                 string query = @"
@@ -179,19 +193,19 @@ namespace LoginModulForm
 
                 if (sonuc > 0)
                 {
-                    MessageBox.Show("Güncellendi");
+                    MessageBox.Show("Kayıt Güncellendi");
                     FormuTemizle();
                 }
 
                 else
                 {
-                   MessageBox.Show("Güncelleme başarısız");
+                   MessageBox.Show("Kayıt Güncelleme başarısız");
                 }
                    
             }
             else
             {
-                MessageBox.Show("Silme işlemi iptal edildi");
+                MessageBox.Show("Güncelleme işlemi iptal edildi");
             }
         }
 
@@ -229,7 +243,7 @@ namespace LoginModulForm
 
             // GÜNCELLE ALANI
             text_guncellead.Clear();
-            text_guncellerol.Clear();
+            cmb_guncellerol.SelectedIndex = -1;
             cmb_guncellebolum.SelectedIndex = -1;
         }
 
@@ -259,6 +273,19 @@ namespace LoginModulForm
         private void cmb_eklebolum_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmb_guncellerol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_guncellerol.Text.ToLower() == "admin")
+            {
+                cmb_guncellebolum.Enabled = false;
+                cmb_guncellebolum.SelectedIndex = -1;
+            }
+            else
+            {
+                cmb_guncellebolum.Enabled = true;
+            }
         }
     }
 }

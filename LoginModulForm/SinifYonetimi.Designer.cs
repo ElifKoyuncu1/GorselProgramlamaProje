@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinifYonetimi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,18 +44,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label_seviyegeri = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2_bolum = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label6_bolum = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGrid_seviyelistele = new System.Windows.Forms.DataGridView();
-            this.label_geri4_bolum = new System.Windows.Forms.Label();
-            this.btn_seviyelistele = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.text_seviyemevcudsil = new System.Windows.Forms.TextBox();
+            this.text_seviyenosil = new System.Windows.Forms.TextBox();
+            this.text_seviyebolumsil = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_seviyesil = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label2_bolum = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -64,20 +62,22 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btn_seviyeguncelle = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.text_seviyebolumsil = new System.Windows.Forms.TextBox();
-            this.text_seviyenosil = new System.Windows.Forms.TextBox();
-            this.text_seviyemevcudsil = new System.Windows.Forms.TextBox();
+            this.label6_bolum = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGrid_seviyelistele = new System.Windows.Forms.DataGridView();
+            this.label_geri4_bolum = new System.Windows.Forms.Label();
+            this.btn_seviyelistele = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_mevcudek)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_seviyelistele)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_seviyelistele)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -232,118 +232,6 @@
             this.tabPage2.Text = " Sınıf Seviyesi Sil";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label2_bolum
-            // 
-            this.label2_bolum.AutoSize = true;
-            this.label2_bolum.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2_bolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2_bolum.Location = new System.Drawing.Point(3, 5);
-            this.label2_bolum.Name = "label2_bolum";
-            this.label2_bolum.Size = new System.Drawing.Size(34, 26);
-            this.label2_bolum.TabIndex = 26;
-            this.label2_bolum.Text = "←";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
-            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Controls.Add(this.label6_bolum);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(552, 387);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Sınıf Seviyesi Güncelle";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label6_bolum
-            // 
-            this.label6_bolum.AutoSize = true;
-            this.label6_bolum.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6_bolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6_bolum.Location = new System.Drawing.Point(5, 7);
-            this.label6_bolum.Name = "label6_bolum";
-            this.label6_bolum.Size = new System.Drawing.Size(34, 26);
-            this.label6_bolum.TabIndex = 34;
-            this.label6_bolum.Text = "←";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
-            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage4.Controls.Add(this.dataGrid_seviyelistele);
-            this.tabPage4.Controls.Add(this.label_geri4_bolum);
-            this.tabPage4.Controls.Add(this.btn_seviyelistele);
-            this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(552, 387);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Sınıf Seviyesi Listele";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // dataGrid_seviyelistele
-            // 
-            this.dataGrid_seviyelistele.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_seviyelistele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGrid_seviyelistele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid_seviyelistele.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGrid_seviyelistele.Enabled = false;
-            this.dataGrid_seviyelistele.Location = new System.Drawing.Point(39, 38);
-            this.dataGrid_seviyelistele.Name = "dataGrid_seviyelistele";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_seviyelistele.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGrid_seviyelistele.Size = new System.Drawing.Size(468, 285);
-            this.dataGrid_seviyelistele.TabIndex = 43;
-            // 
-            // label_geri4_bolum
-            // 
-            this.label_geri4_bolum.AutoSize = true;
-            this.label_geri4_bolum.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_geri4_bolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_geri4_bolum.Location = new System.Drawing.Point(3, 3);
-            this.label_geri4_bolum.Name = "label_geri4_bolum";
-            this.label_geri4_bolum.Size = new System.Drawing.Size(34, 26);
-            this.label_geri4_bolum.TabIndex = 42;
-            this.label_geri4_bolum.Text = "←";
-            // 
-            // btn_seviyelistele
-            // 
-            this.btn_seviyelistele.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btn_seviyelistele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btn_seviyelistele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_seviyelistele.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_seviyelistele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_seviyelistele.Location = new System.Drawing.Point(184, 344);
-            this.btn_seviyelistele.Name = "btn_seviyelistele";
-            this.btn_seviyelistele.Size = new System.Drawing.Size(186, 23);
-            this.btn_seviyelistele.TabIndex = 41;
-            this.btn_seviyelistele.Text = "Listele";
-            this.btn_seviyelistele.UseVisualStyleBackColor = true;
-            this.btn_seviyelistele.Click += new System.EventHandler(this.btn_seviyelistele_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.text_seviyemevcudsil);
@@ -360,6 +248,27 @@
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sınıf Seviyesi Sil";
+            // 
+            // text_seviyemevcudsil
+            // 
+            this.text_seviyemevcudsil.Location = new System.Drawing.Point(140, 138);
+            this.text_seviyemevcudsil.Name = "text_seviyemevcudsil";
+            this.text_seviyemevcudsil.Size = new System.Drawing.Size(131, 20);
+            this.text_seviyemevcudsil.TabIndex = 29;
+            // 
+            // text_seviyenosil
+            // 
+            this.text_seviyenosil.Location = new System.Drawing.Point(140, 93);
+            this.text_seviyenosil.Name = "text_seviyenosil";
+            this.text_seviyenosil.Size = new System.Drawing.Size(131, 20);
+            this.text_seviyenosil.TabIndex = 28;
+            // 
+            // text_seviyebolumsil
+            // 
+            this.text_seviyebolumsil.Location = new System.Drawing.Point(140, 49);
+            this.text_seviyebolumsil.Name = "text_seviyebolumsil";
+            this.text_seviyebolumsil.Size = new System.Drawing.Size(131, 20);
+            this.text_seviyebolumsil.TabIndex = 27;
             // 
             // label4
             // 
@@ -408,6 +317,32 @@
             this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 18;
             this.label7.Text = "Bölüm Adı...:";
+            // 
+            // label2_bolum
+            // 
+            this.label2_bolum.AutoSize = true;
+            this.label2_bolum.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2_bolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2_bolum.Location = new System.Drawing.Point(3, 5);
+            this.label2_bolum.Name = "label2_bolum";
+            this.label2_bolum.Size = new System.Drawing.Size(34, 26);
+            this.label2_bolum.TabIndex = 26;
+            this.label2_bolum.Text = "←";
+            this.label2_bolum.Click += new System.EventHandler(this.label2_bolum_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.label6_bolum);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(552, 387);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Sınıf Seviyesi Güncelle";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -506,26 +441,94 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Bölüm Adı...:";
             // 
-            // text_seviyebolumsil
+            // label6_bolum
             // 
-            this.text_seviyebolumsil.Location = new System.Drawing.Point(140, 49);
-            this.text_seviyebolumsil.Name = "text_seviyebolumsil";
-            this.text_seviyebolumsil.Size = new System.Drawing.Size(131, 20);
-            this.text_seviyebolumsil.TabIndex = 27;
+            this.label6_bolum.AutoSize = true;
+            this.label6_bolum.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6_bolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6_bolum.Location = new System.Drawing.Point(5, 7);
+            this.label6_bolum.Name = "label6_bolum";
+            this.label6_bolum.Size = new System.Drawing.Size(34, 26);
+            this.label6_bolum.TabIndex = 34;
+            this.label6_bolum.Text = "←";
+            this.label6_bolum.Click += new System.EventHandler(this.label6_bolum_Click);
             // 
-            // text_seviyenosil
+            // tabPage4
             // 
-            this.text_seviyenosil.Location = new System.Drawing.Point(140, 93);
-            this.text_seviyenosil.Name = "text_seviyenosil";
-            this.text_seviyenosil.Size = new System.Drawing.Size(131, 20);
-            this.text_seviyenosil.TabIndex = 28;
+            this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
+            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage4.Controls.Add(this.dataGrid_seviyelistele);
+            this.tabPage4.Controls.Add(this.label_geri4_bolum);
+            this.tabPage4.Controls.Add(this.btn_seviyelistele);
+            this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(552, 387);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Sınıf Seviyesi Listele";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // text_seviyemevcudsil
+            // dataGrid_seviyelistele
             // 
-            this.text_seviyemevcudsil.Location = new System.Drawing.Point(140, 138);
-            this.text_seviyemevcudsil.Name = "text_seviyemevcudsil";
-            this.text_seviyemevcudsil.Size = new System.Drawing.Size(131, 20);
-            this.text_seviyemevcudsil.TabIndex = 29;
+            this.dataGrid_seviyelistele.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_seviyelistele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGrid_seviyelistele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid_seviyelistele.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGrid_seviyelistele.Enabled = false;
+            this.dataGrid_seviyelistele.Location = new System.Drawing.Point(39, 38);
+            this.dataGrid_seviyelistele.Name = "dataGrid_seviyelistele";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_seviyelistele.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGrid_seviyelistele.Size = new System.Drawing.Size(468, 285);
+            this.dataGrid_seviyelistele.TabIndex = 43;
+            // 
+            // label_geri4_bolum
+            // 
+            this.label_geri4_bolum.AutoSize = true;
+            this.label_geri4_bolum.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_geri4_bolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_geri4_bolum.Location = new System.Drawing.Point(3, 3);
+            this.label_geri4_bolum.Name = "label_geri4_bolum";
+            this.label_geri4_bolum.Size = new System.Drawing.Size(34, 26);
+            this.label_geri4_bolum.TabIndex = 42;
+            this.label_geri4_bolum.Text = "←";
+            this.label_geri4_bolum.Click += new System.EventHandler(this.label_geri4_bolum_Click);
+            // 
+            // btn_seviyelistele
+            // 
+            this.btn_seviyelistele.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_seviyelistele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_seviyelistele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_seviyelistele.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_seviyelistele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_seviyelistele.Location = new System.Drawing.Point(184, 344);
+            this.btn_seviyelistele.Name = "btn_seviyelistele";
+            this.btn_seviyelistele.Size = new System.Drawing.Size(186, 23);
+            this.btn_seviyelistele.TabIndex = 41;
+            this.btn_seviyelistele.Text = "Listele";
+            this.btn_seviyelistele.UseVisualStyleBackColor = true;
+            this.btn_seviyelistele.Click += new System.EventHandler(this.btn_seviyelistele_Click);
             // 
             // SinifYonetimi
             // 
@@ -546,16 +549,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmup_mevcudek)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_seviyelistele)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_seviyelistele)).EndInit();
             this.ResumeLayout(false);
 
         }

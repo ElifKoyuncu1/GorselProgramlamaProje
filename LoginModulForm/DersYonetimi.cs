@@ -300,7 +300,6 @@ namespace LoginModulForm
                 dfrm.Show();
                 this.Hide();
             }
-
         }
 
         private void text_tipsil_KeyDown(object sender, KeyEventArgs e)
@@ -337,9 +336,11 @@ namespace LoginModulForm
                 {
                     MessageBox.Show("Hata");
                 }
-
-
             }
+        }
+
+        private void btn_sil_Click(object sender, EventArgs e)
+        {
 
         }
     }
