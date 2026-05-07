@@ -20,32 +20,31 @@ namespace LoginModulForm
         }
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
         int bolum_id;
-        private void label_geri_Click(object sender, EventArgs e)
+
+        private void geriGit()
         {
             this.Close();
             YoneticiModul ymdl = new YoneticiModul();
             ymdl.Show();
+        }
+        private void label_geri_Click(object sender, EventArgs e)
+        {
+            geriGit();
         }
 
         private void label_geri2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            YoneticiModul ymdl = new YoneticiModul();
-            ymdl.Show();
+            geriGit();
         }
 
         private void label_geri3_Click(object sender, EventArgs e)
         {
-            this.Close();
-            YoneticiModul ymdl = new YoneticiModul();
-            ymdl.Show();
+            geriGit();
         }
 
         private void label_geri4_Click(object sender, EventArgs e)
         {
-            this.Close();
-            YoneticiModul ymdl = new YoneticiModul();
-            ymdl.Show();
+            geriGit();
         }
 
         private void btn_ekle_Click(object sender, EventArgs e)
@@ -154,7 +153,7 @@ namespace LoginModulForm
             {
                 string ad = text_guncellead.Text.Trim();
                 string rol = cmb_guncellerol.SelectedItem?.ToString();
-                object bolumID = DBNull.Value;
+                object bolumID = DBNull.Value;  //adminin bölümü olmadığı için başta bölüm id için NULL diyoruz. ardından hoca seçilirse eğer bölüm id doluyor. object dememizin sebebi ise bazen int bazen ise null değer alması. 
 
                 if (rol.ToLower() == "hoca")
                 {
@@ -236,7 +235,7 @@ namespace LoginModulForm
             cmb_eklebolum.SelectedIndex = -1;
             cmb_eklebolum.Enabled = false;
 
-            // SİL ALAN
+            // SİL ALANI
             text_silad.Clear();
             text_silrol.Clear();
             text_silbolum.Clear();

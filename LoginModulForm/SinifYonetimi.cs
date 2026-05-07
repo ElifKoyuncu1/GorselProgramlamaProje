@@ -71,12 +71,40 @@ namespace LoginModulForm
             string query = "SELECT ss.SinifSeviyeID, ss.SeviyeNo, ss.SinifMevcudu, b.BolumAd FROM SinifSeviyesi ss INNER JOIN Bolum b ON ss.BolumID = b.BolumID";
             DataTable dt = db.ExecuteQuery(query);
             dataGrid_seviyelistele.DataSource = dt;
+            dataGrid_seviyelistele.Columns["SinifSeviyeID"].Visible = false;
 
         }
 
         private void btn_seviyesil_Click(object sender, EventArgs e)
         {
+            DataBaseClass db = new DataBaseClass(connectionString);
+            DialogResult mesaj = MessageBox.Show(" Bu kaydı silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (mesaj == DialogResult.Yes)
+            {
+                string s_no = text_seviyemevcudsil.Text.Trim();
+                string query = "DELETE FROM SinifSeviyesi WHERE SeviyeNo=@sno";
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@sno", s_no)
+                };
 
+                int s_kyt_sy = db.ExecuteNonQuery(query, parameters);
+                if (s_kyt_sy > 0)
+                {
+                    MessageBox.Show("Seviye Silindi");
+                }
+                else
+                {
+                    MessageBox.Show("Seviye Silinemedi");
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Silme İşlemi iptal edildi");
+            }
+                
         }
 
         private void label2_bolum_Click(object sender, EventArgs e)

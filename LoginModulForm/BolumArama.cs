@@ -40,7 +40,6 @@ namespace LoginModulForm
             {
                 BolumYonetimi bytm = new BolumYonetimi();
 
-                // 🔥 ID TAŞI
                 bytm.secilenBolumId = Convert.ToInt32(dt.Rows[0]["BolumID"]);
 
                 string bolumAd = dt.Rows[0]["BolumAd"].ToString();

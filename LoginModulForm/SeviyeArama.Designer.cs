@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeviyeArama));
             this.lbl_klytm = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nmup_mevcud = new System.Windows.Forms.NumericUpDown();
             this.cmb_seviyebolum = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmb_seviyeno = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_seviyeguncelle = new System.Windows.Forms.Button();
+            this.btn_seviyeara = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmup_mevcud)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_klytm
@@ -57,12 +57,12 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.numericUpDown2);
+            this.groupBox3.Controls.Add(this.nmup_mevcud);
             this.groupBox3.Controls.Add(this.cmb_seviyebolum);
-            this.groupBox3.Controls.Add(this.comboBox4);
+            this.groupBox3.Controls.Add(this.cmb_seviyeno);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.btn_seviyeguncelle);
+            this.groupBox3.Controls.Add(this.btn_seviyeara);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Location = new System.Drawing.Point(120, 74);
@@ -72,13 +72,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sınıf Seviyesi Ara";
             // 
-            // numericUpDown2
+            // nmup_mevcud
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numericUpDown2.Location = new System.Drawing.Point(135, 138);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(136, 20);
-            this.numericUpDown2.TabIndex = 29;
+            this.nmup_mevcud.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nmup_mevcud.Location = new System.Drawing.Point(135, 138);
+            this.nmup_mevcud.Name = "nmup_mevcud";
+            this.nmup_mevcud.Size = new System.Drawing.Size(136, 20);
+            this.nmup_mevcud.TabIndex = 29;
             // 
             // cmb_seviyebolum
             // 
@@ -89,21 +89,21 @@
             this.cmb_seviyebolum.Size = new System.Drawing.Size(136, 21);
             this.cmb_seviyebolum.TabIndex = 28;
             // 
-            // comboBox4
+            // cmb_seviyeno
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmb_seviyeno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmb_seviyeno.FormattingEnabled = true;
+            this.cmb_seviyeno.Items.AddRange(new object[] {
             "Hazırlık",
             "1",
             "2",
             "3",
             "4",
             ""});
-            this.comboBox4.Location = new System.Drawing.Point(135, 90);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(136, 21);
-            this.comboBox4.TabIndex = 27;
+            this.cmb_seviyeno.Location = new System.Drawing.Point(135, 90);
+            this.cmb_seviyeno.Name = "cmb_seviyeno";
+            this.cmb_seviyeno.Size = new System.Drawing.Size(136, 21);
+            this.cmb_seviyeno.TabIndex = 27;
             // 
             // label2
             // 
@@ -127,19 +127,20 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Sınıf Seviyesi...:";
             // 
-            // btn_seviyeguncelle
+            // btn_seviyeara
             // 
-            this.btn_seviyeguncelle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btn_seviyeguncelle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btn_seviyeguncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_seviyeguncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_seviyeguncelle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_seviyeguncelle.Location = new System.Drawing.Point(51, 196);
-            this.btn_seviyeguncelle.Name = "btn_seviyeguncelle";
-            this.btn_seviyeguncelle.Size = new System.Drawing.Size(205, 23);
-            this.btn_seviyeguncelle.TabIndex = 23;
-            this.btn_seviyeguncelle.Text = "Güncelle";
-            this.btn_seviyeguncelle.UseVisualStyleBackColor = true;
+            this.btn_seviyeara.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_seviyeara.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_seviyeara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_seviyeara.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_seviyeara.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_seviyeara.Location = new System.Drawing.Point(51, 196);
+            this.btn_seviyeara.Name = "btn_seviyeara";
+            this.btn_seviyeara.Size = new System.Drawing.Size(205, 23);
+            this.btn_seviyeara.TabIndex = 23;
+            this.btn_seviyeara.Text = "Ara";
+            this.btn_seviyeara.UseVisualStyleBackColor = true;
+            this.btn_seviyeara.Click += new System.EventHandler(this.btn_seviyeara_Click);
             // 
             // label9
             // 
@@ -164,9 +165,10 @@
             this.DoubleBuffered = true;
             this.Name = "SeviyeArama";
             this.Text = "SeviyeArama";
+            this.Load += new System.EventHandler(this.SeviyeArama_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmup_mevcud)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,12 +178,12 @@
 
         private System.Windows.Forms.Label lbl_klytm;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nmup_mevcud;
         private System.Windows.Forms.ComboBox cmb_seviyebolum;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmb_seviyeno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btn_seviyeguncelle;
+        private System.Windows.Forms.Button btn_seviyeara;
         private System.Windows.Forms.Label label9;
     }
 }
