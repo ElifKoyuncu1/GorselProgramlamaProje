@@ -79,7 +79,7 @@ namespace LoginModulForm
         private void btn_guncellebolum_Click(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
-            DialogResult mesaj = MessageBox.Show(" Bu kaydı silmek stediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            DialogResult mesaj = MessageBox.Show(" Bu kaydı güncellemek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (mesaj == DialogResult.Yes)
             {
                 string b_ad = text_guncellebolum.Text.Trim();

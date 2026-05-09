@@ -79,7 +79,7 @@
             this.groupBox1.Size = new System.Drawing.Size(351, 268);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Arama";
+            this.groupBox1.Text = "Kullanıcı Arama";
             // 
             // label2
             // 

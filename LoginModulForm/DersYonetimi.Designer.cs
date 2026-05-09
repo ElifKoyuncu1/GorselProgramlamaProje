@@ -57,12 +57,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btn_sil = new System.Windows.Forms.Button();
-            this.nmup_silogrsayisi = new System.Windows.Forms.NumericUpDown();
-            this.nmup_silsure = new System.Windows.Forms.NumericUpDown();
-            this.nmup_silkredi = new System.Windows.Forms.NumericUpDown();
-            this.cmb_silseviye = new System.Windows.Forms.ComboBox();
-            this.cmb_siltip = new System.Windows.Forms.ComboBox();
-            this.cmb_silbolum = new System.Windows.Forms.ComboBox();
             this.text_silad = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label26 = new System.Windows.Forms.Label();
@@ -99,15 +93,18 @@
             this.text_tipekle = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.btn_tipekle = new System.Windows.Forms.Button();
+            this.text_silbolum = new System.Windows.Forms.TextBox();
+            this.text_siltip = new System.Windows.Forms.TextBox();
+            this.text_silseviye = new System.Windows.Forms.TextBox();
+            this.text_silkredi = new System.Windows.Forms.TextBox();
+            this.text_silsure = new System.Windows.Forms.TextBox();
+            this.text_silmevcud = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_eklesayi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_eklesure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_eklekredi)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmup_silogrsayisi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmup_silsure)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmup_silkredi)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_guncelleogrsayisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_guncellesure)).BeginInit();
@@ -331,6 +328,12 @@
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.text_silmevcud);
+            this.tabPage2.Controls.Add(this.text_silsure);
+            this.tabPage2.Controls.Add(this.text_silkredi);
+            this.tabPage2.Controls.Add(this.text_silseviye);
+            this.tabPage2.Controls.Add(this.text_siltip);
+            this.tabPage2.Controls.Add(this.text_silbolum);
             this.tabPage2.Controls.Add(this.label25);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label9);
@@ -340,12 +343,6 @@
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.btn_sil);
-            this.tabPage2.Controls.Add(this.nmup_silogrsayisi);
-            this.tabPage2.Controls.Add(this.nmup_silsure);
-            this.tabPage2.Controls.Add(this.nmup_silkredi);
-            this.tabPage2.Controls.Add(this.cmb_silseviye);
-            this.tabPage2.Controls.Add(this.cmb_siltip);
-            this.tabPage2.Controls.Add(this.cmb_silbolum);
             this.tabPage2.Controls.Add(this.text_silad);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -457,63 +454,12 @@
             this.btn_sil.UseVisualStyleBackColor = true;
             this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
-            // nmup_silogrsayisi
-            // 
-            this.nmup_silogrsayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nmup_silogrsayisi.Location = new System.Drawing.Point(392, 299);
-            this.nmup_silogrsayisi.Name = "nmup_silogrsayisi";
-            this.nmup_silogrsayisi.Size = new System.Drawing.Size(64, 20);
-            this.nmup_silogrsayisi.TabIndex = 21;
-            // 
-            // nmup_silsure
-            // 
-            this.nmup_silsure.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nmup_silsure.Location = new System.Drawing.Point(328, 262);
-            this.nmup_silsure.Name = "nmup_silsure";
-            this.nmup_silsure.Size = new System.Drawing.Size(64, 20);
-            this.nmup_silsure.TabIndex = 20;
-            // 
-            // nmup_silkredi
-            // 
-            this.nmup_silkredi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nmup_silkredi.Location = new System.Drawing.Point(328, 223);
-            this.nmup_silkredi.Name = "nmup_silkredi";
-            this.nmup_silkredi.Size = new System.Drawing.Size(64, 20);
-            this.nmup_silkredi.TabIndex = 19;
-            // 
-            // cmb_silseviye
-            // 
-            this.cmb_silseviye.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmb_silseviye.FormattingEnabled = true;
-            this.cmb_silseviye.Location = new System.Drawing.Point(328, 176);
-            this.cmb_silseviye.Name = "cmb_silseviye";
-            this.cmb_silseviye.Size = new System.Drawing.Size(145, 21);
-            this.cmb_silseviye.TabIndex = 18;
-            // 
-            // cmb_siltip
-            // 
-            this.cmb_siltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmb_siltip.FormattingEnabled = true;
-            this.cmb_siltip.Location = new System.Drawing.Point(328, 137);
-            this.cmb_siltip.Name = "cmb_siltip";
-            this.cmb_siltip.Size = new System.Drawing.Size(145, 21);
-            this.cmb_siltip.TabIndex = 17;
-            // 
-            // cmb_silbolum
-            // 
-            this.cmb_silbolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmb_silbolum.FormattingEnabled = true;
-            this.cmb_silbolum.Location = new System.Drawing.Point(328, 95);
-            this.cmb_silbolum.Name = "cmb_silbolum";
-            this.cmb_silbolum.Size = new System.Drawing.Size(145, 21);
-            this.cmb_silbolum.TabIndex = 16;
-            // 
             // text_silad
             // 
             this.text_silad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.text_silad.Location = new System.Drawing.Point(328, 57);
             this.text_silad.Name = "text_silad";
-            this.text_silad.Size = new System.Drawing.Size(145, 20);
+            this.text_silad.Size = new System.Drawing.Size(170, 20);
             this.text_silad.TabIndex = 15;
             // 
             // tabPage3
@@ -919,6 +865,54 @@
             this.btn_tipekle.UseVisualStyleBackColor = true;
             this.btn_tipekle.Click += new System.EventHandler(this.btn_tipekle_Click);
             // 
+            // text_silbolum
+            // 
+            this.text_silbolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silbolum.Location = new System.Drawing.Point(328, 97);
+            this.text_silbolum.Name = "text_silbolum";
+            this.text_silbolum.Size = new System.Drawing.Size(170, 20);
+            this.text_silbolum.TabIndex = 31;
+            // 
+            // text_siltip
+            // 
+            this.text_siltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_siltip.Location = new System.Drawing.Point(328, 135);
+            this.text_siltip.Name = "text_siltip";
+            this.text_siltip.Size = new System.Drawing.Size(170, 20);
+            this.text_siltip.TabIndex = 32;
+            // 
+            // text_silseviye
+            // 
+            this.text_silseviye.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silseviye.Location = new System.Drawing.Point(328, 178);
+            this.text_silseviye.Name = "text_silseviye";
+            this.text_silseviye.Size = new System.Drawing.Size(87, 20);
+            this.text_silseviye.TabIndex = 33;
+            // 
+            // text_silkredi
+            // 
+            this.text_silkredi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silkredi.Location = new System.Drawing.Point(328, 219);
+            this.text_silkredi.Name = "text_silkredi";
+            this.text_silkredi.Size = new System.Drawing.Size(87, 20);
+            this.text_silkredi.TabIndex = 34;
+            // 
+            // text_silsure
+            // 
+            this.text_silsure.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silsure.Location = new System.Drawing.Point(328, 256);
+            this.text_silsure.Name = "text_silsure";
+            this.text_silsure.Size = new System.Drawing.Size(87, 20);
+            this.text_silsure.TabIndex = 35;
+            // 
+            // text_silmevcud
+            // 
+            this.text_silmevcud.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silmevcud.Location = new System.Drawing.Point(374, 296);
+            this.text_silmevcud.Name = "text_silmevcud";
+            this.text_silmevcud.Size = new System.Drawing.Size(81, 20);
+            this.text_silmevcud.TabIndex = 36;
+            // 
             // DersYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -936,9 +930,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmup_eklekredi)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmup_silogrsayisi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmup_silsure)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmup_silkredi)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_guncelleogrsayisi)).EndInit();
@@ -989,13 +980,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btn_sil;
-        private System.Windows.Forms.NumericUpDown nmup_silogrsayisi;
-        private System.Windows.Forms.NumericUpDown nmup_silsure;
-        private System.Windows.Forms.NumericUpDown nmup_silkredi;
-        private System.Windows.Forms.ComboBox cmb_silseviye;
-        private System.Windows.Forms.ComboBox cmb_siltip;
-        private System.Windows.Forms.ComboBox cmb_silbolum;
-        private System.Windows.Forms.TextBox text_silad;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -1031,5 +1015,12 @@
         private System.Windows.Forms.Label label28;
         public System.Windows.Forms.TextBox text_tipsil;
         public System.Windows.Forms.TextBox text_tipguncelle;
+        public System.Windows.Forms.TextBox text_silmevcud;
+        public System.Windows.Forms.TextBox text_silsure;
+        public System.Windows.Forms.TextBox text_silkredi;
+        public System.Windows.Forms.TextBox text_silseviye;
+        public System.Windows.Forms.TextBox text_siltip;
+        public System.Windows.Forms.TextBox text_silbolum;
+        public System.Windows.Forms.TextBox text_silad;
     }
 }

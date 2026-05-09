@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinifYonetimi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,9 +56,9 @@
             this.label2_bolum = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.nmup_mcdguncelle = new System.Windows.Forms.NumericUpDown();
+            this.cmb_bolumguncelle = new System.Windows.Forms.ComboBox();
+            this.cmb_seviyeguncelle = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_seviyeguncelle = new System.Windows.Forms.Button();
@@ -76,7 +76,7 @@
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmup_mcdguncelle)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_seviyelistele)).BeginInit();
             this.SuspendLayout();
@@ -270,6 +270,7 @@
             this.text_seviyebolumsil.Name = "text_seviyebolumsil";
             this.text_seviyebolumsil.Size = new System.Drawing.Size(131, 20);
             this.text_seviyebolumsil.TabIndex = 27;
+            this.text_seviyebolumsil.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_seviyebolumsil_KeyDown);
             // 
             // label4
             // 
@@ -347,9 +348,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.numericUpDown2);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.comboBox4);
+            this.groupBox3.Controls.Add(this.nmup_mcdguncelle);
+            this.groupBox3.Controls.Add(this.cmb_bolumguncelle);
+            this.groupBox3.Controls.Add(this.cmb_seviyeguncelle);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.btn_seviyeguncelle);
@@ -362,38 +363,39 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sınıf Seviyesi Güncelle";
             // 
-            // numericUpDown2
+            // nmup_mcdguncelle
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numericUpDown2.Location = new System.Drawing.Point(135, 138);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(136, 20);
-            this.numericUpDown2.TabIndex = 29;
+            this.nmup_mcdguncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nmup_mcdguncelle.Location = new System.Drawing.Point(135, 138);
+            this.nmup_mcdguncelle.Name = "nmup_mcdguncelle";
+            this.nmup_mcdguncelle.Size = new System.Drawing.Size(136, 20);
+            this.nmup_mcdguncelle.TabIndex = 29;
             // 
-            // comboBox3
+            // cmb_bolumguncelle
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(135, 46);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(136, 21);
-            this.comboBox3.TabIndex = 28;
+            this.cmb_bolumguncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmb_bolumguncelle.FormattingEnabled = true;
+            this.cmb_bolumguncelle.Location = new System.Drawing.Point(135, 46);
+            this.cmb_bolumguncelle.Name = "cmb_bolumguncelle";
+            this.cmb_bolumguncelle.Size = new System.Drawing.Size(136, 21);
+            this.cmb_bolumguncelle.TabIndex = 28;
+            this.cmb_bolumguncelle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_bolumguncelle_KeyDown);
             // 
-            // comboBox4
+            // cmb_seviyeguncelle
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmb_seviyeguncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmb_seviyeguncelle.FormattingEnabled = true;
+            this.cmb_seviyeguncelle.Items.AddRange(new object[] {
             "Hazırlık",
             "1",
             "2",
             "3",
             "4",
             ""});
-            this.comboBox4.Location = new System.Drawing.Point(135, 90);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(136, 21);
-            this.comboBox4.TabIndex = 27;
+            this.cmb_seviyeguncelle.Location = new System.Drawing.Point(135, 90);
+            this.cmb_seviyeguncelle.Name = "cmb_seviyeguncelle";
+            this.cmb_seviyeguncelle.Size = new System.Drawing.Size(136, 21);
+            this.cmb_seviyeguncelle.TabIndex = 27;
             // 
             // label2
             // 
@@ -430,6 +432,7 @@
             this.btn_seviyeguncelle.TabIndex = 23;
             this.btn_seviyeguncelle.Text = "Güncelle";
             this.btn_seviyeguncelle.UseVisualStyleBackColor = true;
+            this.btn_seviyeguncelle.Click += new System.EventHandler(this.btn_seviyeguncelle_Click);
             // 
             // label9
             // 
@@ -474,42 +477,42 @@
             // 
             this.dataGrid_seviyelistele.AllowUserToAddRows = false;
             this.dataGrid_seviyelistele.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            this.dataGrid_seviyelistele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver;
+            this.dataGrid_seviyelistele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGrid_seviyelistele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGrid_seviyelistele.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dataGrid_seviyelistele.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid_seviyelistele.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_seviyelistele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_seviyelistele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGrid_seviyelistele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Peru;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid_seviyelistele.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Peru;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid_seviyelistele.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGrid_seviyelistele.Enabled = false;
             this.dataGrid_seviyelistele.EnableHeadersVisualStyles = false;
             this.dataGrid_seviyelistele.Location = new System.Drawing.Point(39, 38);
             this.dataGrid_seviyelistele.Name = "dataGrid_seviyelistele";
             this.dataGrid_seviyelistele.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_seviyelistele.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_seviyelistele.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGrid_seviyelistele.RowHeadersVisible = false;
             this.dataGrid_seviyelistele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrid_seviyelistele.Size = new System.Drawing.Size(468, 285);
@@ -567,7 +570,7 @@
             this.tabPage3.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmup_mcdguncelle)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_seviyelistele)).EndInit();
@@ -593,24 +596,24 @@
         private System.Windows.Forms.Button btn_seviyelistele;
         private System.Windows.Forms.ComboBox cmb_blmek;
         private System.Windows.Forms.ComboBox cmb_seviyeek;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nmup_mevcudek;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox text_seviyemevcudsil;
-        private System.Windows.Forms.TextBox text_seviyenosil;
-        private System.Windows.Forms.TextBox text_seviyebolumsil;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_seviyesil;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_seviyeguncelle;
         private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox text_seviyemevcudsil;
+        public System.Windows.Forms.TextBox text_seviyenosil;
+        public System.Windows.Forms.TextBox text_seviyebolumsil;
+        public System.Windows.Forms.NumericUpDown nmup_mcdguncelle;
+        public System.Windows.Forms.ComboBox cmb_bolumguncelle;
+        public System.Windows.Forms.ComboBox cmb_seviyeguncelle;
     }
 }

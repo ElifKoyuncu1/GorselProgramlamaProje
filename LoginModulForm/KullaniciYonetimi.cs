@@ -19,7 +19,6 @@ namespace LoginModulForm
             InitializeComponent();
         }
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
-        int bolum_id;
 
         private void geriGit()
         {
@@ -50,28 +49,97 @@ namespace LoginModulForm
         private void btn_ekle_Click(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
+
             string k_ad_ek = text_eklead.Text.Trim();
             string k_sifre_ek = text_eklesifre.Text.Trim();
             string k_rol_ek = cmb_eklerol.Text.Trim();
             string k_bolum_ek = cmb_eklebolum.Text.Trim();
-            string query = "INSERT INTO Kullanici (KullaniciAdi, Sifre, Rol, BolumID) SELECT @kadi, @sifre, @rol, b.BolumID FROM Bolum b  WHERE b.BolumAd = @bolumAd";
 
-            SqlParameter[] parameters = new SqlParameter[]
+            // BOŞ ALAN KONTROLÜ
+            if (k_ad_ek == "" || k_sifre_ek == "" || k_rol_ek == "")
             {
-                new SqlParameter("@kadi", k_ad_ek),
-                new SqlParameter("@sifre", k_sifre_ek),
-                new SqlParameter("@rol", k_rol_ek),
-                new SqlParameter("@bolumAd", k_bolum_ek)            
-            };
-            int sonuc = db.ExecuteNonQuery(query, parameters);
-            if (sonuc > 0)
-            {
-                MessageBox.Show("Kullanıcı eklendi");
-                FormuTemizle();
+                MessageBox.Show("Boş alan bırakmayınız");
+                
+                return;
             }
+
+            // KULLANICI ADI VAR MI KONTROLÜ
+            string kontrolQuery = "SELECT COUNT(*) FROM Kullanici WHERE KullaniciAdi=@ad";
+
+            SqlParameter[] kontrolParameters = new SqlParameter[]
+            {
+                new SqlParameter("@ad", k_ad_ek)
+            };
+
+            DataTable dt = db.ExecuteQuery(kontrolQuery, kontrolParameters);
+
+            if (Convert.ToInt32(dt.Rows[0][0]) > 0)
+            {
+                MessageBox.Show("Bu kullanıcı adı zaten mevcut");
+                return;
+            }
+
+            // ADMIN İSE
+            if (k_rol_ek.ToLower() == "admin")
+            {
+                string queryAdmin = @"
+                     INSERT INTO Kullanici (KullaniciAdi, Sifre, Rol, BolumID)
+                     VALUES (@kadi, @sifre, @rol, NULL)";
+
+                SqlParameter[] adminParameters = new SqlParameter[]
+                {
+                    new SqlParameter("@kadi", k_ad_ek),
+                    new SqlParameter("@sifre", k_sifre_ek),
+                    new SqlParameter("@rol", k_rol_ek)
+                };
+
+                int sonuc = db.ExecuteNonQuery(queryAdmin, adminParameters);
+
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Admin eklendi");
+                    FormuTemizle();
+                }
+                else
+                {
+                    MessageBox.Show("Hata");
+                }
+            }
+
+            // HOCA İSE
             else
             {
-                MessageBox.Show("Hata");
+                if (k_bolum_ek == "")
+                {
+                    MessageBox.Show("Bölüm seçiniz");
+                    return;
+                }
+
+                string query = @" 
+                         INSERT INTO Kullanici (KullaniciAdi, Sifre, Rol, BolumID)
+                         SELECT @kadi, @sifre, @rol, b.BolumID
+                         FROM Bolum b
+                         WHERE b.BolumAd = @bolumAd";
+
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@kadi", k_ad_ek),
+                    new SqlParameter("@sifre", k_sifre_ek),
+                    new SqlParameter("@rol", k_rol_ek),
+                    new SqlParameter("@bolumAd", k_bolum_ek)
+                };
+
+                int sonuc = db.ExecuteNonQuery(query, parameters);
+
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Kullanıcı eklendi");
+                    FormuTemizle();
+                }
+                else
+                {
+                    MessageBox.Show("Hata");
+                }
             }
         }
 
@@ -223,6 +291,12 @@ namespace LoginModulForm
             DataTable dt = db.ExecuteQuery(query);
 
             dataGrid_listele.DataSource = dt;
+            dataGrid_listele.Columns["KullaniciID"].Visible = false;
+
+            dataGrid_listele.Columns["KullaniciAdi"].HeaderText = "Kullanıcı Adı";
+            dataGrid_listele.Columns["Rol"].HeaderText = "Rol";
+            dataGrid_listele.Columns["BolumAd"].HeaderText = "Bölüm";
+
 
         }
 
@@ -267,11 +341,6 @@ namespace LoginModulForm
                 this.Hide();
 
             }
-        }
-
-        private void cmb_eklebolum_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void cmb_guncellerol_SelectedIndexChanged(object sender, EventArgs e)

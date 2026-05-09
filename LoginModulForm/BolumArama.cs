@@ -73,6 +73,7 @@ namespace LoginModulForm
             cmb_bolum.DataSource = dt;
             cmb_bolum.DisplayMember = "BolumAd";
             cmb_bolum.ValueMember = "BolumID";
+            cmb_bolum.SelectedIndex = -1;
 
         }
 

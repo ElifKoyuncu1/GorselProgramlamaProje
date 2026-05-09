@@ -37,30 +37,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label_bolumgeri = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.text_silbolum = new System.Windows.Forms.TextBox();
+            this.btn_bolumsil = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2_bolum = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.text_guncellebolum = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_guncellebolum = new System.Windows.Forms.Button();
             this.label6_bolum = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGrid_bolumlistele = new System.Windows.Forms.DataGridView();
             this.label_geri4_bolum = new System.Windows.Forms.Label();
             this.btn_bolumlistele = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btn_bolumsil = new System.Windows.Forms.Button();
-            this.text_silbolum = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_bolumlistele)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -74,7 +74,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(539, 453);
+            this.tabControl1.Size = new System.Drawing.Size(525, 427);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -86,7 +86,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(531, 427);
+            this.tabPage1.Size = new System.Drawing.Size(517, 401);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Bölüm Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -164,6 +164,54 @@
             this.tabPage2.Text = " Bölüm Sil";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.text_silbolum);
+            this.groupBox2.Controls.Add(this.btn_bolumsil);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.Location = new System.Drawing.Point(106, 82);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(303, 205);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Bölüm Ekle";
+            // 
+            // text_silbolum
+            // 
+            this.text_silbolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silbolum.Location = new System.Drawing.Point(146, 59);
+            this.text_silbolum.Name = "text_silbolum";
+            this.text_silbolum.Size = new System.Drawing.Size(110, 20);
+            this.text_silbolum.TabIndex = 30;
+            this.text_silbolum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_silbolum_KeyDown);
+            // 
+            // btn_bolumsil
+            // 
+            this.btn_bolumsil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_bolumsil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_bolumsil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_bolumsil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_bolumsil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_bolumsil.Location = new System.Drawing.Point(49, 134);
+            this.btn_bolumsil.Name = "btn_bolumsil";
+            this.btn_bolumsil.Size = new System.Drawing.Size(207, 23);
+            this.btn_bolumsil.TabIndex = 31;
+            this.btn_bolumsil.Text = "Sil";
+            this.btn_bolumsil.UseVisualStyleBackColor = true;
+            this.btn_bolumsil.Click += new System.EventHandler(this.btn_bolumsil_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(46, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Bölüm Adı...:";
+            // 
             // label2_bolum
             // 
             this.label2_bolum.AutoSize = true;
@@ -190,6 +238,19 @@
             this.tabPage3.Text = "Bölüm Güncelle";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.text_guncellebolum);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.btn_guncellebolum);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox3.Location = new System.Drawing.Point(105, 85);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(303, 205);
+            this.groupBox3.TabIndex = 39;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Bölüm Ekle";
+            // 
             // text_guncellebolum
             // 
             this.text_guncellebolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -198,6 +259,17 @@
             this.text_guncellebolum.Size = new System.Drawing.Size(110, 20);
             this.text_guncellebolum.TabIndex = 37;
             this.text_guncellebolum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_guncellebolum_KeyDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(46, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Bölüm Adı...:";
             // 
             // btn_guncellebolum
             // 
@@ -279,83 +351,11 @@
             this.btn_bolumlistele.UseVisualStyleBackColor = true;
             this.btn_bolumlistele.Click += new System.EventHandler(this.btn_bolumlistele_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(46, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Bölüm Adı...:";
-            // 
-            // btn_bolumsil
-            // 
-            this.btn_bolumsil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btn_bolumsil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btn_bolumsil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bolumsil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_bolumsil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_bolumsil.Location = new System.Drawing.Point(49, 134);
-            this.btn_bolumsil.Name = "btn_bolumsil";
-            this.btn_bolumsil.Size = new System.Drawing.Size(207, 23);
-            this.btn_bolumsil.TabIndex = 31;
-            this.btn_bolumsil.Text = "Sil";
-            this.btn_bolumsil.UseVisualStyleBackColor = true;
-            this.btn_bolumsil.Click += new System.EventHandler(this.btn_bolumsil_Click);
-            // 
-            // text_silbolum
-            // 
-            this.text_silbolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.text_silbolum.Location = new System.Drawing.Point(146, 59);
-            this.text_silbolum.Name = "text_silbolum";
-            this.text_silbolum.Size = new System.Drawing.Size(110, 20);
-            this.text_silbolum.TabIndex = 30;
-            this.text_silbolum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_silbolum_KeyDown);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.text_silbolum);
-            this.groupBox2.Controls.Add(this.btn_bolumsil);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(106, 82);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(303, 205);
-            this.groupBox2.TabIndex = 32;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Bölüm Ekle";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.text_guncellebolum);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.btn_guncellebolum);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(105, 85);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(303, 205);
-            this.groupBox3.TabIndex = 39;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Bölüm Ekle";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(46, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Bölüm Adı...:";
-            // 
             // BolumYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 453);
+            this.ClientSize = new System.Drawing.Size(525, 427);
             this.Controls.Add(this.tabControl1);
             this.Name = "BolumYonetimi";
             this.Text = "BolumYonetimi";
@@ -367,15 +367,15 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_bolumlistele)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }

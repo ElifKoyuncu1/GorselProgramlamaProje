@@ -51,10 +51,19 @@ namespace LoginModulForm
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 cmb_blmek.Items.Add(dt.Rows[i][0].ToString());
+                cmb_bolumguncelle.Items.Add(dt.Rows[i][0].ToString());
 
             }
 
             cmb_blmek.SelectedIndex = -1;
+            cmb_bolumguncelle.SelectedIndex = -1;
+
+
+            ToolTip mesaj = new ToolTip();
+            mesaj.ToolTipTitle = "Arama";
+            mesaj.ToolTipIcon = ToolTipIcon.Info;
+            mesaj.ShowAlways = true;
+            mesaj.SetToolTip(text_seviyebolumsil, "Arama için F4 tuşuna basınız");
 
         }
 
@@ -78,33 +87,92 @@ namespace LoginModulForm
         private void btn_seviyesil_Click(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
-            DialogResult mesaj = MessageBox.Show(" Bu kaydı silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+            DialogResult mesaj = MessageBox.Show(
+                "Bu kaydı silmek istediğinize emin misiniz?",
+                "Uyarı",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
             if (mesaj == DialogResult.Yes)
             {
-                string s_no = text_seviyemevcudsil.Text.Trim();
-                string query = "DELETE FROM SinifSeviyesi WHERE SeviyeNo=@sno";
-                SqlParameter[] parameters = new SqlParameter[]
+                string bolumAd = text_seviyebolumsil.Text.Trim();
+                int seviyeNo = Convert.ToInt32(text_seviyenosil.Text);
+                int sinifMevcudu = Convert.ToInt32(text_seviyemevcudsil.Text);
+
+                // Önce ilgili SinifSeviyeID bulunuyor
+                string idQuery = @"
+                SELECT ss.SinifSeviyeID
+                FROM SinifSeviyesi ss
+                INNER JOIN Bolum b
+                 ON ss.BolumID = b.BolumID
+                 WHERE b.BolumAd = @bad
+                 AND ss.SeviyeNo = @sno
+                 AND ss.SinifMevcudu = @sm";
+
+                SqlParameter[] idParameters = new SqlParameter[]
                 {
-                    new SqlParameter("@sno", s_no)
+                     new SqlParameter("@bad", bolumAd),
+                     new SqlParameter("@sno", seviyeNo),
+                     new SqlParameter("@sm", sinifMevcudu)
                 };
 
-                int s_kyt_sy = db.ExecuteNonQuery(query, parameters);
-                if (s_kyt_sy > 0)
+                DataTable dt = db.ExecuteQuery(idQuery, idParameters);
+
+                if (dt.Rows.Count == 0)
                 {
-                    MessageBox.Show("Seviye Silindi");
+                    MessageBox.Show("Kayıt bulunamadı");
+                    return;
+                }
+
+                int sinifSeviyeID =
+                    Convert.ToInt32(dt.Rows[0]["SinifSeviyeID"]);
+
+                // Bu seviyeye bağlı ders var mı kontrol ediliyor
+                string kontrolQuery =
+                    "SELECT * FROM Ders WHERE SinifSeviyeID=@id";
+
+                SqlParameter[] kontrolParameters = new SqlParameter[]
+                {
+            new SqlParameter("@id", sinifSeviyeID)
+                };
+
+                DataTable kontrolDt =
+                    db.ExecuteQuery(kontrolQuery, kontrolParameters);
+
+                if (kontrolDt.Rows.Count > 0)
+                {
+                    MessageBox.Show(
+                        "Bu seviyeye ait ders bulunduğu için silinemez");
+                    return;
+                }
+
+                // Silme işlemi
+                string deleteQuery =
+                    "DELETE FROM SinifSeviyesi WHERE SinifSeviyeID=@id";
+
+                SqlParameter[] deleteParameters = new SqlParameter[]
+                {
+                    new SqlParameter("@id", sinifSeviyeID)
+                };
+
+                int sonuc =
+                    db.ExecuteNonQuery(deleteQuery, deleteParameters);
+
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Seviye silindi");
                 }
                 else
                 {
-                    MessageBox.Show("Seviye Silinemedi");
+                    MessageBox.Show("Silme işlemi başarısız");
                 }
-
-
             }
             else
             {
-                MessageBox.Show("Silme İşlemi iptal edildi");
+                MessageBox.Show("Silme işlemi iptal edildi");
             }
-                
+
         }
 
         private void label2_bolum_Click(object sender, EventArgs e)
@@ -126,6 +194,79 @@ namespace LoginModulForm
             this.Hide();
             YoneticiModul ymdl = new YoneticiModul();
             ymdl.Show();
+        }
+
+        private void btn_seviyeguncelle_Click(object sender, EventArgs e)
+        {
+            DialogResult mesaj = MessageBox.Show(
+                "Bu kaydı güncellemek istediğinize emin misiniz?",
+                "Uyarı",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (mesaj == DialogResult.Yes)
+            {
+                DataBaseClass db = new DataBaseClass(connectionString);
+
+                string bolumAd = cmb_bolumguncelle.Text.Trim();
+                int seviye = Convert.ToInt32(cmb_seviyeguncelle.Text);
+                int mevcut = (int)nmup_mcdguncelle.Value;
+
+                string query = @"
+                UPDATE SinifSeviyesi
+                SET SeviyeNo = @s,
+                    SinifMevcudu = @m
+                FROM SinifSeviyesi ss
+                INNER JOIN Bolum b ON ss.BolumID = b.BolumID
+                WHERE b.BolumAd = @b";
+
+                SqlParameter[] parameters =
+                {
+                   new SqlParameter("@s", seviye),
+                   new SqlParameter("@m", mevcut),
+                   new SqlParameter("@b", bolumAd)
+                };
+
+                int sonuc = db.ExecuteNonQuery(query, parameters);
+
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Güncellendi");
+                }
+
+                else
+                {
+                    MessageBox.Show("Kayıt bulunamadı");
+                }
+                   
+
+            }
+            else
+            {
+                MessageBox.Show("Güncelleme işlemi iptal edildi");
+            }
+        }
+
+        private void text_seviyebolumsil_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                SeviyeArama sfrm = new SeviyeArama();
+                sfrm.islemTipi = "sil";
+                sfrm.Show();
+                this.Hide();
+            }
+        }
+
+        private void cmb_bolumguncelle_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                SeviyeArama sfrm = new SeviyeArama();
+                sfrm.islemTipi = "guncelle";
+                sfrm.Show();
+                this.Hide();
+            }
         }
     }
 }
