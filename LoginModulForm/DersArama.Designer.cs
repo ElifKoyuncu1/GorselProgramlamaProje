@@ -49,11 +49,12 @@
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label25.Location = new System.Drawing.Point(12, 9);
+            this.label25.Location = new System.Drawing.Point(15, 9);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(34, 26);
             this.label25.TabIndex = 46;
             this.label25.Text = "←";
+            this.label25.Click += new System.EventHandler(this.label25_Click_1);
             // 
             // label11
             // 
@@ -121,6 +122,11 @@
             // 
             this.cmb_araseviye.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmb_araseviye.FormattingEnabled = true;
+            this.cmb_araseviye.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
             this.cmb_araseviye.Location = new System.Drawing.Point(195, 189);
             this.cmb_araseviye.Name = "cmb_araseviye";
             this.cmb_araseviye.Size = new System.Drawing.Size(145, 21);
@@ -200,11 +206,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btn_ara;
         private System.Windows.Forms.ComboBox cmb_araseviye;
         private System.Windows.Forms.ComboBox cmb_aratip;
         private System.Windows.Forms.ComboBox cmb_arabolum;
         private System.Windows.Forms.TextBox text_araad;
         private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Button btn_ara;
     }
 }

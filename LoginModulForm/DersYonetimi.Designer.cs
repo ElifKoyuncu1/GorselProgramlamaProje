@@ -48,6 +48,12 @@
             this.cmb_eklebolum = new System.Windows.Forms.ComboBox();
             this.text_eklead = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.text_silmevcud = new System.Windows.Forms.TextBox();
+            this.text_silsure = new System.Windows.Forms.TextBox();
+            this.text_silkredi = new System.Windows.Forms.TextBox();
+            this.text_silseviye = new System.Windows.Forms.TextBox();
+            this.text_siltip = new System.Windows.Forms.TextBox();
+            this.text_silbolum = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -93,12 +99,6 @@
             this.text_tipekle = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.btn_tipekle = new System.Windows.Forms.Button();
-            this.text_silbolum = new System.Windows.Forms.TextBox();
-            this.text_siltip = new System.Windows.Forms.TextBox();
-            this.text_silseviye = new System.Windows.Forms.TextBox();
-            this.text_silkredi = new System.Windows.Forms.TextBox();
-            this.text_silsure = new System.Windows.Forms.TextBox();
-            this.text_silmevcud = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_eklesayi)).BeginInit();
@@ -352,6 +352,54 @@
             this.tabPage2.Text = "Ders Sil";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // text_silmevcud
+            // 
+            this.text_silmevcud.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silmevcud.Location = new System.Drawing.Point(374, 296);
+            this.text_silmevcud.Name = "text_silmevcud";
+            this.text_silmevcud.Size = new System.Drawing.Size(81, 20);
+            this.text_silmevcud.TabIndex = 36;
+            // 
+            // text_silsure
+            // 
+            this.text_silsure.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silsure.Location = new System.Drawing.Point(328, 256);
+            this.text_silsure.Name = "text_silsure";
+            this.text_silsure.Size = new System.Drawing.Size(87, 20);
+            this.text_silsure.TabIndex = 35;
+            // 
+            // text_silkredi
+            // 
+            this.text_silkredi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silkredi.Location = new System.Drawing.Point(328, 219);
+            this.text_silkredi.Name = "text_silkredi";
+            this.text_silkredi.Size = new System.Drawing.Size(87, 20);
+            this.text_silkredi.TabIndex = 34;
+            // 
+            // text_silseviye
+            // 
+            this.text_silseviye.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silseviye.Location = new System.Drawing.Point(328, 178);
+            this.text_silseviye.Name = "text_silseviye";
+            this.text_silseviye.Size = new System.Drawing.Size(87, 20);
+            this.text_silseviye.TabIndex = 33;
+            // 
+            // text_siltip
+            // 
+            this.text_siltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_siltip.Location = new System.Drawing.Point(328, 135);
+            this.text_siltip.Name = "text_siltip";
+            this.text_siltip.Size = new System.Drawing.Size(170, 20);
+            this.text_siltip.TabIndex = 32;
+            // 
+            // text_silbolum
+            // 
+            this.text_silbolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.text_silbolum.Location = new System.Drawing.Point(328, 97);
+            this.text_silbolum.Name = "text_silbolum";
+            this.text_silbolum.Size = new System.Drawing.Size(170, 20);
+            this.text_silbolum.TabIndex = 31;
+            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -461,6 +509,7 @@
             this.text_silad.Name = "text_silad";
             this.text_silad.Size = new System.Drawing.Size(170, 20);
             this.text_silad.TabIndex = 15;
+            this.text_silad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_silad_KeyDown);
             // 
             // tabPage3
             // 
@@ -590,6 +639,7 @@
             this.btn_guncelle.TabIndex = 40;
             this.btn_guncelle.Text = "Güncelle";
             this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // nmup_guncelleogrsayisi
             // 
@@ -619,6 +669,11 @@
             // 
             this.cmb_guncelleseviye.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmb_guncelleseviye.FormattingEnabled = true;
+            this.cmb_guncelleseviye.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
             this.cmb_guncelleseviye.Location = new System.Drawing.Point(326, 176);
             this.cmb_guncelleseviye.Name = "cmb_guncelleseviye";
             this.cmb_guncelleseviye.Size = new System.Drawing.Size(145, 21);
@@ -649,6 +704,7 @@
             this.text_guncellead.Name = "text_guncellead";
             this.text_guncellead.Size = new System.Drawing.Size(145, 20);
             this.text_guncellead.TabIndex = 33;
+            this.text_guncellead.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_guncellead_KeyDown);
             // 
             // tabPage4
             // 
@@ -865,54 +921,6 @@
             this.btn_tipekle.UseVisualStyleBackColor = true;
             this.btn_tipekle.Click += new System.EventHandler(this.btn_tipekle_Click);
             // 
-            // text_silbolum
-            // 
-            this.text_silbolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.text_silbolum.Location = new System.Drawing.Point(328, 97);
-            this.text_silbolum.Name = "text_silbolum";
-            this.text_silbolum.Size = new System.Drawing.Size(170, 20);
-            this.text_silbolum.TabIndex = 31;
-            // 
-            // text_siltip
-            // 
-            this.text_siltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.text_siltip.Location = new System.Drawing.Point(328, 135);
-            this.text_siltip.Name = "text_siltip";
-            this.text_siltip.Size = new System.Drawing.Size(170, 20);
-            this.text_siltip.TabIndex = 32;
-            // 
-            // text_silseviye
-            // 
-            this.text_silseviye.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.text_silseviye.Location = new System.Drawing.Point(328, 178);
-            this.text_silseviye.Name = "text_silseviye";
-            this.text_silseviye.Size = new System.Drawing.Size(87, 20);
-            this.text_silseviye.TabIndex = 33;
-            // 
-            // text_silkredi
-            // 
-            this.text_silkredi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.text_silkredi.Location = new System.Drawing.Point(328, 219);
-            this.text_silkredi.Name = "text_silkredi";
-            this.text_silkredi.Size = new System.Drawing.Size(87, 20);
-            this.text_silkredi.TabIndex = 34;
-            // 
-            // text_silsure
-            // 
-            this.text_silsure.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.text_silsure.Location = new System.Drawing.Point(328, 256);
-            this.text_silsure.Name = "text_silsure";
-            this.text_silsure.Size = new System.Drawing.Size(87, 20);
-            this.text_silsure.TabIndex = 35;
-            // 
-            // text_silmevcud
-            // 
-            this.text_silmevcud.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.text_silmevcud.Location = new System.Drawing.Point(374, 296);
-            this.text_silmevcud.Name = "text_silmevcud";
-            this.text_silmevcud.Size = new System.Drawing.Size(81, 20);
-            this.text_silmevcud.TabIndex = 36;
-            // 
             // DersYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -988,13 +996,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btn_guncelle;
-        private System.Windows.Forms.NumericUpDown nmup_guncelleogrsayisi;
-        private System.Windows.Forms.NumericUpDown nmup_guncellesure;
-        private System.Windows.Forms.NumericUpDown nmup_guncellekredi;
-        private System.Windows.Forms.ComboBox cmb_guncelleseviye;
-        private System.Windows.Forms.ComboBox cmb_guncelletip;
-        private System.Windows.Forms.ComboBox cmb_guncellebolum;
-        private System.Windows.Forms.TextBox text_guncellead;
         private System.Windows.Forms.Button btn_listele;
         private System.Windows.Forms.DataGridView dataGridView_derslistele;
         private System.Windows.Forms.TabPage tabPage5;
@@ -1022,5 +1023,12 @@
         public System.Windows.Forms.TextBox text_siltip;
         public System.Windows.Forms.TextBox text_silbolum;
         public System.Windows.Forms.TextBox text_silad;
+        public System.Windows.Forms.NumericUpDown nmup_guncelleogrsayisi;
+        public System.Windows.Forms.NumericUpDown nmup_guncellesure;
+        public System.Windows.Forms.NumericUpDown nmup_guncellekredi;
+        public System.Windows.Forms.ComboBox cmb_guncelleseviye;
+        public System.Windows.Forms.ComboBox cmb_guncelletip;
+        public System.Windows.Forms.ComboBox cmb_guncellebolum;
+        public System.Windows.Forms.TextBox text_guncellead;
     }
 }

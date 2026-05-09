@@ -21,6 +21,7 @@ namespace LoginModulForm
         int tip_id;
         int seviye_id;
         public int secilenTipId;
+        public int secilenDersId;
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
         private void btn_ekle_Click(object sender, EventArgs e)
         {
@@ -102,6 +103,7 @@ namespace LoginModulForm
             for (int i = 0; i < dtBolum.Rows.Count; i++)
             {
                 cmb_eklebolum.Items.Add(dtBolum.Rows[i][0].ToString());
+                cmb_guncellebolum.Items.Add(dtBolum.Rows[i][0].ToString());
             }
 
             //DERS TİPİ YÜKLE
@@ -110,6 +112,8 @@ namespace LoginModulForm
             for (int i = 0; i < dtTip.Rows.Count; i++)
             {
                 cmb_ekletip.Items.Add(dtTip.Rows[i][0].ToString());
+                cmb_guncelletip.Items.Add(dtTip.Rows[i][0].ToString());
+
             }
             DersTipleriniYukle();
 
@@ -119,6 +123,9 @@ namespace LoginModulForm
             mesaj.ShowAlways = true;
             mesaj.SetToolTip(text_tipguncelle, "Arama için F4 tuşuna basınız");
             mesaj.SetToolTip(text_tipsil, "Arama için F4 tuşuna basınız");
+            mesaj.SetToolTip(text_silad, "Arama için F4 tuşuna basınız");
+            mesaj.SetToolTip(text_guncellead, "Arama için F4 tuşuna basınız");
+
         }
 
         private void cmb_eklebolum_SelectedIndexChanged(object sender, EventArgs e)
@@ -341,7 +348,144 @@ namespace LoginModulForm
 
         private void btn_sil_Click(object sender, EventArgs e)
         {
+            DataBaseClass db = new DataBaseClass(connectionString);
 
+            DialogResult mesaj = MessageBox.Show(
+                "Bu dersi silmek istediğinize emin misiniz?",
+                "Uyarı",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (mesaj == DialogResult.Yes)
+            {
+                string d_ad = text_silad.Text.Trim();
+                string b_ad = text_silbolum.Text.Trim();
+                string t_ad = text_siltip.Text.Trim();
+                string s_no = text_silseviye.Text.Trim();
+
+                string query = @"
+                DELETE d
+                FROM Ders d
+                INNER JOIN Bolum b 
+                  ON d.BolumID = b.BolumID
+                INNER JOIN DersTipi dt
+                  ON d.DersTipiID = dt.DersTipiID
+                INNER JOIN SinifSeviyesi ss
+                  ON d.SinifSeviyeID = ss.SinifSeviyeID
+                WHERE d.DersAdi = @dad
+                OR b.BolumAd = @bad
+                OR dt.TipAd = @tad
+                OR ss.SeviyeNo = @sno";
+
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@dad", d_ad),
+                    new SqlParameter("@bad", b_ad),
+                    new SqlParameter("@tad", t_ad),
+                    new SqlParameter("@sno", s_no)
+                };
+
+                int sonuc = db.ExecuteNonQuery(query, parameters);
+
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Ders silindi");
+
+                    text_silad.Clear();
+                    text_silbolum.Clear();
+                    text_siltip.Clear();
+                    text_silseviye.Clear();
+                    text_silkredi.Clear();
+                    text_silsure.Clear();
+                    text_silmevcud.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Silme işlemi başarısız");
+                }
+            }
+        }
+
+        private void btn_guncelle_Click(object sender, EventArgs e)
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            DialogResult mesaj = MessageBox.Show(
+                "Bu dersi güncellemek istediğinize emin misiniz?",
+                "Uyarı",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (mesaj == DialogResult.Yes)
+            {
+                string d_ad = text_guncellead.Text.Trim();
+                string b_ad = cmb_guncellebolum.Text.Trim();
+                string t_ad = cmb_guncelletip.Text.Trim();
+                string s_no = cmb_guncelleseviye.Text.Trim();
+
+                int kredi = (int)nmup_guncellekredi.Value;
+                int sure = (int)nmup_guncellesure.Value;
+                int ogrsayi = (int)nmup_guncelleogrsayisi.Value;
+
+                string query = @"
+                UPDATE Ders
+                SET 
+                   DersAdi = @ad,
+                   BolumID = @bolumId,
+                   DersTipiID = @tipId,
+                   SinifSeviyeID = @seviyeId,
+                   Kredi = @kredi,
+                   SinavSuresi = @sure,
+                   DersiAlanOgrenciSayisi = @ogr
+                WHERE DersID = @id";
+
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@ad", text_guncellead.Text.Trim()),
+                    new SqlParameter("@bolumId", bolum_id),
+                    new SqlParameter("@tipId", tip_id),
+                    new SqlParameter("@seviyeId", seviye_id),
+
+                    new SqlParameter("@kredi", (int)nmup_guncellekredi.Value),
+                    new SqlParameter("@sure", (int)nmup_guncellesure.Value),
+                    new SqlParameter("@ogr", (int)nmup_guncelleogrsayisi.Value),
+                    new SqlParameter("@id", secilenDersId)
+                };
+
+                int sonuc = db.ExecuteNonQuery(query, parameters);
+
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Ders güncellendi");
+                }
+                else
+                {
+                    MessageBox.Show("Güncelleme başarısız");
+                }
+            }
+        }
+
+        private void text_guncellead_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                DersArama darm = new DersArama();
+                darm.islemTipi = "guncelle";
+                darm.Show();
+                this.Hide();
+            }
+
+        }
+
+        private void text_silad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                DersArama darm = new DersArama();
+                darm.islemTipi = "sil";
+                darm.Show();
+                this.Hide();
+            }
         }
     }
 }
