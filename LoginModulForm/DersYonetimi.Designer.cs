@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DersYonetimi));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label_geri = new System.Windows.Forms.Label();
@@ -737,7 +739,7 @@
             // 
             this.btn_listele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_listele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_listele.Location = new System.Drawing.Point(198, 411);
+            this.btn_listele.Location = new System.Drawing.Point(193, 430);
             this.btn_listele.Name = "btn_listele";
             this.btn_listele.Size = new System.Drawing.Size(293, 23);
             this.btn_listele.TabIndex = 1;
@@ -747,13 +749,33 @@
             // 
             // dataGridView_derslistele
             // 
-            this.dataGridView_derslistele.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView_derslistele.AllowDrop = true;
+            this.dataGridView_derslistele.AllowUserToAddRows = false;
+            this.dataGridView_derslistele.AllowUserToDeleteRows = false;
+            this.dataGridView_derslistele.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridView_derslistele.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_derslistele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_derslistele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_derslistele.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_derslistele.EnableHeadersVisualStyles = false;
             this.dataGridView_derslistele.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView_derslistele.Location = new System.Drawing.Point(41, 21);
+            this.dataGridView_derslistele.Location = new System.Drawing.Point(8, 32);
             this.dataGridView_derslistele.Name = "dataGridView_derslistele";
-            this.dataGridView_derslistele.Size = new System.Drawing.Size(608, 356);
+            this.dataGridView_derslistele.Size = new System.Drawing.Size(678, 383);
             this.dataGridView_derslistele.TabIndex = 0;
             // 
             // tabPage5

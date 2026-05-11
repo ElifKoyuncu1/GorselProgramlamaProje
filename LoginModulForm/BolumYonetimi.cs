@@ -25,6 +25,20 @@ namespace LoginModulForm
         {
             DataBaseClass db = new DataBaseClass(connectionString);
             string b_ad_ek = text_eklebolum.Text.Trim();
+            string kontrolQuery = "SELECT COUNT(*) FROM Bolum WHERE BolumAd=@ad";
+
+            SqlParameter[] kontrolParameters = new SqlParameter[]
+            {
+                new SqlParameter("@ad", b_ad_ek)
+            };
+
+            DataTable dt = db.ExecuteQuery(kontrolQuery, kontrolParameters);
+
+            if (dt.Rows.Count > 0 && Convert.ToInt32(dt.Rows[0][0]) > 0)
+            {
+                MessageBox.Show("Bu bölüm zaten mevcut");
+                return;
+            }
             string query = "INSERT INTO Bolum(BolumAd) VALUES (@badi)";
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -92,13 +106,17 @@ namespace LoginModulForm
                 int g_kyt_say = db.ExecuteNonQuery(query, parameters);
                 if (g_kyt_say > 0)
                 {
-                    MessageBox.Show("Kayıt Güncellendi");
+                    MessageBox.Show("Bölüm Güncellendi");
                     text_guncellebolum.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("Kayıt Güncellenmedi");
+                    MessageBox.Show("Bölüm Güncellenmedi");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Güncelleme işlemi iptal edildi");
             }
             
         }
@@ -109,6 +127,8 @@ namespace LoginModulForm
             string query = "SELECT * FROM Bolum";
             DataTable dt = db.ExecuteQuery(query);
             dataGrid_bolumlistele.DataSource = dt;
+            dataGrid_bolumlistele.Columns["BolumID"].Visible = false;
+            dataGrid_bolumlistele.Columns["BolumAd"].HeaderText = "Bölüm Adı";
         }
 
         private void label_bolumgeri_Click(object sender, EventArgs e)

@@ -219,7 +219,6 @@ namespace LoginModulForm
             DataBaseClass db = new DataBaseClass(connectionString);
             string query = @"
             SELECT 
-                d.DersID,
                 d.DersAdi,
                 b.BolumAd,
                 t.TipAd,
@@ -233,6 +232,12 @@ namespace LoginModulForm
             INNER JOIN SinifSeviyesi s ON d.SinifSeviyeID = s.SinifSeviyeID";
             DataTable dt = db.ExecuteQuery(query);
             dataGridView_derslistele.DataSource = dt;
+            dataGridView_derslistele.Columns["DersAdi"].HeaderText = "Ders Adı";
+            dataGridView_derslistele.Columns["BolumAd"].HeaderText = "Bölüm Adı";
+            dataGridView_derslistele.Columns["TipAd"].HeaderText = "Ders Tipi";
+            dataGridView_derslistele.Columns["SeviyeNo"].HeaderText = "Sınıf Seviyesi";
+            dataGridView_derslistele.Columns["SinavSuresi"].HeaderText = "Dersin Sınav Süresi";
+            dataGridView_derslistele.Columns["DersiAlanOgrenciSayisi"].HeaderText = "Dersi Alan Öğrenci Sayısı";
         }
 
         private void label_geri_Click(object sender, EventArgs e)

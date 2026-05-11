@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BolumArama));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmb_bolum = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_arabolum = new System.Windows.Forms.Button();
-            this.cmb_bolum = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -44,19 +44,27 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.btn_arabolum);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(140, 73);
+            this.groupBox3.Location = new System.Drawing.Point(109, 69);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(303, 205);
+            this.groupBox3.Size = new System.Drawing.Size(357, 255);
             this.groupBox3.TabIndex = 40;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Bölüm Ekle";
+            this.groupBox3.Text = "Bölüm Ara";
+            // 
+            // cmb_bolum
+            // 
+            this.cmb_bolum.FormattingEnabled = true;
+            this.cmb_bolum.Location = new System.Drawing.Point(131, 86);
+            this.cmb_bolum.Name = "cmb_bolum";
+            this.cmb_bolum.Size = new System.Drawing.Size(191, 21);
+            this.cmb_bolum.TabIndex = 39;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(46, 62);
+            this.label2.Location = new System.Drawing.Point(32, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 29;
@@ -69,7 +77,7 @@
             this.btn_arabolum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_arabolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_arabolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_arabolum.Location = new System.Drawing.Point(49, 134);
+            this.btn_arabolum.Location = new System.Drawing.Point(70, 185);
             this.btn_arabolum.Name = "btn_arabolum";
             this.btn_arabolum.Size = new System.Drawing.Size(222, 23);
             this.btn_arabolum.TabIndex = 38;
@@ -77,21 +85,13 @@
             this.btn_arabolum.UseVisualStyleBackColor = true;
             this.btn_arabolum.Click += new System.EventHandler(this.btn_arabolum_Click);
             // 
-            // cmb_bolum
-            // 
-            this.cmb_bolum.FormattingEnabled = true;
-            this.cmb_bolum.Location = new System.Drawing.Point(135, 59);
-            this.cmb_bolum.Name = "cmb_bolum";
-            this.cmb_bolum.Size = new System.Drawing.Size(136, 21);
-            this.cmb_bolum.TabIndex = 39;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 41;
