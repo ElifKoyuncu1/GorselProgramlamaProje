@@ -101,6 +101,12 @@
     <Compile Include="DersYonetimi.Designer.cs">
       <DependentUpon>DersYonetimi.cs</DependentUpon>
     </Compile>
+    <Compile Include="HocaDersler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HocaDersler.Designer.cs">
+      <DependentUpon>HocaDersler.cs</DependentUpon>
+    </Compile>
     <Compile Include="HocaModul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DersYonetimi.resx">
       <DependentUpon>DersYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HocaDersler.resx">
+      <DependentUpon>HocaDersler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HocaModul.resx">
       <DependentUpon>HocaModul.cs</DependentUpon>

@@ -12,9 +12,17 @@ namespace LoginModulForm
 {
     public partial class HocaModul : Form
     {
+        int gelenBolumID;
         public HocaModul(int bolumID)
         {
             InitializeComponent();
+            gelenBolumID = bolumID;
+        }
+
+        private void btn_derslerim_Click(object sender, EventArgs e)
+        {
+            HocaDersler hd =new HocaDersler(gelenBolumID);
+            hd.Show();
         }
     }
 }

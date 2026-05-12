@@ -17,6 +17,7 @@ namespace LoginModulForm
         {
             InitializeComponent();
         }
+        int secilenSeviyeID = 0;
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
         private void btn_bolumekle_Click_1(object sender, EventArgs e)
         {
@@ -248,12 +249,15 @@ namespace LoginModulForm
                 SELECT COUNT(*) 
                 FROM SinifSeviyesi ss
                 INNER JOIN Bolum b ON ss.BolumID = b.BolumID
-                WHERE b.BolumAd = @b AND ss.SeviyeNo = @s";
+                WHERE b.BolumAd = @b 
+                AND ss.SeviyeNo = @s 
+                AND ss.SinifSeviyeID != @id";
 
                 SqlParameter[] kontrolParams =
                 {
                     new SqlParameter("@b", bolumAd),
-                    new SqlParameter("@s", yeniSeviye)
+                    new SqlParameter("@s", yeniSeviye),
+                    new SqlParameter("@id", secilenSeviyeID)
                 };
 
                 DataTable kontrolDt = db.ExecuteQuery(kontrolQuery, kontrolParams);
@@ -268,16 +272,14 @@ namespace LoginModulForm
                 string query = @"
                 UPDATE SinifSeviyesi
                 SET SeviyeNo = @s,
-                    SinifMevcudu = @m
-                FROM SinifSeviyesi ss
-                INNER JOIN Bolum b ON ss.BolumID = b.BolumID
-                WHERE b.BolumAd = @b";
+                SinifMevcudu = @m
+                WHERE SinifSeviyeID = @id";
 
                 SqlParameter[] parameters =
                 {
                     new SqlParameter("@s", yeniSeviye),
                     new SqlParameter("@m", yeniMevcut),
-                    new SqlParameter("@b", bolumAd)
+                    new SqlParameter("@id", secilenSeviyeID)
         };
 
                 int sonuc = db.ExecuteNonQuery(query, parameters);

@@ -17,6 +17,7 @@ namespace LoginModulForm
         {
             InitializeComponent();
         }
+        public int secilenSeviyeID = 0;
         public string islemTipi;
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
         private void btn_seviyeara_Click(object sender, EventArgs e)
@@ -53,8 +54,9 @@ namespace LoginModulForm
             if (dt.Rows.Count > 0)
             {
                 SinifYonetimi sf = new SinifYonetimi();
+                Convert.ToInt32(dt.Rows[0]["SinifSeviyeID"]);
 
-               if (islemTipi == "sil")
+                if (islemTipi == "sil")
                 {
                     sf.text_seviyebolumsil.Text = dt.Rows[0]["BolumAd"].ToString();
                     sf.text_seviyenosil.Text = dt.Rows[0]["SeviyeNo"].ToString();

@@ -78,6 +78,7 @@
             this.btn_derslerim.TabIndex = 7;
             this.btn_derslerim.Text = "Derslerim";
             this.btn_derslerim.UseVisualStyleBackColor = false;
+            this.btn_derslerim.Click += new System.EventHandler(this.btn_derslerim_Click);
             // 
             // HocaModul
             // 
