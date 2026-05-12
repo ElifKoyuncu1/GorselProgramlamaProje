@@ -253,6 +253,8 @@
             // 
             // btn_ekle
             // 
+            this.btn_ekle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_ekle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ekle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -493,6 +495,8 @@
             // 
             // btn_sil
             // 
+            this.btn_sil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_sil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_sil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -632,6 +636,8 @@
             // 
             // btn_guncelle
             // 
+            this.btn_guncelle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_guncelle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_guncelle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -680,6 +686,7 @@
             this.cmb_guncelleseviye.Name = "cmb_guncelleseviye";
             this.cmb_guncelleseviye.Size = new System.Drawing.Size(145, 21);
             this.cmb_guncelleseviye.TabIndex = 36;
+            this.cmb_guncelleseviye.SelectedIndexChanged += new System.EventHandler(this.cmb_guncelleseviye_SelectedIndexChanged);
             // 
             // cmb_guncelletip
             // 
@@ -689,6 +696,7 @@
             this.cmb_guncelletip.Name = "cmb_guncelletip";
             this.cmb_guncelletip.Size = new System.Drawing.Size(145, 21);
             this.cmb_guncelletip.TabIndex = 35;
+            this.cmb_guncelletip.SelectedIndexChanged += new System.EventHandler(this.cmb_guncelletip_SelectedIndexChanged);
             // 
             // cmb_guncellebolum
             // 
@@ -698,6 +706,7 @@
             this.cmb_guncellebolum.Name = "cmb_guncellebolum";
             this.cmb_guncellebolum.Size = new System.Drawing.Size(145, 21);
             this.cmb_guncellebolum.TabIndex = 34;
+            this.cmb_guncellebolum.SelectedIndexChanged += new System.EventHandler(this.cmb_guncellebolum_SelectedIndexChanged);
             // 
             // text_guncellead
             // 
@@ -737,6 +746,8 @@
             // 
             // btn_listele
             // 
+            this.btn_listele.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_listele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_listele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_listele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_listele.Location = new System.Drawing.Point(193, 430);
@@ -756,7 +767,7 @@
             this.dataGridView_derslistele.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Sienna;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -841,6 +852,8 @@
             // 
             // btn_tipsil
             // 
+            this.btn_tipsil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_tipsil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_tipsil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tipsil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_tipsil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -887,6 +900,8 @@
             // 
             // btn_tipguncelle
             // 
+            this.btn_tipguncelle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_tipguncelle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_tipguncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tipguncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_tipguncelle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -932,6 +947,8 @@
             // 
             // btn_tipekle
             // 
+            this.btn_tipekle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_tipekle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_tipekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tipekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_tipekle.ForeColor = System.Drawing.SystemColors.ControlLightLight;

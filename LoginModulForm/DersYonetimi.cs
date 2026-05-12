@@ -25,6 +25,7 @@ namespace LoginModulForm
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
         private void btn_ekle_Click(object sender, EventArgs e)
         {
+
             DataBaseClass db = new DataBaseClass(connectionString);
             string d_ad = text_eklead.Text.Trim();
             string b_ad = cmb_eklebolum.Text.Trim();
@@ -378,9 +379,9 @@ namespace LoginModulForm
                 INNER JOIN SinifSeviyesi ss
                   ON d.SinifSeviyeID = ss.SinifSeviyeID
                 WHERE d.DersAdi = @dad
-                OR b.BolumAd = @bad
-                OR dt.TipAd = @tad
-                OR ss.SeviyeNo = @sno";
+                AND b.BolumAd = @bad
+                AND dt.TipAd = @tad
+                AND ss.SeviyeNo = @sno";
 
                 SqlParameter[] parameters =
                 {
@@ -490,6 +491,99 @@ namespace LoginModulForm
                 darm.islemTipi = "sil";
                 darm.Show();
                 this.Hide();
+            }
+        }
+
+        private void cmb_guncellebolum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_guncellebolum.SelectedIndex == -1)
+                return;
+
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            string b_ad = cmb_guncellebolum.Text.Trim();
+
+            string query = "SELECT BolumID FROM Bolum WHERE BolumAd=@ad";
+
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@ad", b_ad)
+            };
+
+            DataTable dt = db.ExecuteQuery(query, parameters);
+
+            if (dt.Rows.Count > 0)
+            {
+                bolum_id = Convert.ToInt32(dt.Rows[0][0]);
+            }
+
+            cmb_guncelleseviye.Items.Clear();
+
+            string query2 = "SELECT SeviyeNo FROM SinifSeviyesi WHERE BolumID=@id";
+
+            SqlParameter[] p =
+            {
+                new SqlParameter("@id", bolum_id)
+            };
+
+            DataTable dt2 = db.ExecuteQuery(query2, p);
+
+            for (int i = 0; i < dt2.Rows.Count; i++)
+            {
+                cmb_guncelleseviye.Items.Add(dt2.Rows[i][0].ToString());
+            }
+        }
+
+        private void cmb_guncelletip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_guncelletip.SelectedIndex == -1)
+                return;
+
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            string t_ad = cmb_guncelletip.Text.Trim();
+
+            string query = "SELECT DersTipiID FROM DersTipi WHERE TipAd=@ad";
+
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@ad", t_ad)
+            };
+
+            DataTable dt = db.ExecuteQuery(query, parameters);
+
+            if (dt.Rows.Count > 0)
+            {
+                tip_id = Convert.ToInt32(dt.Rows[0][0]);
+            }
+        }
+
+        private void cmb_guncelleseviye_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_guncelleseviye.SelectedIndex == -1)
+                return;
+
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            string sno = cmb_guncelleseviye.Text.Trim();
+
+            string query = @"
+
+            SELECT SinifSeviyeID 
+            FROM SinifSeviyesi 
+            WHERE SeviyeNo=@s AND BolumID=@bid";
+
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@s", sno),
+                new SqlParameter("@bid", bolum_id)
+            };
+
+            DataTable dt = db.ExecuteQuery(query, parameters);
+
+            if (dt.Rows.Count > 0)
+            {
+                seviye_id = Convert.ToInt32(dt.Rows[0][0]);
             }
         }
     }

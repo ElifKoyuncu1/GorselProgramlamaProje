@@ -21,25 +21,58 @@ namespace LoginModulForm
         private void btn_bolumekle_Click_1(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
-            string s_blm_ek = cmb_blmek.Text.Trim();
-            int s_seviye_ek = Convert.ToInt32(cmb_seviyeek.Text);
-            int s_mevcut_ek = (int)nmup_mevcudek.Value;
-            string query = "INSERT INTO SinifSeviyesi (SeviyeNo, SinifMevcudu, BolumID) SELECT @sno, @smvcd, b.BolumID FROM Bolum b  WHERE b.BolumAd = @bolumAd";
 
-            SqlParameter[] parameters = new SqlParameter[]
+            string bolumAd = cmb_blmek.Text.Trim();
+            int seviyeNo = Convert.ToInt32(cmb_seviyeek.Text);
+            int mevcud = (int)nmup_mevcudek.Value;
+
+            try
             {
-                new SqlParameter("@sno", s_seviye_ek),
-                new SqlParameter("@smvcd", s_mevcut_ek),
-                new SqlParameter("@bolumAd", s_blm_ek)
-            };
-            int sonuc = db.ExecuteNonQuery(query, parameters);
-            if (sonuc > 0)
-            {
-                MessageBox.Show("Sınıf Seviyesi eklendi");
+                // 1) BolumID + seviye var mı kontrol
+                string kontrolQuery = @"
+                SELECT COUNT(*) 
+                FROM SinifSeviyesi ss
+                INNER JOIN Bolum b ON ss.BolumID = b.BolumID
+                WHERE b.BolumAd = @b AND ss.SeviyeNo = @s";
+
+                SqlParameter[] kontrolParams =
+                {
+                    new SqlParameter("@b", bolumAd),
+                    new SqlParameter("@s", seviyeNo)
+                };
+
+                DataTable kontrolDt = db.ExecuteQuery(kontrolQuery, kontrolParams);
+
+                if (Convert.ToInt32(kontrolDt.Rows[0][0]) > 0)
+                {
+                    MessageBox.Show("Bu bölüm için bu seviye zaten mevcut!");
+                    return;
+                }
+
+                // 2) Insert
+                string insertQuery = @"
+                INSERT INTO SinifSeviyesi (SeviyeNo, SinifMevcudu, BolumID)
+                SELECT @sno, @smvcd, b.BolumID 
+                FROM Bolum b 
+                WHERE b.BolumAd = @bolumAd";
+
+                SqlParameter[] insertParams =
+                {
+                    new SqlParameter("@sno", seviyeNo),
+                    new SqlParameter("@smvcd", mevcud),
+                    new SqlParameter("@bolumAd", bolumAd)
+                };
+
+                int sonuc = db.ExecuteNonQuery(insertQuery, insertParams);
+
+                if (sonuc > 0)
+                    MessageBox.Show("Sınıf seviyesi eklendi");
+                else
+                    MessageBox.Show("Bölüm bulunamadı!");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Hata");
+                MessageBox.Show("Hata: " + ex.Message);
             }
         }
 
@@ -134,7 +167,7 @@ namespace LoginModulForm
 
                 SqlParameter[] kontrolParameters = new SqlParameter[]
                 {
-            new SqlParameter("@id", sinifSeviyeID)
+                     new SqlParameter("@id", sinifSeviyeID)
                 };
 
                 DataTable kontrolDt =
@@ -142,8 +175,7 @@ namespace LoginModulForm
 
                 if (kontrolDt.Rows.Count > 0)
                 {
-                    MessageBox.Show(
-                        "Bu seviyeye ait ders bulunduğu için silinemez");
+                    MessageBox.Show("Bu seviyeye ait ders bulunduğu için silinemez");
                     return;
                 }
 
@@ -198,20 +230,41 @@ namespace LoginModulForm
 
         private void btn_seviyeguncelle_Click(object sender, EventArgs e)
         {
-            DialogResult mesaj = MessageBox.Show(
-                "Bu kaydı güncellemek istediğinize emin misiniz?",
-                "Uyarı",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
+            DialogResult mesaj = MessageBox.Show("Bu kaydı güncellemek istediğinize emin misiniz?","Uyarı",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
 
-            if (mesaj == DialogResult.Yes)
+            if (mesaj != DialogResult.Yes)
+                return;
+
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            string bolumAd = cmb_bolumguncelle.Text.Trim();
+            int yeniSeviye = Convert.ToInt32(cmb_seviyeguncelle.Text);
+            int yeniMevcut = (int)nmup_mcdguncelle.Value;
+
+            try
             {
-                DataBaseClass db = new DataBaseClass(connectionString);
+                // 1) ÇAKIŞMA KONTROLÜ
+                string kontrolQuery = @"
+                SELECT COUNT(*) 
+                FROM SinifSeviyesi ss
+                INNER JOIN Bolum b ON ss.BolumID = b.BolumID
+                WHERE b.BolumAd = @b AND ss.SeviyeNo = @s";
 
-                string bolumAd = cmb_bolumguncelle.Text.Trim();
-                int seviye = Convert.ToInt32(cmb_seviyeguncelle.Text);
-                int mevcut = (int)nmup_mcdguncelle.Value;
+                SqlParameter[] kontrolParams =
+                {
+                    new SqlParameter("@b", bolumAd),
+                    new SqlParameter("@s", yeniSeviye)
+                };
 
+                DataTable kontrolDt = db.ExecuteQuery(kontrolQuery, kontrolParams);
+
+                if (Convert.ToInt32(kontrolDt.Rows[0][0]) > 0)
+                {
+                    MessageBox.Show("Bu bölümde bu seviye zaten var!");
+                    return;
+                }
+
+                // 2) UPDATE
                 string query = @"
                 UPDATE SinifSeviyesi
                 SET SeviyeNo = @s,
@@ -222,28 +275,21 @@ namespace LoginModulForm
 
                 SqlParameter[] parameters =
                 {
-                   new SqlParameter("@s", seviye),
-                   new SqlParameter("@m", mevcut),
-                   new SqlParameter("@b", bolumAd)
-                };
+                    new SqlParameter("@s", yeniSeviye),
+                    new SqlParameter("@m", yeniMevcut),
+                    new SqlParameter("@b", bolumAd)
+        };
 
                 int sonuc = db.ExecuteNonQuery(query, parameters);
 
                 if (sonuc > 0)
-                {
                     MessageBox.Show("Güncellendi");
-                }
-
                 else
-                {
                     MessageBox.Show("Kayıt bulunamadı");
-                }
-                   
-
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Güncelleme işlemi iptal edildi");
+                MessageBox.Show("Hata: " + ex.Message);
             }
         }
 

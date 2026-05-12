@@ -107,6 +107,8 @@
             // btn_ara
             // 
             this.btn_ara.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ara.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_ara.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btn_ara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ara.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ara.ForeColor = System.Drawing.SystemColors.ControlLightLight;
