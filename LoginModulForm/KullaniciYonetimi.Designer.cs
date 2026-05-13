@@ -118,7 +118,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid_listele.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGrid_listele.Enabled = false;
-            this.dataGrid_listele.Location = new System.Drawing.Point(65, 49);
+            this.dataGrid_listele.Location = new System.Drawing.Point(33, 44);
             this.dataGrid_listele.Name = "dataGrid_listele";
             this.dataGrid_listele.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -129,7 +129,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid_listele.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGrid_listele.Size = new System.Drawing.Size(485, 256);
+            this.dataGrid_listele.Size = new System.Drawing.Size(564, 309);
             this.dataGrid_listele.TabIndex = 40;
             // 
             // label_geri4
@@ -151,7 +151,7 @@
             this.btn_listele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_listele.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_listele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_listele.Location = new System.Drawing.Point(208, 338);
+            this.btn_listele.Location = new System.Drawing.Point(215, 375);
             this.btn_listele.Name = "btn_listele";
             this.btn_listele.Size = new System.Drawing.Size(186, 23);
             this.btn_listele.TabIndex = 36;
