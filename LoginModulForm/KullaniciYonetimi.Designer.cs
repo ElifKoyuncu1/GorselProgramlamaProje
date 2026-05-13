@@ -32,9 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGrid_listele = new System.Windows.Forms.DataGridView();
-            this.label_geri4 = new System.Windows.Forms.Label();
             this.btn_listele = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -69,6 +69,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_geri = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_listele)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -78,15 +80,16 @@
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage4
             // 
             this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage4.Controls.Add(this.dataGrid_listele);
-            this.tabPage4.Controls.Add(this.label_geri4);
-            this.tabPage4.Controls.Add(this.btn_listele);
+            this.tabPage4.Controls.Add(this.panel2);
+            this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -98,51 +101,51 @@
             // 
             // dataGrid_listele
             // 
-            this.dataGrid_listele.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGrid_listele.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_listele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGrid_listele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGrid_listele.AllowUserToAddRows = false;
+            this.dataGrid_listele.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            this.dataGrid_listele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGrid_listele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrid_listele.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.dataGrid_listele.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGrid_listele.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid_listele.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_listele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGrid_listele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid_listele.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGrid_listele.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid_listele.Enabled = false;
-            this.dataGrid_listele.Location = new System.Drawing.Point(33, 44);
+            this.dataGrid_listele.EnableHeadersVisualStyles = false;
+            this.dataGrid_listele.GridColor = System.Drawing.Color.Black;
+            this.dataGrid_listele.Location = new System.Drawing.Point(0, 0);
             this.dataGrid_listele.Name = "dataGrid_listele";
             this.dataGrid_listele.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_listele.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGrid_listele.Size = new System.Drawing.Size(564, 309);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_listele.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGrid_listele.RowHeadersVisible = false;
+            this.dataGrid_listele.RowTemplate.Height = 36;
+            this.dataGrid_listele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGrid_listele.Size = new System.Drawing.Size(619, 412);
             this.dataGrid_listele.TabIndex = 40;
-            // 
-            // label_geri4
-            // 
-            this.label_geri4.AutoSize = true;
-            this.label_geri4.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label_geri4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_geri4.Location = new System.Drawing.Point(6, 0);
-            this.label_geri4.Name = "label_geri4";
-            this.label_geri4.Size = new System.Drawing.Size(34, 26);
-            this.label_geri4.TabIndex = 39;
-            this.label_geri4.Text = "←";
-            this.label_geri4.Click += new System.EventHandler(this.label_geri4_Click);
             // 
             // btn_listele
             // 
@@ -151,7 +154,7 @@
             this.btn_listele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_listele.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_listele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_listele.Location = new System.Drawing.Point(215, 375);
+            this.btn_listele.Location = new System.Drawing.Point(214, 17);
             this.btn_listele.Name = "btn_listele";
             this.btn_listele.Size = new System.Drawing.Size(186, 23);
             this.btn_listele.TabIndex = 36;
@@ -554,6 +557,24 @@
             this.tabControl1.Size = new System.Drawing.Size(633, 444);
             this.tabControl1.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGrid_listele);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(619, 412);
+            this.panel1.TabIndex = 41;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_listele);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 357);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(619, 58);
+            this.panel2.TabIndex = 42;
+            // 
             // KullaniciYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -561,10 +582,9 @@
             this.ClientSize = new System.Drawing.Size(633, 444);
             this.Controls.Add(this.tabControl1);
             this.Name = "KullaniciYonetimi";
-            this.Text = "KullaniciYonetimi";
+            this.Text = "Kullanıcı Yönetimi";
             this.Load += new System.EventHandler(this.KullaniciYonetimi_Load);
             this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_listele)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -579,6 +599,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -587,7 +609,6 @@
 
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGrid_listele;
-        private System.Windows.Forms.Label label_geri4;
         private System.Windows.Forms.Button btn_listele;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label13;
@@ -622,5 +643,7 @@
         public System.Windows.Forms.ComboBox cmb_guncellebolum;
         public System.Windows.Forms.TextBox text_guncellead;
         public System.Windows.Forms.ComboBox cmb_guncellerol;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

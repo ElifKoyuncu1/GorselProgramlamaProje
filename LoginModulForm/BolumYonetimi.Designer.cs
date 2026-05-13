@@ -56,6 +56,8 @@
             this.dataGrid_bolumlistele = new System.Windows.Forms.DataGridView();
             this.label_geri4_bolum = new System.Windows.Forms.Label();
             this.btn_bolumlistele = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -65,6 +67,8 @@
             this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_bolumlistele)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,7 +82,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(525, 427);
+            this.tabControl1.Size = new System.Drawing.Size(559, 447);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -90,7 +94,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(517, 401);
+            this.tabPage1.Size = new System.Drawing.Size(551, 421);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Bölüm Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -101,7 +105,7 @@
             this.groupBox1.Controls.Add(this.text_eklebolum);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(86, 80);
+            this.groupBox1.Location = new System.Drawing.Point(104, 81);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(335, 226);
             this.groupBox1.TabIndex = 24;
@@ -163,7 +167,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(517, 401);
+            this.tabPage2.Size = new System.Drawing.Size(551, 421);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = " Bölüm Sil";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -174,7 +178,7 @@
             this.groupBox2.Controls.Add(this.btn_bolumsil);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(80, 76);
+            this.groupBox2.Location = new System.Drawing.Point(101, 80);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(335, 226);
             this.groupBox2.TabIndex = 32;
@@ -237,7 +241,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(517, 401);
+            this.tabPage3.Size = new System.Drawing.Size(551, 421);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Bölüm Güncelle";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -248,7 +252,7 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.btn_guncellebolum);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(82, 71);
+            this.groupBox3.Location = new System.Drawing.Point(100, 82);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(335, 226);
             this.groupBox3.TabIndex = 39;
@@ -282,7 +286,7 @@
             this.btn_guncellebolum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guncellebolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_guncellebolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_guncellebolum.Location = new System.Drawing.Point(71, 177);
+            this.btn_guncellebolum.Location = new System.Drawing.Point(70, 171);
             this.btn_guncellebolum.Name = "btn_guncellebolum";
             this.btn_guncellebolum.Size = new System.Drawing.Size(207, 23);
             this.btn_guncellebolum.TabIndex = 38;
@@ -306,14 +310,14 @@
             // 
             this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage4.Controls.Add(this.dataGrid_bolumlistele);
+            this.tabPage4.Controls.Add(this.panel2);
+            this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Controls.Add(this.label_geri4_bolum);
-            this.tabPage4.Controls.Add(this.btn_bolumlistele);
             this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(517, 401);
+            this.tabPage4.Size = new System.Drawing.Size(551, 421);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Bölüm Listele";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -323,48 +327,52 @@
             this.dataGrid_bolumlistele.AllowDrop = true;
             this.dataGrid_bolumlistele.AllowUserToAddRows = false;
             this.dataGrid_bolumlistele.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Peru;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGrid_bolumlistele.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             this.dataGrid_bolumlistele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid_bolumlistele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGrid_bolumlistele.BackgroundColor = System.Drawing.Color.SaddleBrown;
-            this.dataGrid_bolumlistele.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGrid_bolumlistele.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dataGrid_bolumlistele.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.dataGrid_bolumlistele.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGrid_bolumlistele.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Sienna;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Sienna;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid_bolumlistele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGrid_bolumlistele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid_bolumlistele.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGrid_bolumlistele.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid_bolumlistele.Enabled = false;
             this.dataGrid_bolumlistele.EnableHeadersVisualStyles = false;
             this.dataGrid_bolumlistele.GridColor = System.Drawing.Color.Black;
-            this.dataGrid_bolumlistele.Location = new System.Drawing.Point(90, 36);
+            this.dataGrid_bolumlistele.Location = new System.Drawing.Point(0, 0);
             this.dataGrid_bolumlistele.Name = "dataGrid_bolumlistele";
             this.dataGrid_bolumlistele.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Sienna;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid_bolumlistele.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid_bolumlistele.RowHeadersVisible = false;
+            this.dataGrid_bolumlistele.RowTemplate.Height = 36;
+            this.dataGrid_bolumlistele.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGrid_bolumlistele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_bolumlistele.Size = new System.Drawing.Size(323, 286);
+            this.dataGrid_bolumlistele.Size = new System.Drawing.Size(545, 415);
             this.dataGrid_bolumlistele.TabIndex = 43;
             // 
             // label_geri4_bolum
@@ -386,7 +394,7 @@
             this.btn_bolumlistele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bolumlistele.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_bolumlistele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_bolumlistele.Location = new System.Drawing.Point(159, 357);
+            this.btn_bolumlistele.Location = new System.Drawing.Point(177, 16);
             this.btn_bolumlistele.Name = "btn_bolumlistele";
             this.btn_bolumlistele.Size = new System.Drawing.Size(186, 23);
             this.btn_bolumlistele.TabIndex = 41;
@@ -394,11 +402,29 @@
             this.btn_bolumlistele.UseVisualStyleBackColor = true;
             this.btn_bolumlistele.Click += new System.EventHandler(this.btn_bolumlistele_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGrid_bolumlistele);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(545, 415);
+            this.panel1.TabIndex = 44;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_bolumlistele);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 362);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(545, 56);
+            this.panel2.TabIndex = 45;
+            // 
             // BolumYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 427);
+            this.ClientSize = new System.Drawing.Size(559, 447);
             this.Controls.Add(this.tabControl1);
             this.Name = "BolumYonetimi";
             this.Text = "BolumYonetimi";
@@ -419,6 +445,8 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_bolumlistele)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -448,5 +476,7 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox text_guncellebolum;
         public System.Windows.Forms.TextBox text_silbolum;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

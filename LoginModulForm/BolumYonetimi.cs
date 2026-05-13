@@ -24,7 +24,16 @@ namespace LoginModulForm
         private void btn_bolumekle_Click(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
+
+            
             string b_ad_ek = text_eklebolum.Text.Trim();
+            if (string.IsNullOrWhiteSpace(b_ad_ek))
+            {
+                MessageBox.Show("Lütfen bir bölüm ismi giriniz");
+                return;
+            }
+
+
             string kontrolQuery = "SELECT COUNT(*) FROM Bolum WHERE BolumAd=@ad";
 
             SqlParameter[] kontrolParameters = new SqlParameter[]

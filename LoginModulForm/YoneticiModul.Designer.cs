@@ -163,7 +163,7 @@
             this.Controls.Add(this.btn_kullanici);
             this.DoubleBuffered = true;
             this.Name = "YoneticiModul";
-            this.Text = "YoneticiModul";
+            this.Text = "Yönetici Modül";
             this.ResumeLayout(false);
 
         }

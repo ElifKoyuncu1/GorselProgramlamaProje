@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DersYonetimi));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label_geri = new System.Windows.Forms.Label();
@@ -84,7 +85,6 @@
             this.cmb_guncellebolum = new System.Windows.Forms.ComboBox();
             this.text_guncellead = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label27 = new System.Windows.Forms.Label();
             this.btn_listele = new System.Windows.Forms.Button();
             this.dataGridView_derslistele = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -721,7 +721,6 @@
             // 
             this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage4.Controls.Add(this.label27);
             this.tabPage4.Controls.Add(this.btn_listele);
             this.tabPage4.Controls.Add(this.dataGridView_derslistele);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -731,18 +730,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Ders Listele";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label27.Location = new System.Drawing.Point(3, 3);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(34, 26);
-            this.label27.TabIndex = 22;
-            this.label27.Text = "←";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // btn_listele
             // 
@@ -763,30 +750,38 @@
             this.dataGridView_derslistele.AllowDrop = true;
             this.dataGridView_derslistele.AllowUserToAddRows = false;
             this.dataGridView_derslistele.AllowUserToDeleteRows = false;
-            this.dataGridView_derslistele.BackgroundColor = System.Drawing.Color.Tan;
-            this.dataGridView_derslistele.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_derslistele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView_derslistele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
+            this.dataGridView_derslistele.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            this.dataGridView_derslistele.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_derslistele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_derslistele.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.dataGridView_derslistele.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_derslistele.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Sienna;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Sienna;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_derslistele.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_derslistele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_derslistele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_derslistele.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_derslistele.EnableHeadersVisualStyles = false;
-            this.dataGridView_derslistele.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView_derslistele.Location = new System.Drawing.Point(8, 32);
+            this.dataGridView_derslistele.GridColor = System.Drawing.Color.Black;
+            this.dataGridView_derslistele.Location = new System.Drawing.Point(8, 6);
             this.dataGridView_derslistele.Name = "dataGridView_derslistele";
-            this.dataGridView_derslistele.Size = new System.Drawing.Size(678, 383);
+            this.dataGridView_derslistele.RowHeadersVisible = false;
+            this.dataGridView_derslistele.RowTemplate.Height = 36;
+            this.dataGridView_derslistele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_derslistele.Size = new System.Drawing.Size(678, 409);
             this.dataGridView_derslistele.TabIndex = 0;
             // 
             // tabPage5
@@ -967,7 +962,7 @@
             this.ClientSize = new System.Drawing.Size(702, 497);
             this.Controls.Add(this.tabControl1);
             this.Name = "DersYonetimi";
-            this.Text = "DersYonetimi";
+            this.Text = "Ders Yönetimi";
             this.Load += new System.EventHandler(this.DersYonetimi_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -983,7 +978,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmup_guncellesure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_guncellekredi)).EndInit();
             this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_derslistele)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -1051,7 +1045,6 @@
         private System.Windows.Forms.Label label_geri;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         public System.Windows.Forms.TextBox text_tipsil;
         public System.Windows.Forms.TextBox text_tipguncelle;
