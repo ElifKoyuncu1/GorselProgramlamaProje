@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LoginModulForm
 {
-    public partial class derslik_yonetimi : Form
+    public partial class DerslikYonetimi : Form
     {
-        public derslik_yonetimi()
+        public DerslikYonetimi()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace LoginModulForm
 {
-    partial class derslik_yonetimi
+    partial class DerslikYonetimi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DerslikYonetimi));
+            this.SuspendLayout();
+            // 
+            // DerslikYonetimi
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "derslik_yonetimi";
+            this.DoubleBuffered = true;
+            this.Name = "DerslikYonetimi";
+            this.Text = "DerslikYonetimi";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
