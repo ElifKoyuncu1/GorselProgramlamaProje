@@ -591,5 +591,10 @@ namespace LoginModulForm
             frm.Show();
             this.Hide();
         }
+
+        private void btn_ekle_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

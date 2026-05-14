@@ -152,6 +152,7 @@
             this.btn_ekle.TabIndex = 8;
             this.btn_ekle.Text = "Ekle";
             this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click_1);
             // 
             // mtx_bitEkle
             // 
