@@ -140,12 +140,12 @@ C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModu
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.Properties.Resources.resources
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.SeviyeArama.resources
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.SinifYonetimi.resources
+C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.TakvimZamanDilimi.resources
+C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.TakvimZamanDilimiAraForm.resources
+C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.TumProgramlar.resources
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.YoneticiModul.resources
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.csproj.GenerateResource.cache
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.csproj.CoreCompileInputs.cache
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginMod.AD267D31.Up2Date
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.exe
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.pdb
-C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.TakvimZamanDilimi.resources
-C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.TakvimZamanDilimiAraForm.resources
-C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.TumProgramlar.resources
