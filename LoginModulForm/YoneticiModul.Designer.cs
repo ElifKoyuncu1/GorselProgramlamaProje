@@ -67,6 +67,7 @@
             this.btn_derslik.TabIndex = 10;
             this.btn_derslik.Text = "Derslik Yönetimi";
             this.btn_derslik.UseVisualStyleBackColor = false;
+            this.btn_derslik.Click += new System.EventHandler(this.btn_derslik_Click);
             // 
             // btn_programlar
             // 

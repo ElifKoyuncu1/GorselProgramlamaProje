@@ -44,5 +44,12 @@ namespace LoginModulForm
             sfytm.Show();
             this.Hide();
         }
+
+        private void btn_derslik_Click(object sender, EventArgs e)
+        {
+            YoneticiModul ymtl = new YoneticiModul();
+            ymtl.Show();
+            this.Hide();
+        }
     }
 }

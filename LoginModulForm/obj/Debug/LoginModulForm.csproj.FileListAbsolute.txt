@@ -144,3 +144,4 @@ C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModu
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.SeviyeArama.resources
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.DersArama.resources
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.HocaDersler.resources
+C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.DerslikYonetimi.resources
