@@ -47,9 +47,8 @@ namespace LoginModulForm
 
         private void btn_derslik_Click(object sender, EventArgs e)
         {
-            YoneticiModul ymtl = new YoneticiModul();
-            ymtl.Show();
-            this.Hide();
+            DerslikYonetimi drl=new DerslikYonetimi();
+            drl.Show();
             this.Hide();
         }
     }

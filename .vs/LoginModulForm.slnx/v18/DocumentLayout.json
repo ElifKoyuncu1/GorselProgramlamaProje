@@ -54,21 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginModulForm.csproj",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\LoginModulForm.csproj",
-              "RelativeDocumentMoniker": "LoginModulForm\\LoginModulForm.csproj",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\LoginModulForm.csproj*",
-              "RelativeToolTip": "LoginModulForm\\LoginModulForm.csproj*",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-14T10:45:27.334Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -95,6 +82,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginModulForm.csproj",
+              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\LoginModulForm.csproj",
+              "RelativeDocumentMoniker": "LoginModulForm\\LoginModulForm.csproj",
+              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\LoginModulForm.csproj",
+              "RelativeToolTip": "LoginModulForm\\LoginModulForm.csproj",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAPkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-14T10:45:27.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\README.md",
@@ -103,8 +103,7 @@
               "RelativeToolTip": "README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-05-14T10:40:33.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T10:40:33.921Z"
             },
             {
               "$type": "Document",
@@ -116,8 +115,7 @@
               "RelativeToolTip": "LoginModulForm\\YoneticiModul.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:21:35.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T10:21:35.984Z"
             },
             {
               "$type": "Document",
