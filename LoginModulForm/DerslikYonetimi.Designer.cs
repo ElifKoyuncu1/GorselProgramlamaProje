@@ -33,6 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lbl_dekle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btn_ekle = new System.Windows.Forms.Button();
             this.text_drsEkle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,17 +58,16 @@
             this.lbl_dlstl = new System.Windows.Forms.Label();
             this.btn_listele = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -130,6 +130,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Derslik Ekle";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.numericUpDown1.Location = new System.Drawing.Point(168, 96);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(111, 19);
+            this.numericUpDown1.TabIndex = 5;
+            // 
             // btn_ekle
             // 
             this.btn_ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -141,6 +149,7 @@
             this.btn_ekle.TabIndex = 4;
             this.btn_ekle.Text = "Ekle";
             this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // text_drsEkle
             // 
@@ -181,7 +190,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(561, 332);
+            this.tabPage2.Size = new System.Drawing.Size(565, 334);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Derslik Sil";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -272,7 +281,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(561, 332);
+            this.tabPage3.Size = new System.Drawing.Size(565, 334);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Derslik Güncelle";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -364,7 +373,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(561, 332);
+            this.tabPage4.Size = new System.Drawing.Size(565, 334);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Derslik Listele";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -403,14 +412,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(302, 206);
             this.dataGridView1.TabIndex = 0;
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numericUpDown1.Location = new System.Drawing.Point(168, 96);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(111, 19);
-            this.numericUpDown1.TabIndex = 5;
-            // 
             // DerslikYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,6 +427,7 @@
             this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -437,7 +439,6 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
