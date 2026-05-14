@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DerslikYonetimi));
+=======
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lbl_dekle = new System.Windows.Forms.Label();
@@ -77,10 +80,16 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabControl1.Location = new System.Drawing.Point(0, -1);
+<<<<<<< HEAD
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(536, 343);
+=======
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(789, 480);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -88,11 +97,18 @@
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.Controls.Add(this.lbl_dekle);
             this.tabPage1.Controls.Add(this.groupBox1);
+<<<<<<< HEAD
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Size = new System.Drawing.Size(528, 317);
+=======
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(781, 451);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Derslik Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -101,11 +117,18 @@
             // 
             this.lbl_dekle.AutoSize = true;
             this.lbl_dekle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.lbl_dekle.Location = new System.Drawing.Point(2, 2);
             this.lbl_dekle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_dekle.Name = "lbl_dekle";
             this.lbl_dekle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_dekle.Size = new System.Drawing.Size(19, 13);
+=======
+            this.lbl_dekle.Location = new System.Drawing.Point(3, 3);
+            this.lbl_dekle.Name = "lbl_dekle";
+            this.lbl_dekle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_dekle.Size = new System.Drawing.Size(21, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.lbl_dekle.TabIndex = 1;
             this.lbl_dekle.Text = "←";
             this.lbl_dekle.Click += new System.EventHandler(this.lbl_dekle_Click);
@@ -118,11 +141,17 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.groupBox1.Location = new System.Drawing.Point(112, 43);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Size = new System.Drawing.Size(299, 188);
+=======
+            this.groupBox1.Location = new System.Drawing.Point(150, 53);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(399, 231);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Derslik Ekle";
@@ -130,10 +159,16 @@
             // btn_ekle
             // 
             this.btn_ekle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.btn_ekle.Location = new System.Drawing.Point(29, 127);
             this.btn_ekle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ekle.Name = "btn_ekle";
             this.btn_ekle.Size = new System.Drawing.Size(187, 19);
+=======
+            this.btn_ekle.Location = new System.Drawing.Point(39, 156);
+            this.btn_ekle.Name = "btn_ekle";
+            this.btn_ekle.Size = new System.Drawing.Size(249, 23);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.btn_ekle.TabIndex = 4;
             this.btn_ekle.Text = "Ekle";
             this.btn_ekle.UseVisualStyleBackColor = true;
@@ -141,37 +176,61 @@
             // 
             // text_drsKapaEkle
             // 
+<<<<<<< HEAD
             this.text_drsKapaEkle.Location = new System.Drawing.Point(141, 76);
             this.text_drsKapaEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_drsKapaEkle.Name = "text_drsKapaEkle";
             this.text_drsKapaEkle.Size = new System.Drawing.Size(76, 19);
+=======
+            this.text_drsKapaEkle.Location = new System.Drawing.Point(188, 93);
+            this.text_drsKapaEkle.Name = "text_drsKapaEkle";
+            this.text_drsKapaEkle.Size = new System.Drawing.Size(100, 22);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.text_drsKapaEkle.TabIndex = 3;
             // 
             // text_drsEkle
             // 
+<<<<<<< HEAD
             this.text_drsEkle.Location = new System.Drawing.Point(141, 38);
             this.text_drsEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_drsEkle.Name = "text_drsEkle";
             this.text_drsEkle.Size = new System.Drawing.Size(76, 19);
+=======
+            this.text_drsEkle.Location = new System.Drawing.Point(188, 47);
+            this.text_drsEkle.Name = "text_drsEkle";
+            this.text_drsEkle.Size = new System.Drawing.Size(100, 22);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.text_drsEkle.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(27, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
+=======
+            this.label2.Location = new System.Drawing.Point(36, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.label2.TabIndex = 1;
             this.label2.Text = "Kapasite";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(25, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
+=======
+            this.label1.Location = new System.Drawing.Point(33, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.label1.TabIndex = 0;
             this.label1.Text = "Derslik Adı..:";
             // 
@@ -180,11 +239,18 @@
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.lbl_dsil);
             this.tabPage2.Controls.Add(this.groupBox2);
+<<<<<<< HEAD
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Size = new System.Drawing.Size(528, 317);
+=======
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(781, 451);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Derslik Sil";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -193,11 +259,18 @@
             // 
             this.lbl_dsil.AutoSize = true;
             this.lbl_dsil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.lbl_dsil.Location = new System.Drawing.Point(2, 2);
             this.lbl_dsil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_dsil.Name = "lbl_dsil";
             this.lbl_dsil.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_dsil.Size = new System.Drawing.Size(19, 13);
+=======
+            this.lbl_dsil.Location = new System.Drawing.Point(3, 3);
+            this.lbl_dsil.Name = "lbl_dsil";
+            this.lbl_dsil.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_dsil.Size = new System.Drawing.Size(21, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.lbl_dsil.TabIndex = 2;
             this.lbl_dsil.Text = "←";
             this.lbl_dsil.Click += new System.EventHandler(this.lbl_dsil_Click);
@@ -210,11 +283,17 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.groupBox2.Location = new System.Drawing.Point(117, 43);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Size = new System.Drawing.Size(299, 188);
+=======
+            this.groupBox2.Location = new System.Drawing.Point(156, 53);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(399, 231);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Derslik Sil";
@@ -222,10 +301,16 @@
             // btn_sil
             // 
             this.btn_sil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.btn_sil.Location = new System.Drawing.Point(29, 127);
             this.btn_sil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_sil.Name = "btn_sil";
             this.btn_sil.Size = new System.Drawing.Size(187, 19);
+=======
+            this.btn_sil.Location = new System.Drawing.Point(39, 156);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(249, 23);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.btn_sil.TabIndex = 4;
             this.btn_sil.Text = "Sil";
             this.btn_sil.UseVisualStyleBackColor = true;
@@ -233,37 +318,61 @@
             // 
             // text_KapsSil
             // 
+<<<<<<< HEAD
             this.text_KapsSil.Location = new System.Drawing.Point(141, 76);
             this.text_KapsSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_KapsSil.Name = "text_KapsSil";
             this.text_KapsSil.Size = new System.Drawing.Size(76, 19);
+=======
+            this.text_KapsSil.Location = new System.Drawing.Point(188, 93);
+            this.text_KapsSil.Name = "text_KapsSil";
+            this.text_KapsSil.Size = new System.Drawing.Size(100, 22);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.text_KapsSil.TabIndex = 3;
             // 
             // text_dersSil
             // 
+<<<<<<< HEAD
             this.text_dersSil.Location = new System.Drawing.Point(141, 38);
             this.text_dersSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_dersSil.Name = "text_dersSil";
             this.text_dersSil.Size = new System.Drawing.Size(76, 19);
+=======
+            this.text_dersSil.Location = new System.Drawing.Point(188, 47);
+            this.text_dersSil.Name = "text_dersSil";
+            this.text_dersSil.Size = new System.Drawing.Size(100, 22);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.text_dersSil.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(27, 80);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
+=======
+            this.label3.Location = new System.Drawing.Point(36, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.label3.TabIndex = 1;
             this.label3.Text = "Kapasite";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
             this.label4.Location = new System.Drawing.Point(25, 43);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
+=======
+            this.label4.Location = new System.Drawing.Point(33, 53);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.label4.TabIndex = 0;
             this.label4.Text = "Derslik Adı..:";
             // 
@@ -272,11 +381,18 @@
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.Controls.Add(this.lbl_dgncl);
             this.tabPage3.Controls.Add(this.groupBox3);
+<<<<<<< HEAD
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Size = new System.Drawing.Size(584, 364);
+=======
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(781, 451);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Derslik Güncelle";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -285,11 +401,18 @@
             // 
             this.lbl_dgncl.AutoSize = true;
             this.lbl_dgncl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.lbl_dgncl.Location = new System.Drawing.Point(2, 2);
             this.lbl_dgncl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_dgncl.Name = "lbl_dgncl";
             this.lbl_dgncl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_dgncl.Size = new System.Drawing.Size(19, 13);
+=======
+            this.lbl_dgncl.Location = new System.Drawing.Point(3, 3);
+            this.lbl_dgncl.Name = "lbl_dgncl";
+            this.lbl_dgncl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_dgncl.Size = new System.Drawing.Size(21, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.lbl_dgncl.TabIndex = 2;
             this.lbl_dgncl.Text = "←";
             this.lbl_dgncl.Click += new System.EventHandler(this.lbl_dgncl_Click);
@@ -302,11 +425,17 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.groupBox3.Location = new System.Drawing.Point(119, 42);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Size = new System.Drawing.Size(299, 188);
+=======
+            this.groupBox3.Location = new System.Drawing.Point(159, 52);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(399, 231);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Derslik Güncelle";
@@ -314,10 +443,16 @@
             // btn_guncelle
             // 
             this.btn_guncelle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.btn_guncelle.Location = new System.Drawing.Point(29, 127);
             this.btn_guncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_guncelle.Name = "btn_guncelle";
             this.btn_guncelle.Size = new System.Drawing.Size(187, 19);
+=======
+            this.btn_guncelle.Location = new System.Drawing.Point(39, 156);
+            this.btn_guncelle.Name = "btn_guncelle";
+            this.btn_guncelle.Size = new System.Drawing.Size(249, 23);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.btn_guncelle.TabIndex = 4;
             this.btn_guncelle.Text = "Güncelle";
             this.btn_guncelle.UseVisualStyleBackColor = true;
@@ -325,52 +460,86 @@
             // 
             // text_kapsGuncelle
             // 
+<<<<<<< HEAD
             this.text_kapsGuncelle.Location = new System.Drawing.Point(141, 76);
             this.text_kapsGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_kapsGuncelle.Name = "text_kapsGuncelle";
             this.text_kapsGuncelle.Size = new System.Drawing.Size(76, 19);
+=======
+            this.text_kapsGuncelle.Location = new System.Drawing.Point(188, 93);
+            this.text_kapsGuncelle.Name = "text_kapsGuncelle";
+            this.text_kapsGuncelle.Size = new System.Drawing.Size(100, 22);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.text_kapsGuncelle.TabIndex = 3;
             // 
             // text_drsGuncelle
             // 
+<<<<<<< HEAD
             this.text_drsGuncelle.Location = new System.Drawing.Point(141, 38);
             this.text_drsGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_drsGuncelle.Name = "text_drsGuncelle";
             this.text_drsGuncelle.Size = new System.Drawing.Size(76, 19);
+=======
+            this.text_drsGuncelle.Location = new System.Drawing.Point(188, 47);
+            this.text_drsGuncelle.Name = "text_drsGuncelle";
+            this.text_drsGuncelle.Size = new System.Drawing.Size(100, 22);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.text_drsGuncelle.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
             this.label5.Location = new System.Drawing.Point(27, 80);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
+=======
+            this.label5.Location = new System.Drawing.Point(36, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.label5.TabIndex = 1;
             this.label5.Text = "Kapasite";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+<<<<<<< HEAD
             this.label6.Location = new System.Drawing.Point(25, 43);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 13);
+=======
+            this.label6.Location = new System.Drawing.Point(33, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.label6.TabIndex = 0;
             this.label6.Text = "Derslik Adı..:";
             // 
             // tabPage4
             // 
+<<<<<<< HEAD
             this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
+=======
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage4.Controls.Add(this.lbl_dlstl);
             this.tabPage4.Controls.Add(this.btn_listele);
             this.tabPage4.Controls.Add(this.dataGridView1);
+<<<<<<< HEAD
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Size = new System.Drawing.Size(528, 317);
+=======
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(781, 451);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Derslik Listele";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -379,11 +548,18 @@
             // 
             this.lbl_dlstl.AutoSize = true;
             this.lbl_dlstl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.lbl_dlstl.Location = new System.Drawing.Point(2, 2);
             this.lbl_dlstl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_dlstl.Name = "lbl_dlstl";
             this.lbl_dlstl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_dlstl.Size = new System.Drawing.Size(19, 13);
+=======
+            this.lbl_dlstl.Location = new System.Drawing.Point(3, 3);
+            this.lbl_dlstl.Name = "lbl_dlstl";
+            this.lbl_dlstl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl_dlstl.Size = new System.Drawing.Size(21, 16);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.lbl_dlstl.TabIndex = 6;
             this.lbl_dlstl.Text = "←";
             this.lbl_dlstl.Click += new System.EventHandler(this.lbl_dlstl_Click);
@@ -391,10 +567,16 @@
             // btn_listele
             // 
             this.btn_listele.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.btn_listele.Location = new System.Drawing.Point(179, 264);
             this.btn_listele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_listele.Name = "btn_listele";
             this.btn_listele.Size = new System.Drawing.Size(187, 19);
+=======
+            this.btn_listele.Location = new System.Drawing.Point(239, 325);
+            this.btn_listele.Name = "btn_listele";
+            this.btn_listele.Size = new System.Drawing.Size(249, 23);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.btn_listele.TabIndex = 5;
             this.btn_listele.Text = "Listele";
             this.btn_listele.UseVisualStyleBackColor = true;
@@ -403,22 +585,38 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.dataGridView1.Location = new System.Drawing.Point(121, 43);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(302, 206);
+=======
+            this.dataGridView1.Location = new System.Drawing.Point(161, 53);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(403, 254);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.dataGridView1.TabIndex = 0;
             // 
             // DerslikYonetimi
             // 
+<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(532, 336);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(709, 414);
+            this.Controls.Add(this.tabControl1);
+>>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
             this.Name = "DerslikYonetimi";
             this.Text = "Derslik Yönetimi";
             this.tabControl1.ResumeLayout(false);
