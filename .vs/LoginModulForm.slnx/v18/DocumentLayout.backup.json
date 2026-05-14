@@ -3,48 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\LoginModulForm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginModulForm\\LoginModulForm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|c:\\users\\elif koyuncu\\source\\repos\\elifkoyuncu1\\gorselprogramlamaproje\\loginmodulform\\bolumarama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|solutionrelative:loginmodulform\\bolumarama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\YoneticiModul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginModulForm\\YoneticiModul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|c:\\users\\elif koyuncu\\source\\repos\\elifkoyuncu1\\gorselprogramlamaproje\\loginmodulform\\kullaniciyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|solutionrelative:loginmodulform\\kullaniciyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|c:\\users\\elif koyuncu\\source\\repos\\elifkoyuncu1\\gorselprogramlamaproje\\loginmodulform\\kullaniciyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|solutionrelative:loginmodulform\\kullaniciyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\loginmodulform\\seviyearama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:loginmodulform\\seviyearama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|c:\\users\\elif koyuncu\\source\\repos\\elifkoyuncu1\\gorselprogramlamaproje\\loginmodulform\\bolumarama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|solutionrelative:loginmodulform\\bolumarama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SeviyeArama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginModulForm\\SeviyeArama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|c:\\users\\elif koyuncu\\source\\repos\\elifkoyuncu1\\gorselprogramlamaproje\\loginmodulform\\hocadersler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|solutionrelative:loginmodulform\\hocadersler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\DersYonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginModulForm\\DersYonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\loginmodulform\\sinifyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|solutionrelative:loginmodulform\\sinifyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\loginmodulform\\dersyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:loginmodulform\\dersyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\loginmodulform\\bolumyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:loginmodulform\\bolumyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SinifYonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginModulForm\\SinifYonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\loginmodulform\\sinifyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:loginmodulform\\sinifyonetimi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginModulForm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4214DAF9-E1F2-435F-9874-A8ECDAFDD427}|LoginModulForm\\LoginModulForm.csproj|solutionrelative:LoginModulForm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,21 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginModulForm.csproj",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\LoginModulForm.csproj",
-              "RelativeDocumentMoniker": "LoginModulForm\\LoginModulForm.csproj",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\LoginModulForm.csproj*",
-              "RelativeToolTip": "LoginModulForm\\LoginModulForm.csproj*",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-14T10:45:27.334Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -95,107 +66,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-05-14T10:40:33.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "YoneticiModul.cs",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\YoneticiModul.cs",
-              "RelativeDocumentMoniker": "LoginModulForm\\YoneticiModul.cs",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\YoneticiModul.cs",
-              "RelativeToolTip": "LoginModulForm\\YoneticiModul.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
+              "Title": "KullaniciYonetimi.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\KullaniciYonetimi.cs",
+              "RelativeDocumentMoniker": "LoginModulForm\\KullaniciYonetimi.cs",
+              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\KullaniciYonetimi.cs [Design]",
+              "RelativeToolTip": "LoginModulForm\\KullaniciYonetimi.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:21:35.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T12:17:11.374Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DersYonetimi.cs",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\DersYonetimi.cs",
-              "RelativeDocumentMoniker": "LoginModulForm\\DersYonetimi.cs",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\DersYonetimi.cs",
-              "RelativeToolTip": "LoginModulForm\\DersYonetimi.cs",
-              "ViewState": "AgIAAJoBAAAAAAAAAAAawBsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BolumArama.cs",
+              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\BolumArama.cs",
+              "RelativeDocumentMoniker": "LoginModulForm\\BolumArama.cs",
+              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\BolumArama.cs*",
+              "RelativeToolTip": "LoginModulForm\\BolumArama.cs*",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwB0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:20:56.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SeviyeArama.cs",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SeviyeArama.cs",
-              "RelativeDocumentMoniker": "LoginModulForm\\SeviyeArama.cs",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SeviyeArama.cs",
-              "RelativeToolTip": "LoginModulForm\\SeviyeArama.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAIwDEAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:20:56.706Z",
+              "WhenOpened": "2026-05-14T12:16:11.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SeviyeArama.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SeviyeArama.cs",
-              "RelativeDocumentMoniker": "LoginModulForm\\SeviyeArama.cs",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SeviyeArama.cs [Design]",
-              "RelativeToolTip": "LoginModulForm\\SeviyeArama.cs [Design]",
+              "Title": "BolumArama.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\BolumArama.cs",
+              "RelativeDocumentMoniker": "LoginModulForm\\BolumArama.cs",
+              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\BolumArama.cs [Design]*",
+              "RelativeToolTip": "LoginModulForm\\BolumArama.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:20:56.909Z",
+              "WhenOpened": "2026-05-14T12:16:07.568Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DersYonetimi.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\DersYonetimi.cs",
-              "RelativeDocumentMoniker": "LoginModulForm\\DersYonetimi.cs",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\DersYonetimi.cs [Design]",
-              "RelativeToolTip": "LoginModulForm\\DersYonetimi.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "HocaDersler.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\HocaDersler.cs",
+              "RelativeDocumentMoniker": "LoginModulForm\\HocaDersler.cs",
+              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\HocaDersler.cs [Design]",
+              "RelativeToolTip": "LoginModulForm\\HocaDersler.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:20:58.853Z",
+              "WhenOpened": "2026-05-14T12:14:27.093Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BolumYonetimi.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\BolumYonetimi.cs",
-              "RelativeDocumentMoniker": "LoginModulForm\\BolumYonetimi.cs",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\BolumYonetimi.cs [Design]",
-              "RelativeToolTip": "LoginModulForm\\BolumYonetimi.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:20:58.854Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SinifYonetimi.cs",
-              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SinifYonetimi.cs",
-              "RelativeDocumentMoniker": "LoginModulForm\\SinifYonetimi.cs",
-              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SinifYonetimi.cs",
-              "RelativeToolTip": "LoginModulForm\\SinifYonetimi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:20:58.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "SinifYonetimi.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\SinifYonetimi.cs",
               "RelativeDocumentMoniker": "LoginModulForm\\SinifYonetimi.cs",
@@ -207,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\Program.cs",
               "RelativeDocumentMoniker": "LoginModulForm\\Program.cs",
@@ -216,6 +136,40 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T10:20:58.899Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "bd941bfb-680e-44f4-832e-1ab292425eb6",
+        "Display": 0,
+        "X": 418,
+        "Y": 197,
+        "Width": 1252,
+        "Height": 397,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KullaniciYonetimi.cs",
+              "DocumentMoniker": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\KullaniciYonetimi.cs",
+              "RelativeDocumentMoniker": "LoginModulForm\\KullaniciYonetimi.cs",
+              "ToolTip": "C:\\Users\\Elif Koyuncu\\source\\repos\\ElifKoyuncu1\\GorselProgramlamaProje\\LoginModulForm\\KullaniciYonetimi.cs",
+              "RelativeToolTip": "LoginModulForm\\KullaniciYonetimi.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAcwDIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T12:17:14.231Z",
+              "EditorCaption": ""
             }
           ]
         }

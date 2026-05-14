@@ -73,6 +73,7 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.text_aramaad);
             this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(122, 63);
             this.groupBox1.Name = "groupBox1";
@@ -152,7 +153,7 @@
             this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.Name = "KullaniciArama";
-            this.Text = "KullaniciArama";
+            this.Text = "Kullanıcı Arama";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

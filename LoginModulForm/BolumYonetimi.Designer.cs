@@ -53,11 +53,11 @@
             this.btn_guncellebolum = new System.Windows.Forms.Button();
             this.label6_bolum = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGrid_bolumlistele = new System.Windows.Forms.DataGridView();
-            this.label_geri4_bolum = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_bolumlistele = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGrid_bolumlistele = new System.Windows.Forms.DataGridView();
+            this.label_geri4_bolum = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,9 +66,9 @@
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_bolumlistele)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_bolumlistele)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -322,6 +322,39 @@
             this.tabPage4.Text = "Bölüm Listele";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_bolumlistele);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 362);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(545, 56);
+            this.panel2.TabIndex = 45;
+            // 
+            // btn_bolumlistele
+            // 
+            this.btn_bolumlistele.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_bolumlistele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_bolumlistele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_bolumlistele.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_bolumlistele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_bolumlistele.Location = new System.Drawing.Point(177, 16);
+            this.btn_bolumlistele.Name = "btn_bolumlistele";
+            this.btn_bolumlistele.Size = new System.Drawing.Size(186, 23);
+            this.btn_bolumlistele.TabIndex = 41;
+            this.btn_bolumlistele.Text = "Listele";
+            this.btn_bolumlistele.UseVisualStyleBackColor = true;
+            this.btn_bolumlistele.Click += new System.EventHandler(this.btn_bolumlistele_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGrid_bolumlistele);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(545, 415);
+            this.panel1.TabIndex = 44;
+            // 
             // dataGrid_bolumlistele
             // 
             this.dataGrid_bolumlistele.AllowDrop = true;
@@ -387,39 +420,6 @@
             this.label_geri4_bolum.Text = "←";
             this.label_geri4_bolum.Click += new System.EventHandler(this.label_geri4_bolum_Click);
             // 
-            // btn_bolumlistele
-            // 
-            this.btn_bolumlistele.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btn_bolumlistele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btn_bolumlistele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bolumlistele.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_bolumlistele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_bolumlistele.Location = new System.Drawing.Point(177, 16);
-            this.btn_bolumlistele.Name = "btn_bolumlistele";
-            this.btn_bolumlistele.Size = new System.Drawing.Size(186, 23);
-            this.btn_bolumlistele.TabIndex = 41;
-            this.btn_bolumlistele.Text = "Listele";
-            this.btn_bolumlistele.UseVisualStyleBackColor = true;
-            this.btn_bolumlistele.Click += new System.EventHandler(this.btn_bolumlistele_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dataGrid_bolumlistele);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(545, 415);
-            this.panel1.TabIndex = 44;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_bolumlistele);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 362);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(545, 56);
-            this.panel2.TabIndex = 45;
-            // 
             // BolumYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,7 +427,7 @@
             this.ClientSize = new System.Drawing.Size(559, 447);
             this.Controls.Add(this.tabControl1);
             this.Name = "BolumYonetimi";
-            this.Text = "BolumYonetimi";
+            this.Text = "Bölüm Yönetimi";
             this.Load += new System.EventHandler(this.BolumYonetimi_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -444,9 +444,9 @@
             this.groupBox3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_bolumlistele)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_bolumlistele)).EndInit();
             this.ResumeLayout(false);
 
         }
