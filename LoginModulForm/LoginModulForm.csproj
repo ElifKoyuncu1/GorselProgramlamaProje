@@ -158,6 +158,24 @@
       <DependentUpon>SinifYonetimi.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TakvimZamanDilimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakvimZamanDilimi.Designer.cs">
+      <DependentUpon>TakvimZamanDilimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakvimZamanDilimiAraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakvimZamanDilimiAraForm.Designer.cs">
+      <DependentUpon>TakvimZamanDilimiAraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TumProgramlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TumProgramlar.Designer.cs">
+      <DependentUpon>TumProgramlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="YoneticiModul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,12 +226,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SeviyeArama.resx">
       <DependentUpon>SeviyeArama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SinifYonetimi.resx">
       <DependentUpon>SinifYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakvimZamanDilimi.resx">
+      <DependentUpon>TakvimZamanDilimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakvimZamanDilimiAraForm.resx">
+      <DependentUpon>TakvimZamanDilimiAraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TumProgramlar.resx">
+      <DependentUpon>TumProgramlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YoneticiModul.resx">
       <DependentUpon>YoneticiModul.cs</DependentUpon>
@@ -233,6 +261,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-12-21 at 14.28.34.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

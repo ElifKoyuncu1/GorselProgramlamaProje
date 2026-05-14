@@ -51,5 +51,19 @@ namespace LoginModulForm
             drlytm.Show();
             this.Hide();
         }
+
+        private void btn_zaman_takvim_Click(object sender, EventArgs e)
+        {
+            TakvimZamanDilimi zmndlm = new TakvimZamanDilimi();
+            zmndlm.Show();
+            this.Hide();
+        }
+
+        private void btn_programlar_Click(object sender, EventArgs e)
+        {
+            TumProgramlar tm = new TumProgramlar();
+            tm.Show();
+            this.Hide();
+        }
     }
 }

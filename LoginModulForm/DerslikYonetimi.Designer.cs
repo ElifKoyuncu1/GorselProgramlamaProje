@@ -114,6 +114,7 @@
             this.lbl_dekle.Size = new System.Drawing.Size(26, 20);
             this.lbl_dekle.TabIndex = 1;
             this.lbl_dekle.Text = "←";
+            this.lbl_dekle.Click += new System.EventHandler(this.lbl_dekle_Click_1);
             // 
             // groupBox1
             // 
@@ -208,6 +209,7 @@
             this.lbl_dsil.Size = new System.Drawing.Size(19, 13);
             this.lbl_dsil.TabIndex = 2;
             this.lbl_dsil.Text = "←";
+            this.lbl_dsil.Click += new System.EventHandler(this.lbl_dsil_Click);
             // 
             // groupBox2
             // 
@@ -300,6 +302,7 @@
             this.lbl_dgncl.Size = new System.Drawing.Size(19, 13);
             this.lbl_dgncl.TabIndex = 2;
             this.lbl_dgncl.Text = "←";
+            this.lbl_dgncl.Click += new System.EventHandler(this.lbl_dgncl_Click);
             // 
             // groupBox3
             // 
@@ -393,6 +396,7 @@
             this.lbl_dlstl.Size = new System.Drawing.Size(19, 13);
             this.lbl_dlstl.TabIndex = 6;
             this.lbl_dlstl.Text = "←";
+            this.lbl_dlstl.Click += new System.EventHandler(this.lbl_dlstl_Click);
             // 
             // btn_listele
             // 

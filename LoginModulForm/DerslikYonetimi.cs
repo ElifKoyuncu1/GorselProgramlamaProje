@@ -216,37 +216,6 @@ namespace LoginModulForm
             num_guncelle.Value = 1;
         }
 
-
-        
-
-        private void lbl_dekle_Click(object sender, EventArgs e)
-        {
-            YoneticiModul frm = new YoneticiModul();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void lbl_dsil_Click(object sender, EventArgs e)
-        {
-            YoneticiModul frm = new YoneticiModul();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void lbl_dgncl_Click(object sender, EventArgs e)
-        {
-            YoneticiModul frm = new YoneticiModul();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void lbl_dlstl_Click(object sender, EventArgs e)
-        {
-            YoneticiModul frm = new YoneticiModul();
-            frm.Show();
-            this.Hide();
-        }
-
         private void btn_sil_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(text_dersSil.Text))
@@ -433,6 +402,34 @@ namespace LoginModulForm
             {
                 MessageBox.Show("Listeleme sırasında hata oluştu: " + ex.Message);
             }
+        }
+
+        private void lbl_dekle_Click_1(object sender, EventArgs e)
+        {
+            YoneticiModul frm = new YoneticiModul();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void lbl_dsil_Click(object sender, EventArgs e)
+        {
+            YoneticiModul frm = new YoneticiModul();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void lbl_dgncl_Click(object sender, EventArgs e)
+        {
+            YoneticiModul frm = new YoneticiModul();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void lbl_dlstl_Click(object sender, EventArgs e)
+        {
+            YoneticiModul frm = new YoneticiModul();
+            frm.Show();
+            this.Hide();
         }
     }
 }
