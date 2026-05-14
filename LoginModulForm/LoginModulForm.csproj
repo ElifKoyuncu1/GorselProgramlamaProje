@@ -89,13 +89,10 @@
     <Compile Include="DersArama.Designer.cs">
       <DependentUpon>DersArama.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="DerslikAraForm.cs" />
     <Compile Include="DerslikAraForm.Designer.cs">
       <DependentUpon>DerslikAraForm.cs</DependentUpon>
     </Compile>
->>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
     <Compile Include="DerslikYonetimi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,12 +171,10 @@
     <EmbeddedResource Include="DersArama.resx">
       <DependentUpon>DersArama.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-=======
+
     <EmbeddedResource Include="DerslikAraForm.resx">
       <DependentUpon>DerslikAraForm.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> 7955a4e465da3b020fb32ec219b22ff276f5b737
     <EmbeddedResource Include="DerslikYonetimi.resx">
       <DependentUpon>DerslikYonetimi.cs</DependentUpon>
     </EmbeddedResource>
