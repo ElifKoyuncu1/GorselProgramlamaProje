@@ -54,7 +54,7 @@ namespace LoginModulForm
             if (dt.Rows.Count > 0)
             {
                 SinifYonetimi sf = new SinifYonetimi();
-                Convert.ToInt32(dt.Rows[0]["SinifSeviyeID"]);
+                sf.secilenSeviyeID = Convert.ToInt32(dt.Rows[0]["SinifSeviyeID"]);
 
                 if (islemTipi == "sil")
                 {

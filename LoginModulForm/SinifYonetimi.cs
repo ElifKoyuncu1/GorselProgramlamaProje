@@ -17,7 +17,7 @@ namespace LoginModulForm
         {
             InitializeComponent();
         }
-        int secilenSeviyeID = 0;
+        public int secilenSeviyeID = 0;
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
         private void btn_bolumekle_Click_1(object sender, EventArgs e)
         {
@@ -115,6 +115,9 @@ namespace LoginModulForm
             DataTable dt = db.ExecuteQuery(query);
             dataGrid_seviyelistele.DataSource = dt;
             dataGrid_seviyelistele.Columns["SinifSeviyeID"].Visible = false;
+            dataGrid_seviyelistele.Columns["SeviyeNo"].HeaderText = "Sınıf Seviyesi";
+            dataGrid_seviyelistele.Columns["BolumAd"].HeaderText = "Bölüm Adı";
+            dataGrid_seviyelistele.Columns["SinifMevcudu"].HeaderText = "Sınıf Mevcudu";
 
         }
 
@@ -251,13 +254,15 @@ namespace LoginModulForm
                 INNER JOIN Bolum b ON ss.BolumID = b.BolumID
                 WHERE b.BolumAd = @b 
                 AND ss.SeviyeNo = @s 
+                AND SS.SinifMevcudu=@m
                 AND ss.SinifSeviyeID != @id";
 
                 SqlParameter[] kontrolParams =
                 {
                     new SqlParameter("@b", bolumAd),
                     new SqlParameter("@s", yeniSeviye),
-                    new SqlParameter("@id", secilenSeviyeID)
+                    new SqlParameter("@id", secilenSeviyeID),
+                    new SqlParameter("@m", yeniMevcut)
                 };
 
                 DataTable kontrolDt = db.ExecuteQuery(kontrolQuery, kontrolParams);
