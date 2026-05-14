@@ -33,7 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lbl_dekle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.num_ekle = new System.Windows.Forms.NumericUpDown();
             this.btn_ekle = new System.Windows.Forms.Button();
             this.text_drsEkle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,16 +41,16 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lbl_dsil = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.num_sil = new System.Windows.Forms.NumericUpDown();
             this.btn_sil = new System.Windows.Forms.Button();
-            this.text_KapsSil = new System.Windows.Forms.TextBox();
             this.text_dersSil = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lbl_dgncl = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.num_guncelle = new System.Windows.Forms.NumericUpDown();
             this.btn_guncelle = new System.Windows.Forms.Button();
-            this.text_kapsGuncelle = new System.Windows.Forms.TextBox();
             this.text_drsGuncelle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,11 +61,13 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_ekle)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_sil)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_guncelle)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +117,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.num_ekle);
             this.groupBox1.Controls.Add(this.btn_ekle);
             this.groupBox1.Controls.Add(this.text_drsEkle);
             this.groupBox1.Controls.Add(this.label2);
@@ -130,13 +132,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Derslik Ekle";
             // 
-            // numericUpDown1
+            // num_ekle
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numericUpDown1.Location = new System.Drawing.Point(168, 96);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(111, 19);
-            this.numericUpDown1.TabIndex = 5;
+            this.num_ekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.num_ekle.Location = new System.Drawing.Point(168, 96);
+            this.num_ekle.Name = "num_ekle";
+            this.num_ekle.Size = new System.Drawing.Size(111, 19);
+            this.num_ekle.TabIndex = 5;
             // 
             // btn_ekle
             // 
@@ -209,8 +211,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.num_sil);
             this.groupBox2.Controls.Add(this.btn_sil);
-            this.groupBox2.Controls.Add(this.text_KapsSil);
             this.groupBox2.Controls.Add(this.text_dersSil);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
@@ -224,31 +226,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Derslik Sil";
             // 
+            // num_sil
+            // 
+            this.num_sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.num_sil.Location = new System.Drawing.Point(141, 80);
+            this.num_sil.Name = "num_sil";
+            this.num_sil.Size = new System.Drawing.Size(111, 19);
+            this.num_sil.TabIndex = 6;
+            // 
             // btn_sil
             // 
             this.btn_sil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_sil.Location = new System.Drawing.Point(29, 127);
             this.btn_sil.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(187, 19);
+            this.btn_sil.Size = new System.Drawing.Size(223, 19);
             this.btn_sil.TabIndex = 4;
             this.btn_sil.Text = "Sil";
             this.btn_sil.UseVisualStyleBackColor = true;
-            // 
-            // text_KapsSil
-            // 
-            this.text_KapsSil.Location = new System.Drawing.Point(141, 76);
-            this.text_KapsSil.Margin = new System.Windows.Forms.Padding(2);
-            this.text_KapsSil.Name = "text_KapsSil";
-            this.text_KapsSil.Size = new System.Drawing.Size(76, 19);
-            this.text_KapsSil.TabIndex = 3;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click_1);
             // 
             // text_dersSil
             // 
             this.text_dersSil.Location = new System.Drawing.Point(141, 38);
             this.text_dersSil.Margin = new System.Windows.Forms.Padding(2);
             this.text_dersSil.Name = "text_dersSil";
-            this.text_dersSil.Size = new System.Drawing.Size(76, 19);
+            this.text_dersSil.Size = new System.Drawing.Size(111, 19);
             this.text_dersSil.TabIndex = 2;
             // 
             // label3
@@ -300,8 +303,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.num_guncelle);
             this.groupBox3.Controls.Add(this.btn_guncelle);
-            this.groupBox3.Controls.Add(this.text_kapsGuncelle);
             this.groupBox3.Controls.Add(this.text_drsGuncelle);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
@@ -315,6 +318,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Derslik Güncelle";
             // 
+            // num_guncelle
+            // 
+            this.num_guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.num_guncelle.Location = new System.Drawing.Point(141, 74);
+            this.num_guncelle.Name = "num_guncelle";
+            this.num_guncelle.Size = new System.Drawing.Size(111, 19);
+            this.num_guncelle.TabIndex = 6;
+            // 
             // btn_guncelle
             // 
             this.btn_guncelle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -325,21 +336,14 @@
             this.btn_guncelle.TabIndex = 4;
             this.btn_guncelle.Text = "Güncelle";
             this.btn_guncelle.UseVisualStyleBackColor = true;
-            // 
-            // text_kapsGuncelle
-            // 
-            this.text_kapsGuncelle.Location = new System.Drawing.Point(141, 76);
-            this.text_kapsGuncelle.Margin = new System.Windows.Forms.Padding(2);
-            this.text_kapsGuncelle.Name = "text_kapsGuncelle";
-            this.text_kapsGuncelle.Size = new System.Drawing.Size(76, 19);
-            this.text_kapsGuncelle.TabIndex = 3;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click_1);
             // 
             // text_drsGuncelle
             // 
             this.text_drsGuncelle.Location = new System.Drawing.Point(141, 38);
             this.text_drsGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.text_drsGuncelle.Name = "text_drsGuncelle";
-            this.text_drsGuncelle.Size = new System.Drawing.Size(76, 19);
+            this.text_drsGuncelle.Size = new System.Drawing.Size(111, 19);
             this.text_drsGuncelle.TabIndex = 2;
             // 
             // label5
@@ -400,6 +404,7 @@
             this.btn_listele.TabIndex = 5;
             this.btn_listele.Text = "Listele";
             this.btn_listele.UseVisualStyleBackColor = true;
+            this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click_1);
             // 
             // dataGridView1
             // 
@@ -427,15 +432,17 @@
             this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_ekle)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_sil)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_guncelle)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -449,16 +456,13 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label lbl_dekle;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btn_ekle;
-        private System.Windows.Forms.TextBox text_drsEkle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label lbl_dsil;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_sil;
-        private System.Windows.Forms.TextBox text_KapsSil;
         private System.Windows.Forms.TextBox text_dersSil;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -466,7 +470,6 @@
         private System.Windows.Forms.Label lbl_dgncl;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_guncelle;
-        private System.Windows.Forms.TextBox text_kapsGuncelle;
         private System.Windows.Forms.TextBox text_drsGuncelle;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -474,5 +477,9 @@
         private System.Windows.Forms.Label lbl_dlstl;
         private System.Windows.Forms.Button btn_listele;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.NumericUpDown num_sil;
+        private System.Windows.Forms.NumericUpDown num_guncelle;
+        public System.Windows.Forms.NumericUpDown num_ekle;
+        public System.Windows.Forms.TextBox text_drsEkle;
     }
 }

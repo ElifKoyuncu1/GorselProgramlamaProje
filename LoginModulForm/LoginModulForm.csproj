@@ -89,6 +89,12 @@
     <Compile Include="DersArama.Designer.cs">
       <DependentUpon>DersArama.cs</DependentUpon>
     </Compile>
+    <Compile Include="DerslikAraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DerslikAraForm.Designer.cs">
+      <DependentUpon>DerslikAraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DerslikYonetimi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DersArama.resx">
       <DependentUpon>DersArama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DerslikAraForm.resx">
+      <DependentUpon>DerslikAraForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DerslikYonetimi.resx">
       <DependentUpon>DerslikYonetimi.cs</DependentUpon>
