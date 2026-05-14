@@ -82,7 +82,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(569, 358);
+            this.tabControl1.Size = new System.Drawing.Size(573, 360);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -95,7 +95,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(561, 332);
+            this.tabPage1.Size = new System.Drawing.Size(565, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Derslik Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -416,7 +416,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(569, 358);
+            this.ClientSize = new System.Drawing.Size(573, 360);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.Name = "DerslikYonetimi";
