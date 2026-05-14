@@ -203,6 +203,15 @@ namespace LoginModulForm
 
         private void cmb_ekleseviye_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmb_eklebolum.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen önce bölüm seçiniz.");
+                return;
+            }
+
+            if (cmb_ekleseviye.SelectedIndex == -1)
+                return;
+
             DataBaseClass db = new DataBaseClass(connectionString);
             string sno = cmb_ekleseviye.Text.Trim();
             string query3 = "SELECT SinifSeviyeID FROM SinifSeviyesi WHERE SeviyeNo=@s_no AND BolumID=@bid";
@@ -211,7 +220,10 @@ namespace LoginModulForm
              new SqlParameter("@bid", bolum_id)
             };
             DataTable dt2 = db.ExecuteQuery(query3, parameters);
-            seviye_id = Convert.ToInt32(dt2.Rows[0][0]);
+            if (dt2.Rows.Count > 0)
+            {
+                seviye_id = Convert.ToInt32(dt2.Rows[0][0]);
+            }
 
         }
 

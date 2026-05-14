@@ -109,7 +109,7 @@
             this.Controls.Add(this.groupBox3);
             this.DoubleBuffered = true;
             this.Name = "BolumArama";
-            this.Text = "BolumArama";
+            this.Text = "Bölüm Arama";
             this.Load += new System.EventHandler(this.BolumArama_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
