@@ -15,9 +15,12 @@ namespace LoginModulForm
 {
     public partial class DersArama : Form
     {
-        public DersArama()
+        private DersYonetimi _anaForm;
+        public DersArama(DersYonetimi gelenForm)
         {
             InitializeComponent();
+
+            _anaForm = gelenForm; // Gelen formu hafızaya aldık
         }
 
         public string islemTipi;
@@ -27,7 +30,6 @@ namespace LoginModulForm
         private void btn_ara_Click(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
-            DersYonetimi dytm = new DersYonetimi();
             string d_ad=text_araad.Text.Trim();
             string d_blm = cmb_arabolum.Text.Trim();
             string d_tip=cmb_aratip.Text.Trim();
@@ -55,28 +57,33 @@ namespace LoginModulForm
             {
                 if (islemTipi == "sil")
                 {
-                    dytm.secilenDersId = Convert.ToInt32(dt.Rows[0]["DersID"]);
-                    dytm.text_silad.Text = dt.Rows[0]["DersAdi"].ToString();
-                    dytm.text_silbolum.Text = dt.Rows[0]["BolumAd"].ToString();
-                    dytm.text_siltip.Text = dt.Rows[0]["TipAd"].ToString();
-                    dytm.text_silseviye.Text = dt.Rows[0]["SeviyeNo"].ToString();
-                    dytm.text_silkredi.Text = dt.Rows[0]["Kredi"].ToString();
-                    dytm.text_silsure.Text = dt.Rows[0]["SinavSuresi"].ToString();
-                    dytm.text_silmevcud.Text = dt.Rows[0]["DersiAlanOgrenciSayisi"].ToString();
+                    _anaForm.secilenDersId = Convert.ToInt32(dt.Rows[0]["DersID"]);
+                    _anaForm.text_silad.Text = dt.Rows[0]["DersAdi"].ToString();
+                    _anaForm.text_silbolum.Text = dt.Rows[0]["BolumAd"].ToString();
+                    _anaForm.text_siltip.Text = dt.Rows[0]["TipAd"].ToString();
+                    _anaForm.text_silseviye.Text = dt.Rows[0]["SeviyeNo"].ToString();
+                    _anaForm.text_silkredi.Text = dt.Rows[0]["Kredi"].ToString();
+                    _anaForm.text_silsure.Text = dt.Rows[0]["SinavSuresi"].ToString();
+                    _anaForm.text_silmevcud.Text = dt.Rows[0]["DersiAlanOgrenciSayisi"].ToString();
                 }
 
                 else if (islemTipi == "guncelle")
                 {
-                    dytm.secilenDersId = Convert.ToInt32(dt.Rows[0]["DersID"]);
-                    dytm.text_guncellead.Text = dt.Rows[0]["DersAdi"].ToString();
-                    dytm.cmb_guncellebolum.SelectedValue = dt.Rows[0]["BolumID"];
-                    dytm.cmb_guncelletip.SelectedValue = dt.Rows[0]["DersTipiID"];
-                    dytm.cmb_guncelleseviye.SelectedValue = dt.Rows[0]["SinifSeviyeID"];
-                    dytm.nmup_guncellekredi.Value = Convert.ToDecimal(dt.Rows[0]["Kredi"]);
-                    dytm.nmup_guncellesure.Value =Convert.ToDecimal(dt.Rows[0]["SinavSuresi"]);
-                    dytm.nmup_guncelleogrsayisi.Value =Convert.ToDecimal(dt.Rows[0]["DersiAlanOgrenciSayisi"]);
+                    _anaForm.secilenDersId = Convert.ToInt32(dt.Rows[0]["DersID"]);
+                    _anaForm.text_guncellead.Text = dt.Rows[0]["DersAdi"].ToString();
+
+                    // Önce bölümü seçtiriyoruz (Bu işlem otomatik olarak sınıf seviyelerini dolduracak)
+                    _anaForm.cmb_guncellebolum.SelectedValue = dt.Rows[0]["BolumID"];
+                    _anaForm.cmb_guncelletip.SelectedValue = dt.Rows[0]["DersTipiID"];
+
+                    // Sınıf seviyesinin dolması için değeri bağlıyoruz
+                    _anaForm.cmb_guncelleseviye.SelectedValue = dt.Rows[0]["SinifSeviyeID"];
+
+                    _anaForm.nmup_guncellekredi.Value = Convert.ToDecimal(dt.Rows[0]["Kredi"]);
+                    _anaForm.nmup_guncellesure.Value = Convert.ToDecimal(dt.Rows[0]["SinavSuresi"]);
+                    _anaForm.nmup_guncelleogrsayisi.Value = Convert.ToDecimal(dt.Rows[0]["DersiAlanOgrenciSayisi"]);
                 }
-                dytm.Show();
+                _anaForm.Show();
                 this.Hide();
                 
             }
@@ -99,11 +106,9 @@ namespace LoginModulForm
 
             cmb_arabolum.DataSource = dtBolum;
 
-            cmb_arabolum.DisplayMember =
-            "BolumAd";
+            cmb_arabolum.DisplayMember ="BolumAd";
 
-            cmb_arabolum.ValueMember =
-            "BolumID";
+            cmb_arabolum.ValueMember ="BolumID";
 
             cmb_arabolum.SelectedIndex = -1;
 
@@ -117,11 +122,9 @@ namespace LoginModulForm
 
             cmb_aratip.DataSource = dtTip;
 
-            cmb_aratip.DisplayMember =
-            "TipAd";
+            cmb_aratip.DisplayMember ="TipAd";
 
-            cmb_aratip.ValueMember =
-            "DersTipiID";
+            cmb_aratip.ValueMember ="DersTipiID";
 
             cmb_aratip.SelectedIndex = -1;
 
@@ -129,8 +132,7 @@ namespace LoginModulForm
 
         private void label25_Click_1(object sender, EventArgs e)
         {
-            DersYonetimi dytm = new DersYonetimi();
-            dytm.Show();
+            _anaForm.Show();
             this.Hide();
         }
     }

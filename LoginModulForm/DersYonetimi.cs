@@ -217,7 +217,7 @@ namespace LoginModulForm
         {
             if (e.KeyCode == Keys.F4)
             {
-                DersArama darm = new DersArama();
+                DersArama darm = new DersArama(this);
                 darm.islemTipi = "sil";
                 darm.Show();
                 this.Hide();
@@ -227,6 +227,15 @@ namespace LoginModulForm
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
+
+            if (cmb_guncellebolum.SelectedValue == null ||
+                cmb_guncelletip.SelectedValue == null ||
+                cmb_guncelleseviye.SelectedValue == null)
+            {
+                MessageBox.Show("Lütfen tüm alanların (Bölüm, Tip, Seviye) seçili olduğundan emin olun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DataBaseClass db = new DataBaseClass(connectionString);
 
             DialogResult mesaj = MessageBox.Show(
@@ -321,7 +330,7 @@ namespace LoginModulForm
         {
             if (e.KeyCode == Keys.F4)
             {
-                DersArama darm = new DersArama();
+                DersArama darm = new DersArama(this);
                 darm.islemTipi = "guncelle";
                 darm.Show();
                 this.Hide();
@@ -394,14 +403,7 @@ namespace LoginModulForm
             ymdl.Show();
         }
 
-        
-
-        
-
-        
-        
-
-        
+               
 
         private void cmb_guncelletip_SelectedIndexChanged(object sender, EventArgs e)
         {
