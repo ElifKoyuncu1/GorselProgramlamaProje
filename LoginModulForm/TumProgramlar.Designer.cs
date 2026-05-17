@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TumProgramlar));
-            this.cmb_programlar = new System.Windows.Forms.ComboBox();
+            this.cmb_blmler = new System.Windows.Forms.ComboBox();
             this.dgw_programlar = new System.Windows.Forms.DataGridView();
             this.btn_dosya_indir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmb_programseviye = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_programlar)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cmb_programlar
+            // cmb_blmler
             // 
-            this.cmb_programlar.FormattingEnabled = true;
-            this.cmb_programlar.Location = new System.Drawing.Point(155, 12);
-            this.cmb_programlar.Name = "cmb_programlar";
-            this.cmb_programlar.Size = new System.Drawing.Size(472, 21);
-            this.cmb_programlar.TabIndex = 0;
+            this.cmb_blmler.FormattingEnabled = true;
+            this.cmb_blmler.Location = new System.Drawing.Point(129, 9);
+            this.cmb_blmler.Name = "cmb_blmler";
+            this.cmb_blmler.Size = new System.Drawing.Size(210, 21);
+            this.cmb_blmler.TabIndex = 0;
             // 
             // dgw_programlar
             // 
@@ -75,8 +76,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.cmb_programseviye);
             this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.cmb_programlar);
+            this.panel1.Controls.Add(this.cmb_blmler);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -116,6 +118,14 @@
             this.panel3.Size = new System.Drawing.Size(804, 452);
             this.panel3.TabIndex = 5;
             // 
+            // cmb_programseviye
+            // 
+            this.cmb_programseviye.FormattingEnabled = true;
+            this.cmb_programseviye.Location = new System.Drawing.Point(404, 9);
+            this.cmb_programseviye.Name = "cmb_programseviye";
+            this.cmb_programseviye.Size = new System.Drawing.Size(210, 21);
+            this.cmb_programseviye.TabIndex = 48;
+            // 
             // TumProgramlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,12 +151,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmb_programlar;
+        private System.Windows.Forms.ComboBox cmb_blmler;
         private System.Windows.Forms.DataGridView dgw_programlar;
         private System.Windows.Forms.Button btn_dosya_indir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox cmb_programseviye;
     }
 }

@@ -152,4 +152,4 @@ C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModu
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.exe
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.pdb
 C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.SinavProgramiOlustur.resources
-C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.HocaProgramlar.resources
+C:\Users\Elif Koyuncu\source\repos\ElifKoyuncu1\GorselProgramlamaProje\LoginModulForm\obj\Debug\LoginModulForm.HocaProgramim.resources

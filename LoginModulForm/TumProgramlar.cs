@@ -29,10 +29,10 @@ namespace LoginModulForm
             DataTable dt = db.ExecuteQuery(query);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                cmb_programlar.Items.Add(dt.Rows[i][0].ToString());
+                cmb_blmler.Items.Add(dt.Rows[i][0].ToString());
             }
 
-            cmb_programlar.SelectedIndex = -1;
+            cmb_blmler.SelectedIndex = -1;
         }
 
         private void label25_Click(object sender, EventArgs e)

@@ -27,7 +27,9 @@ namespace LoginModulForm
 
         private void btn_programım_Click(object sender, EventArgs e)
         {
-
+            HocaProgramim hp = new HocaProgramim(gelenBolumID);
+            hp.Show();
+            this.Hide();
         }
 
         private void btn_programolustur_Click(object sender, EventArgs e)

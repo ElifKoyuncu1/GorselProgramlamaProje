@@ -110,15 +110,22 @@ namespace LoginModulForm
 
         private void btn_seviyelistele_Click(object sender, EventArgs e)
         {
-            DataBaseClass db = new DataBaseClass(connectionString);
-            string query = "SELECT ss.SinifSeviyeID, ss.SeviyeNo, ss.SinifMevcudu, b.BolumAd FROM SinifSeviyesi ss INNER JOIN Bolum b ON ss.BolumID = b.BolumID";
-            DataTable dt = db.ExecuteQuery(query);
-            dataGrid_seviyelistele.DataSource = dt;
-            dataGrid_seviyelistele.Columns["SinifSeviyeID"].Visible = false;
-            dataGrid_seviyelistele.Columns["SeviyeNo"].HeaderText = "Sınıf Seviyesi";
-            dataGrid_seviyelistele.Columns["BolumAd"].HeaderText = "Bölüm Adı";
-            dataGrid_seviyelistele.Columns["SinifMevcudu"].HeaderText = "Sınıf Mevcudu";
-
+            try
+            {
+                DataBaseClass db = new DataBaseClass(connectionString);
+                string query = @"SELECT ss.SinifSeviyeID, ss.SeviyeNo, ss.SinifMevcudu, b.BolumAd FROM SinifSeviyesi ss LEFT JOIN Bolum b ON ss.BolumID = b.BolumID";
+                DataTable dt = db.ExecuteQuery(query);
+                dataGrid_seviyelistele.AutoGenerateColumns = true;
+                dataGrid_seviyelistele.DataSource = dt;
+                dataGrid_seviyelistele.Columns["SinifSeviyeID"].Visible = false;
+                dataGrid_seviyelistele.Columns["SeviyeNo"].HeaderText = "Sınıf Seviyesi";
+                dataGrid_seviyelistele.Columns["BolumAd"].HeaderText = "Bölüm Adı";
+                dataGrid_seviyelistele.Columns["SinifMevcudu"].HeaderText = "Sınıf Mevcudu";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu:" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_seviyesil_Click(object sender, EventArgs e)
