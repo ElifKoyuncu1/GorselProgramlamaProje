@@ -37,5 +37,12 @@ namespace LoginModulForm
             SinavProgramiOlustur frm = new SinavProgramiOlustur(gelenBolumID);
             frm.Show();
         }
+
+        private void label2_bolum_Click(object sender, EventArgs e)
+        {
+            YoneticiModul ym = new YoneticiModul();
+            ym.Show();
+            this.Hide();
+        }
     }
 }

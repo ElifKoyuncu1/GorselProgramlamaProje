@@ -37,6 +37,7 @@
             this.btn_kullanici = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label2_bolum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_zaman_takvim
@@ -167,6 +168,19 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label2_bolum
+            // 
+            this.label2_bolum.AutoSize = true;
+            this.label2_bolum.BackColor = System.Drawing.Color.Transparent;
+            this.label2_bolum.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2_bolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2_bolum.Location = new System.Drawing.Point(12, 9);
+            this.label2_bolum.Name = "label2_bolum";
+            this.label2_bolum.Size = new System.Drawing.Size(34, 26);
+            this.label2_bolum.TabIndex = 30;
+            this.label2_bolum.Text = "←";
+            this.label2_bolum.Click += new System.EventHandler(this.label2_bolum_Click);
+            // 
             // YoneticiModul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +188,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(589, 426);
+            this.Controls.Add(this.label2_bolum);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_zaman_takvim);
@@ -186,6 +201,7 @@
             this.Name = "YoneticiModul";
             this.Text = "Yönetici Modül";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -199,5 +215,6 @@
         private System.Windows.Forms.Button btn_kullanici;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2_bolum;
     }
 }

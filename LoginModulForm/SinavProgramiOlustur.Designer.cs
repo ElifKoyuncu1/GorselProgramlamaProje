@@ -44,6 +44,7 @@
             this.cmb_programVersiyon = new System.Windows.Forms.ComboBox();
             this.chk_cumartesiKullan = new System.Windows.Forms.CheckBox();
             this.cmb_takvim = new System.Windows.Forms.ComboBox();
+            this.label2_bolum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_program)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,7 +150,7 @@
             this.dataGridView_program.RowHeadersWidth = 51;
             this.dataGridView_program.RowTemplate.Height = 36;
             this.dataGridView_program.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_program.Size = new System.Drawing.Size(710, 515);
+            this.dataGridView_program.Size = new System.Drawing.Size(707, 528);
             this.dataGridView_program.TabIndex = 18;
             // 
             // btn_temizle
@@ -236,13 +237,27 @@
             this.cmb_takvim.Size = new System.Drawing.Size(138, 21);
             this.cmb_takvim.TabIndex = 12;
             // 
+            // label2_bolum
+            // 
+            this.label2_bolum.AutoSize = true;
+            this.label2_bolum.BackColor = System.Drawing.Color.Transparent;
+            this.label2_bolum.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2_bolum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2_bolum.Location = new System.Drawing.Point(12, 9);
+            this.label2_bolum.Name = "label2_bolum";
+            this.label2_bolum.Size = new System.Drawing.Size(34, 26);
+            this.label2_bolum.TabIndex = 30;
+            this.label2_bolum.Text = "←";
+            this.label2_bolum.Click += new System.EventHandler(this.label2_bolum_Click);
+            // 
             // SinavProgramiOlustur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(803, 759);
+            this.ClientSize = new System.Drawing.Size(800, 772);
+            this.Controls.Add(this.label2_bolum);
             this.Controls.Add(this.lbl_program);
             this.Controls.Add(this.lbl_takvim);
             this.Controls.Add(this.lbl_durum);
@@ -279,5 +294,6 @@
         private System.Windows.Forms.ComboBox cmb_programVersiyon;
         private System.Windows.Forms.CheckBox chk_cumartesiKullan;
         private System.Windows.Forms.ComboBox cmb_takvim;
+        private System.Windows.Forms.Label label2_bolum;
     }
 }

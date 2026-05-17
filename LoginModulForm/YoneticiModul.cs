@@ -72,5 +72,12 @@ namespace LoginModulForm
             akdtkm.Show();
             this.Hide();
         }
+
+        private void label2_bolum_Click(object sender, EventArgs e)
+        {
+            LoginForm loginform = new LoginForm();
+            loginform.Show();
+            this.Hide();
+        }
     }
 }

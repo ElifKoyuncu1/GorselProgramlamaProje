@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HocaProgramim));
             this.dataGridView_programim = new System.Windows.Forms.DataGridView();
             this.cmb_programVersiyon = new System.Windows.Forms.ComboBox();
@@ -41,9 +44,38 @@
             // 
             // dataGridView_programim
             // 
+            this.dataGridView_programim.AllowUserToAddRows = false;
+            this.dataGridView_programim.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            this.dataGridView_programim.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_programim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_programim.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.dataGridView_programim.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_programim.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_programim.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_programim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_programim.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_programim.EnableHeadersVisualStyles = false;
+            this.dataGridView_programim.GridColor = System.Drawing.Color.Black;
             this.dataGridView_programim.Location = new System.Drawing.Point(12, 59);
             this.dataGridView_programim.Name = "dataGridView_programim";
+            this.dataGridView_programim.RowHeadersVisible = false;
+            this.dataGridView_programim.RowTemplate.Height = 36;
+            this.dataGridView_programim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_programim.Size = new System.Drawing.Size(791, 503);
             this.dataGridView_programim.TabIndex = 0;
             // 
