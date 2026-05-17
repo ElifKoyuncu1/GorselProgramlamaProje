@@ -40,9 +40,10 @@ namespace LoginModulForm
 
         private void label2_bolum_Click(object sender, EventArgs e)
         {
-            YoneticiModul ym = new YoneticiModul();
-            ym.Show();
+            LoginForm loginform = new LoginForm();
+            loginform.Show();
             this.Hide();
+
         }
     }
 }
