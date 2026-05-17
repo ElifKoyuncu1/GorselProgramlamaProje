@@ -35,6 +35,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cmbAraDonemTipi = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label_geri = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,6 +119,19 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Dönem Tipi..:";
             // 
+            // label_geri
+            // 
+            this.label_geri.AutoSize = true;
+            this.label_geri.BackColor = System.Drawing.Color.Transparent;
+            this.label_geri.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_geri.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_geri.Location = new System.Drawing.Point(12, 9);
+            this.label_geri.Name = "label_geri";
+            this.label_geri.Size = new System.Drawing.Size(34, 26);
+            this.label_geri.TabIndex = 23;
+            this.label_geri.Text = "←";
+            this.label_geri.Click += new System.EventHandler(this.label_geri_Click);
+            // 
             // TakvimZamanDilimiAraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +139,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(594, 371);
+            this.Controls.Add(this.label_geri);
             this.Controls.Add(this.groupBox2);
             this.DoubleBuffered = true;
             this.Name = "TakvimZamanDilimiAraForm";
@@ -133,6 +148,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -144,5 +160,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbAraDonemTipi;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label_geri;
     }
 }

@@ -137,5 +137,12 @@ namespace LoginModulForm
 
             cmbAraDonemTipi.SelectedIndex = -1;
         }
+
+        private void label_geri_Click(object sender, EventArgs e)
+        {
+            TakvimZamanDilimi tksdm = new TakvimZamanDilimi();
+            tksdm.Show();
+            this.Hide();
+        }
     }
 }
