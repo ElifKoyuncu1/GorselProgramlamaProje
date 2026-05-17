@@ -65,5 +65,12 @@ namespace LoginModulForm
             tm.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AkademikTakvim akdtkm = new AkademikTakvim();
+            akdtkm.Show();
+            this.Hide();
+        }
     }
 }

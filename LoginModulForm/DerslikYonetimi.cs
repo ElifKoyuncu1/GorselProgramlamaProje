@@ -13,208 +13,72 @@ namespace LoginModulForm
 {
     public partial class DerslikYonetimi : Form
     {
-        string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
-
-        int secilenDerslikID = 0;
-        ToolTip bilgiToolTip = new ToolTip();
-
         public DerslikYonetimi()
         {
             InitializeComponent();
-
-            this.KeyPreview = true;
-            this.KeyDown += DerslikYonetimi_KeyDown;
-
-            text_drsGuncelle.KeyDown += GuncelleAlan_KeyDown;
-            num_guncelle.KeyDown += GuncelleAlan_KeyDown;
-
-            text_drsGuncelle.Enter += GuncelleAlan_Enter;
-            num_guncelle.Enter += GuncelleAlan_Enter;
-
-            NumericAyarlariniYap();
-            ToolTipleriAyarla();
-
-            Listele();
         }
+        string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
 
-        private void NumericAyarlariniYap()
-        {
-            num_ekle.Minimum = 1;
-            num_ekle.Maximum = 1000;
-            num_ekle.Value = 1;
-
-            num_guncelle.Minimum = 1;
-            num_guncelle.Maximum = 1000;
-            num_guncelle.Value = 1;
-
-            // Eğer num_sil gerçekten NumericUpDown ise kalsın.
-            // Silme işleminde kapasite kullanılmıyorsa bu kontrolü formdan kaldırabilirsin.
-            num_sil.Minimum = 1;
-            num_sil.Maximum = 1000;
-            num_sil.Value = 1;
-        }
-
-        private void ToolTipleriAyarla()
-        {
-            bilgiToolTip.IsBalloon = true;
-            bilgiToolTip.ToolTipIcon = ToolTipIcon.Info;
-            bilgiToolTip.ToolTipTitle = "Arama";
-            bilgiToolTip.AutoPopDelay = 4000;
-            bilgiToolTip.InitialDelay = 300;
-            bilgiToolTip.ReshowDelay = 100;
-
-            bilgiToolTip.SetToolTip(text_drsGuncelle, "Arama için F4 tuşuna basınız.");
-            bilgiToolTip.SetToolTip(num_guncelle, "Arama için F4 tuşuna basınız.");
-            bilgiToolTip.SetToolTip(btn_guncelle, "Önce F4 ile dersliği getir, sonra burada güncelle.");
-        }
-
-        private void GuncelleAlan_Enter(object sender, EventArgs e)
-        {
-            Control kontrol = sender as Control;
-
-            if (kontrol != null)
-            {
-                bilgiToolTip.Show(
-                    "Arama için F4 tuşuna basınız.",
-                    kontrol,
-                    kontrol.Width / 2,
-                    kontrol.Height,
-                    3000
-                );
-            }
-        }
-
-        private void DerslikYonetimi_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F4)
-            {
-                DerslikAraFormunuAc();
-
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
-        }
-
-        private void GuncelleAlan_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F4)
-            {
-                DerslikAraFormunuAc();
-
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
-        }
-
-        private void DerslikAraFormunuAc()
-        {
-            using (DerslikAraForm araForm = new DerslikAraForm())
-            {
-                if (araForm.ShowDialog() == DialogResult.OK)
-                {
-                    secilenDerslikID = araForm.SecilenDerslikID;
-
-                    text_drsGuncelle.Text = araForm.SecilenDerslikAd;
-
-                    int gelenKapasite = araForm.SecilenKapasite;
-
-                    if (gelenKapasite < num_guncelle.Minimum)
-                        gelenKapasite = Convert.ToInt32(num_guncelle.Minimum);
-
-                    if (gelenKapasite > num_guncelle.Maximum)
-                        gelenKapasite = Convert.ToInt32(num_guncelle.Maximum);
-
-                    num_guncelle.Value = gelenKapasite;
-
-                    tabControl1.SelectedTab = tabPage3;
-
-                    MessageBox.Show("Derslik bilgisi ana forma getirildi. Bilgileri düzenleyip Güncelle butonuna basabilirsiniz.");
-                }
-            }
-        }
+        public int secilenDerslikID = 0;
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(text_drsEkle.Text))
-            {
-                MessageBox.Show("Derslik adı boş olamaz.");
-                return;
-            }
-
-            int kapasite = Convert.ToInt32(num_ekle.Value);
-
-            if (kapasite <= 0)
-            {
-                MessageBox.Show("Kapasite 0'dan büyük olmalıdır.");
-                return;
-            }
+            DataBaseClass db = new DataBaseClass(connectionString);
 
             string derslikAd = text_drsEkle.Text.Trim();
 
-            try
+            int kapasite = (int)num_ekle.Value;
+
+            if (derslikAd == "")
             {
-                using (SqlConnection baglanti = new SqlConnection(connectionString))
-                {
-                    baglanti.Open();
-
-                    string kontrolSorgu = @"
-                SELECT COUNT(*)
-                FROM Derslik
-                WHERE DerslikAd = @derslikAd";
-
-                    using (SqlCommand kontrolKomut = new SqlCommand(kontrolSorgu, baglanti))
-                    {
-                        kontrolKomut.Parameters.AddWithValue("@derslikAd", derslikAd);
-
-                        int kayitSayisi = Convert.ToInt32(kontrolKomut.ExecuteScalar());
-
-                        if (kayitSayisi > 0)
-                        {
-                            MessageBox.Show("Bu derslik zaten kayıtlı.");
-                            return;
-                        }
-                    }
-
-                    string sorgu = @"
-                INSERT INTO Derslik
-                (DerslikAd, Kapasite)
-                VALUES
-                (@derslikAd, @kapasite)";
-
-                    using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
-                    {
-                        komut.Parameters.AddWithValue("@derslikAd", derslikAd);
-                        komut.Parameters.AddWithValue("@kapasite", kapasite);
-
-                        int sonuc = komut.ExecuteNonQuery();
-
-                        if (sonuc > 0)
-                        {
-                            MessageBox.Show("Derslik başarıyla eklendi.");
-
-                            text_drsEkle.Clear();
-                            num_ekle.Value = 1;
-
-                            Listele();
-                        }
-                    }
-                }
+                MessageBox.Show("Derslik adı boş bırakılamaz.");
+                return;
             }
-            catch (Exception ex)
+
+            string kontrolQuery =
+            "SELECT * FROM Derslik WHERE DerslikAd=@ad";
+
+            SqlParameter[] kontrolParameters =
             {
-                MessageBox.Show("Ekleme sırasında hata oluştu: " + ex.Message);
+                new SqlParameter("@ad", derslikAd)
+            };
+
+            DataTable kontrol = db.ExecuteQuery(kontrolQuery, kontrolParameters);
+
+            if (kontrol.Rows.Count > 0)
+            {
+                MessageBox.Show("Bu derslik zaten kayıtlı.");
+                return;
+            }
+
+            string query = @"
+            INSERT INTO Derslik
+            (DerslikAd, Kapasite)
+            VALUES
+            (@ad, @kapasite)";
+
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@ad", derslikAd),
+                new SqlParameter("@kapasite", kapasite)
+            };
+
+            int sonuc = db.ExecuteNonQuery(query, parameters);
+
+            if (sonuc > 0)
+            {
+                MessageBox.Show("Derslik başarıyla eklendi.");
+
+                text_drsEkle.Clear();
+
+                num_ekle.Value = 1;
+            }
+            else
+            {
+                MessageBox.Show("Ekleme işlemi başarısız.");
             }
         }
 
- 
-
-        private void GuncelleAlanlariniTemizle()
-        {
-            secilenDerslikID = 0;
-
-            text_drsGuncelle.Clear();
-            num_guncelle.Value = 1;
-        }
 
         private void btn_sil_Click_1(object sender, EventArgs e)
         {
@@ -224,185 +88,115 @@ namespace LoginModulForm
                 return;
             }
 
-            string derslikAd = text_dersSil.Text.Trim();
+            DataBaseClass db = new DataBaseClass(connectionString);
 
-            DialogResult onay = MessageBox.Show(
+            DialogResult mesaj = MessageBox.Show(
                 "Bu dersliği silmek istediğinize emin misiniz?",
                 "Uyarı",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
 
-            if (onay != DialogResult.Yes)
-                return;
-
-            try
+            if (mesaj == DialogResult.Yes)
             {
-                using (SqlConnection baglanti = new SqlConnection(connectionString))
+                string derslikAd = text_dersSil.Text.Trim();
+
+                string query =
+                "DELETE FROM Derslik WHERE DerslikAd=@ad";
+
+                SqlParameter[] parameters =
                 {
-                    baglanti.Open();
+                    new SqlParameter("@ad", derslikAd)
+                };
 
-                    string sorgu = @"
-                DELETE FROM Derslik
-                WHERE DerslikAd = @derslikAd";
+                int sonuc = db.ExecuteNonQuery(query, parameters);
 
-                    using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
-                    {
-                        komut.Parameters.AddWithValue("@derslikAd", derslikAd);
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Derslik silindi.");
 
-                        int sonuc = komut.ExecuteNonQuery();
+                    text_dersSil.Clear();
 
-                        if (sonuc > 0)
-                        {
-                            MessageBox.Show("Derslik silindi.");
-
-                            text_dersSil.Clear();
-                            num_sil.Value = 1;
-
-                            Listele();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Silinecek derslik bulunamadı.");
-                        }
-                    }
+                    num_sil.Value = 1;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Silme sırasında hata oluştu: " + ex.Message);
+                else
+                {
+                    MessageBox.Show("Silme işlemi başarısız.");
+                }
             }
         }
 
         private void btn_guncelle_Click_1(object sender, EventArgs e)
         {
-            if (secilenDerslikID == 0)
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            DialogResult mesaj = MessageBox.Show(
+                "Bu dersliği güncellemek istediğinize emin misiniz?",
+                "Uyarı",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (mesaj == DialogResult.Yes)
             {
-                DerslikAraFormunuAc();
-                return;
-            }
+                string derslikAd = text_drsGuncelle.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(text_drsGuncelle.Text))
-            {
-                MessageBox.Show("Derslik adı boş olamaz.");
-                return;
-            }
+                int kapasite = (int)num_guncelle.Value;
 
-            int kapasite = Convert.ToInt32(num_guncelle.Value);
-
-            if (kapasite <= 0)
-            {
-                MessageBox.Show("Kapasite 0'dan büyük olmalıdır.");
-                return;
-            }
-
-            string derslikAd = text_drsGuncelle.Text.Trim();
-
-            try
-            {
-                using (SqlConnection baglanti = new SqlConnection(connectionString))
-                {
-                    baglanti.Open();
-
-                    string kontrolSorgu = @"
-                SELECT COUNT(*)
-                FROM Derslik
-                WHERE DerslikID <> @derslikID
-                  AND DerslikAd = @derslikAd";
-
-                    using (SqlCommand kontrolKomut = new SqlCommand(kontrolSorgu, baglanti))
-                    {
-                        kontrolKomut.Parameters.AddWithValue("@derslikID", secilenDerslikID);
-                        kontrolKomut.Parameters.AddWithValue("@derslikAd", derslikAd);
-
-                        int kayitSayisi = Convert.ToInt32(kontrolKomut.ExecuteScalar());
-
-                        if (kayitSayisi > 0)
-                        {
-                            MessageBox.Show("Bu derslik adı başka bir kayıtta kullanılıyor.");
-                            return;
-                        }
-                    }
-
-                    string sorgu = @"
+                string query = @"
                 UPDATE Derslik
-                SET DerslikAd = @derslikAd,
-                    Kapasite = @kapasite
-                WHERE DerslikID = @derslikID";
+                SET
+                    DerslikAd=@ad,
+                    Kapasite=@kapasite
+                WHERE DerslikID=@id";
 
-                    using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
-                    {
-                        komut.Parameters.AddWithValue("@derslikAd", derslikAd);
-                        komut.Parameters.AddWithValue("@kapasite", kapasite);
-                        komut.Parameters.AddWithValue("@derslikID", secilenDerslikID);
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@ad", derslikAd),
+                    new SqlParameter("@kapasite", kapasite),
+                    new SqlParameter("@id", secilenDerslikID)
+                };
 
-                        int sonuc = komut.ExecuteNonQuery();
+                int sonuc = db.ExecuteNonQuery(query, parameters);
 
-                        if (sonuc > 0)
-                        {
-                            MessageBox.Show("Derslik başarıyla güncellendi.");
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Derslik güncellendi.");
 
-                            GuncelleAlanlariniTemizle();
-                            Listele();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Güncellenecek derslik bulunamadı.");
-                        }
-                    }
+                    text_drsGuncelle.Clear();
+
+                    num_guncelle.Value = 1;
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Güncelleme başarısız.");
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Güncelleme sırasında hata oluştu: " + ex.Message);
-            }
         }
+  
 
         private void btn_listele_Click_1(object sender, EventArgs e)
         {
-            Listele();
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            string query = @"
+            SELECT
+              DerslikID,
+              DerslikAd,
+              Kapasite
+            FROM Derslik";
+
+            DataTable dt = db.ExecuteQuery(query);
+
+            dataGridView1.DataSource = dt;
+
+
+            dataGridView1.Columns["DerslikAd"].HeaderText = "Derslik Adı";
+
+            dataGridView1.Columns["Kapasite"].HeaderText = "Kapasite";
+
         }
-        private void Listele()
-        {
-            try
-            {
-                using (SqlConnection baglanti = new SqlConnection(connectionString))
-                {
-                    baglanti.Open();
-
-                    string sorgu = @"
-                SELECT 
-                    DerslikID,
-                    DerslikAd,
-                    Kapasite
-                FROM Derslik
-                ORDER BY DerslikID";
-
-                    SqlDataAdapter da = new SqlDataAdapter(sorgu, baglanti);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    dataGridView1.DataSource = dt;
-
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    dataGridView1.ReadOnly = true;
-                    dataGridView1.AllowUserToAddRows = false;
-
-                    if (dataGridView1.Columns.Contains("DerslikID"))
-                        dataGridView1.Columns["DerslikID"].HeaderText = "Derslik ID";
-
-                    if (dataGridView1.Columns.Contains("DerslikAd"))
-                        dataGridView1.Columns["DerslikAd"].HeaderText = "Derslik Adı";
-
-                    if (dataGridView1.Columns.Contains("Kapasite"))
-                        dataGridView1.Columns["Kapasite"].HeaderText = "Kapasite";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Listeleme sırasında hata oluştu: " + ex.Message);
-            }
-        }
+     
 
         private void lbl_dekle_Click_1(object sender, EventArgs e)
         {
@@ -430,6 +224,46 @@ namespace LoginModulForm
             YoneticiModul frm = new YoneticiModul();
             frm.Show();
             this.Hide();
+        }
+
+        private void DerslikYonetimi_Load(object sender, EventArgs e)
+        {
+            ToolTip mesaj = new ToolTip();
+
+            mesaj.ToolTipTitle = "Arama";
+            mesaj.ToolTipIcon = ToolTipIcon.Info;
+            mesaj.ShowAlways = true;
+
+            mesaj.SetToolTip(text_drsGuncelle, "Arama için F4 tuşuna basınız");
+            mesaj.SetToolTip(text_dersSil, "Arama için F4 tuşuna basınız");
+        }
+
+        private void text_dersSil_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                DerslikAraForm frm = new DerslikAraForm();
+
+                frm.islemTipi = "sil";
+
+                frm.Show();
+
+                this.Hide();
+            }
+        }
+
+        private void text_drsGuncelle_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                DerslikAraForm frm = new DerslikAraForm();
+
+                frm.islemTipi = "guncelle";
+
+                frm.Show();
+
+                this.Hide();
+            }
         }
     }
 }

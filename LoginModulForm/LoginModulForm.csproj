@@ -70,6 +70,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AkademikTakvim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AkademikTakvim.Designer.cs">
+      <DependentUpon>AkademikTakvim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AkademikTakvimArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AkademikTakvimArama.Designer.cs">
+      <DependentUpon>AkademikTakvimArama.cs</DependentUpon>
+    </Compile>
     <Compile Include="BolumArama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     <Compile Include="HocaModul.Designer.cs">
       <DependentUpon>HocaModul.cs</DependentUpon>
     </Compile>
+    <Compile Include="HocaProgramlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HocaProgramlar.Designer.cs">
+      <DependentUpon>HocaProgramlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="KullaniciArama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +168,12 @@
     </Compile>
     <Compile Include="SeviyeArama.Designer.cs">
       <DependentUpon>SeviyeArama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinavProgramiOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinavProgramiOlustur.Designer.cs">
+      <DependentUpon>SinavProgramiOlustur.cs</DependentUpon>
     </Compile>
     <Compile Include="SinifYonetimi.cs">
       <SubType>Form</SubType>
@@ -182,6 +206,12 @@
     <Compile Include="YoneticiModul.Designer.cs">
       <DependentUpon>YoneticiModul.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AkademikTakvim.resx">
+      <DependentUpon>AkademikTakvim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AkademikTakvimArama.resx">
+      <DependentUpon>AkademikTakvimArama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BolumArama.resx">
       <DependentUpon>BolumArama.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +239,9 @@
     <EmbeddedResource Include="HocaModul.resx">
       <DependentUpon>HocaModul.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HocaProgramlar.resx">
+      <DependentUpon>HocaProgramlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KullaniciArama.resx">
       <DependentUpon>KullaniciArama.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +263,9 @@
     </Compile>
     <EmbeddedResource Include="SeviyeArama.resx">
       <DependentUpon>SeviyeArama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinavProgramiOlustur.resx">
+      <DependentUpon>SinavProgramiOlustur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SinifYonetimi.resx">
       <DependentUpon>SinifYonetimi.cs</DependentUpon>

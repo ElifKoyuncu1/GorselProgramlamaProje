@@ -35,6 +35,7 @@
             this.txtDerslikAdi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label_bolumgeri = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_kapasite)).BeginInit();
             this.SuspendLayout();
@@ -47,20 +48,24 @@
             this.groupBox1.Controls.Add(this.txtDerslikAdi);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(125, 52);
+            this.groupBox1.Location = new System.Drawing.Point(98, 34);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(384, 224);
+            this.groupBox1.Size = new System.Drawing.Size(374, 256);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Derslik Güncelle";
+            this.groupBox1.Text = "Derslik Ara";
             // 
             // btn_ara
             // 
-            this.btn_ara.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_ara.Location = new System.Drawing.Point(66, 151);
+            this.btn_ara.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_ara.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_ara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ara.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_ara.Location = new System.Drawing.Point(97, 197);
             this.btn_ara.Name = "btn_ara";
-            this.btn_ara.Size = new System.Drawing.Size(246, 23);
+            this.btn_ara.Size = new System.Drawing.Size(175, 30);
             this.btn_ara.TabIndex = 4;
             this.btn_ara.Text = "Ara";
             this.btn_ara.UseVisualStyleBackColor = true;
@@ -68,35 +73,50 @@
             // 
             // num_kapasite
             // 
-            this.num_kapasite.Location = new System.Drawing.Point(213, 94);
+            this.num_kapasite.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.num_kapasite.Location = new System.Drawing.Point(179, 120);
             this.num_kapasite.Name = "num_kapasite";
-            this.num_kapasite.Size = new System.Drawing.Size(120, 20);
+            this.num_kapasite.Size = new System.Drawing.Size(137, 20);
             this.num_kapasite.TabIndex = 3;
             // 
             // txtDerslikAdi
             // 
-            this.txtDerslikAdi.Location = new System.Drawing.Point(213, 46);
+            this.txtDerslikAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtDerslikAdi.Location = new System.Drawing.Point(179, 63);
             this.txtDerslikAdi.Name = "txtDerslikAdi";
-            this.txtDerslikAdi.Size = new System.Drawing.Size(120, 20);
+            this.txtDerslikAdi.Size = new System.Drawing.Size(137, 20);
             this.txtDerslikAdi.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 102);
+            this.label2.Location = new System.Drawing.Point(61, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Kapasite";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 54);
+            this.label1.Location = new System.Drawing.Point(61, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Derslik Adı..:";
+            // 
+            // label_bolumgeri
+            // 
+            this.label_bolumgeri.AutoSize = true;
+            this.label_bolumgeri.BackColor = System.Drawing.Color.Transparent;
+            this.label_bolumgeri.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_bolumgeri.ForeColor = System.Drawing.Color.White;
+            this.label_bolumgeri.Location = new System.Drawing.Point(12, 9);
+            this.label_bolumgeri.Name = "label_bolumgeri";
+            this.label_bolumgeri.Size = new System.Drawing.Size(34, 26);
+            this.label_bolumgeri.TabIndex = 23;
+            this.label_bolumgeri.Text = "←";
+            this.label_bolumgeri.Click += new System.EventHandler(this.label_bolumgeri_Click);
             // 
             // DerslikAraForm
             // 
@@ -104,7 +124,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(662, 366);
+            this.ClientSize = new System.Drawing.Size(591, 345);
+            this.Controls.Add(this.label_bolumgeri);
             this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.Name = "DerslikAraForm";
@@ -113,6 +134,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_kapasite)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +146,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.NumericUpDown num_kapasite;
+        private System.Windows.Forms.Label label_bolumgeri;
     }
 }

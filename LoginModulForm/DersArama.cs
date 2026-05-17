@@ -32,7 +32,7 @@ namespace LoginModulForm
             string d_blm = cmb_arabolum.Text.Trim();
             string d_tip=cmb_aratip.Text.Trim();
             string d_seviye=cmb_araseviye.Text.Trim();
-            string query = @"SELECT d.DersID, d.DersAdi, b.BolumAd, dt.TipAd, ss.SeviyeNo, d.Kredi, d.SinavSuresi, d.DersiAlanOgrenciSayisi
+            string query = @"SELECT d.DersID, d.DersAdi, b.BolumID, b.BolumAd, dt.DersTipiID, dt.TipAd, ss.SinifSeviyeID, ss.SeviyeNo, d.Kredi, d.SinavSuresi, d.DersiAlanOgrenciSayisi
                           FROM Ders d 
                           INNER JOIN Bolum b ON d.BolumID = b.BolumID
                           INNER JOIN DersTipi dt ON d.DersTipiID = dt.DersTipiID
@@ -69,9 +69,9 @@ namespace LoginModulForm
                 {
                     dytm.secilenDersId = Convert.ToInt32(dt.Rows[0]["DersID"]);
                     dytm.text_guncellead.Text = dt.Rows[0]["DersAdi"].ToString();
-                    dytm.cmb_guncellebolum.Text = dt.Rows[0]["BolumAd"].ToString();
-                    dytm.cmb_guncelletip.Text = dt.Rows[0]["TipAd"].ToString();
-                    dytm.cmb_guncelleseviye.Text = dt.Rows[0]["SeviyeNo"].ToString();
+                    dytm.cmb_guncellebolum.SelectedValue = dt.Rows[0]["BolumID"];
+                    dytm.cmb_guncelletip.SelectedValue = dt.Rows[0]["DersTipiID"];
+                    dytm.cmb_guncelleseviye.SelectedValue = dt.Rows[0]["SinifSeviyeID"];
                     dytm.nmup_guncellekredi.Value = Convert.ToDecimal(dt.Rows[0]["Kredi"]);
                     dytm.nmup_guncellesure.Value =Convert.ToDecimal(dt.Rows[0]["SinavSuresi"]);
                     dytm.nmup_guncelleogrsayisi.Value =Convert.ToDecimal(dt.Rows[0]["DersiAlanOgrenciSayisi"]);
@@ -91,19 +91,39 @@ namespace LoginModulForm
         private void DersArama_Load(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
-            string query = "SELECT BolumAd FROM Bolum";
-            string query1 = "SELECT TipAd FROM DersTipi";
-            DataTable dt = db.ExecuteQuery(query);
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                cmb_arabolum.Items.Add(dt.Rows[i][0].ToString());
-            }
+            string queryBolum =
+            "SELECT BolumID, BolumAd FROM Bolum";
 
-            DataTable dtTip = db.ExecuteQuery(query1);
-            for (int i = 0; i < dtTip.Rows.Count; i++)
-            {
-                cmb_aratip.Items.Add(dtTip.Rows[i][0].ToString());
-            }
+            DataTable dtBolum =
+            db.ExecuteQuery(queryBolum);
+
+            cmb_arabolum.DataSource = dtBolum;
+
+            cmb_arabolum.DisplayMember =
+            "BolumAd";
+
+            cmb_arabolum.ValueMember =
+            "BolumID";
+
+            cmb_arabolum.SelectedIndex = -1;
+
+
+            // DERS TİPLERİ
+            string queryTip =
+            "SELECT DersTipiID, TipAd FROM DersTipi";
+
+            DataTable dtTip =
+            db.ExecuteQuery(queryTip);
+
+            cmb_aratip.DataSource = dtTip;
+
+            cmb_aratip.DisplayMember =
+            "TipAd";
+
+            cmb_aratip.ValueMember =
+            "DersTipiID";
+
+            cmb_aratip.SelectedIndex = -1;
 
         }
 

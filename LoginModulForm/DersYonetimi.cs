@@ -23,72 +23,19 @@ namespace LoginModulForm
         public int secilenTipId;
         public int secilenDersId;
         string connectionString = @"Data Source=localhost; Initial Catalog=SinavProgrami;Integrated Security=true";
-        private void btn_ekle_Click(object sender, EventArgs e)
-        {
-
-            DataBaseClass db = new DataBaseClass(connectionString);
-            string d_ad = text_eklead.Text.Trim();
-            string b_ad = cmb_eklebolum.Text.Trim();
-            string t_ad = cmb_ekletip.Text.Trim();
-            string s_no = cmb_ekleseviye.Text.Trim();
-
-            string query = @"
-            INSERT INTO Ders
-            (DersAdi, BolumID, DersTipiID, SinifSeviyeID, Kredi, SinavSuresi, DersiAlanOgrenciSayisi)
-            SELECT 
-                @dersadi,
-                b.BolumID,
-                t.DersTipiID,
-                s.SinifSeviyeID,
-                @kredi,
-                @sure,
-                @ogrencisayisi
-            FROM Bolum b
-            INNER JOIN DersTipi t ON t.TipAd = @tipAd
-            INNER JOIN SinifSeviyesi s ON s.SeviyeNo = @seviyeNo AND s.BolumID = b.BolumID
-            WHERE b.BolumAd = @bolumAd";
-
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-            new SqlParameter("@dersadi", d_ad),
-            new SqlParameter("@bolumAd", b_ad),
-            new SqlParameter("@tipAd", t_ad),
-            new SqlParameter("@seviyeNo", s_no),
-            new SqlParameter("@kredi", Convert.ToInt32(nmup_eklekredi.Text)),
-            new SqlParameter("@sure", Convert.ToInt32(nmup_eklesure.Text)),
-            new SqlParameter("@ogrencisayisi", Convert.ToInt32(nmup_eklesayi.Text))
-            };
-
-            int sonuc = db.ExecuteNonQuery(query, parameters);
-
-            if (sonuc > 0)
-            {
-                MessageBox.Show("Ders başarıyla eklendi.");
-
-                text_eklead.Clear();
-                cmb_eklebolum.SelectedIndex = -1;
-                cmb_ekletip.SelectedIndex = -1;
-                cmb_ekleseviye.Items.Clear();
-                nmup_eklekredi.Value=0;
-                nmup_eklesure.Value = 0;
-                nmup_eklesayi.Value = 0;
-            }
-            else
-            {
-                MessageBox.Show("Ders eklenemedi (eşleşen veri yok olabilir).");
-            }
-        }
+        
 
         void DersTipleriniYukle()
         {
             DataBaseClass db = new DataBaseClass(connectionString);
 
-            string query = "SELECT TipAd FROM DersTipi";
+            string query = "SELECT DersTipiID, TipAd FROM DersTipi";
+
             DataTable dtTip = db.ExecuteQuery(query);
 
-            cmb_ekletip.DataSource = null; // eskiyi temizle
             cmb_ekletip.DataSource = dtTip;
             cmb_ekletip.DisplayMember = "TipAd";
+            cmb_ekletip.ValueMember = "DersTipiID";
 
             cmb_ekletip.SelectedIndex = -1;
         }
@@ -96,27 +43,33 @@ namespace LoginModulForm
         private void DersYonetimi_Load(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
-            string query = "SELECT BolumAd FROM Bolum";
-            string query1 = "SELECT TipAd FROM DersTipi";
 
-            //BÖLÜMLERİ YÜKLE
-            DataTable dtBolum = db.ExecuteQuery(query);
-            for (int i = 0; i < dtBolum.Rows.Count; i++)
-            {
-                cmb_eklebolum.Items.Add(dtBolum.Rows[i][0].ToString());
-                cmb_guncellebolum.Items.Add(dtBolum.Rows[i][0].ToString());
-            }
+            // BÖLÜM
+            string queryBolum = "SELECT BolumID, BolumAd FROM Bolum";
+            DataTable dtBolum = db.ExecuteQuery(queryBolum);
 
-            //DERS TİPİ YÜKLE
+            cmb_eklebolum.DataSource = dtBolum;
+            cmb_eklebolum.DisplayMember = "BolumAd";
+            cmb_eklebolum.ValueMember = "BolumID";
 
-            DataTable dtTip = db.ExecuteQuery(query1);
-            for (int i = 0; i < dtTip.Rows.Count; i++)
-            {
-                cmb_ekletip.Items.Add(dtTip.Rows[i][0].ToString());
-                cmb_guncelletip.Items.Add(dtTip.Rows[i][0].ToString());
+            cmb_guncellebolum.DataSource = dtBolum.Copy();
+            cmb_guncellebolum.DisplayMember = "BolumAd";
+            cmb_guncellebolum.ValueMember = "BolumID";
 
-            }
-            DersTipleriniYukle();
+
+            // DERS TİPİ
+            string queryTip = "SELECT DersTipiID, TipAd FROM DersTipi";
+            DataTable dtTip = db.ExecuteQuery(queryTip);
+
+            cmb_ekletip.DataSource = dtTip;
+            cmb_ekletip.DisplayMember = "TipAd";
+            cmb_ekletip.ValueMember = "DersTipiID";
+
+            cmb_guncelletip.DataSource = dtTip.Copy();
+            cmb_guncelletip.DisplayMember = "TipAd";
+            cmb_guncelletip.ValueMember = "DersTipiID";
+            cmb_ekletip.SelectedIndex = -1;
+            cmb_eklebolum.SelectedIndex = -1;
 
             ToolTip mesaj = new ToolTip();
             mesaj.ToolTipTitle = "Arama";
@@ -129,103 +82,255 @@ namespace LoginModulForm
 
         }
 
-        private void cmb_eklebolum_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_ekle_Click(object sender, EventArgs e)
         {
-            if (cmb_eklebolum.SelectedIndex == -1)
-                return;
-            DataBaseClass db = new DataBaseClass(connectionString);
-            string b_ad = cmb_eklebolum.Text.Trim();
-            string query1 = "select BolumID from Bolum where BolumAd=@B_Ad";
-            SqlParameter[] parameters = new SqlParameter[] {
-             new SqlParameter("@B_Ad", b_ad),
-            };
-            DataTable dt1 = db.ExecuteQuery(query1, parameters);
-
-            if (dt1.Rows.Count == 0)
-                return;
-            bolum_id =Convert.ToInt32(dt1.Rows[0][0]);
-
-            cmb_ekleseviye.Items.Clear();
-
-            string querySeviye = "SELECT SeviyeNo FROM SinifSeviyesi WHERE BolumID=@bid";
-            SqlParameter[] p = {
-                new SqlParameter("@bid", bolum_id)
-            };
-
-            DataTable dtSeviye = db.ExecuteQuery(querySeviye, p);
-
-            for (int i = 0; i < dtSeviye.Rows.Count; i++)
+            if (cmb_eklebolum.SelectedValue == null ||
+                cmb_ekletip.SelectedValue == null ||
+                cmb_ekleseviye.SelectedValue == null)
             {
-                cmb_ekleseviye.Items.Add(dtSeviye.Rows[i][0].ToString());
+                MessageBox.Show("Tüm seçimleri yapınız.");
+                return;
             }
-        }
 
-        private void btn_tipekle_Click(object sender, EventArgs e)
-        {
-            DataBaseClass db=new DataBaseClass(connectionString);
-            string t_ad_ek = text_tipekle.Text.Trim();
-            string query = "INSERT INTO DersTipi(TipAd) VALUES (@tadi)";
+            DataBaseClass db = new DataBaseClass(connectionString);
+            string dersAd = text_eklead.Text.Trim();
+            int bolumID = Convert.ToInt32(cmb_eklebolum.SelectedValue);
+            int tipID = Convert.ToInt32(cmb_ekletip.SelectedValue);
+            int s_no = Convert.ToInt32(cmb_ekleseviye.SelectedValue);
+
+            string query = @"
+            INSERT INTO Ders
+            (
+                DersAdi,
+                BolumID,
+                DersTipiID,
+                SinifSeviyeID,
+                Kredi,
+                SinavSuresi,
+                DersiAlanOgrenciSayisi
+            )
+            VALUES
+            (
+                @ad,
+                @bid,
+                @tid,
+                @sid,
+                @kredi,
+                @sure,
+                @ogr
+            )";
+
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@tadi", t_ad_ek)
+            new SqlParameter("@ad", dersAd),
+            new SqlParameter("@bid", bolumID),
+            new SqlParameter("@tid", tipID),
+            new SqlParameter("@sid", s_no),
+            new SqlParameter("@kredi", (int)nmup_eklekredi.Value),
+            new SqlParameter("@sure", (int)nmup_eklesure.Value),
+            new SqlParameter("@ogr", (int)nmup_eklesayi.Value)
             };
+
             int sonuc = db.ExecuteNonQuery(query, parameters);
+
             if (sonuc > 0)
             {
-                MessageBox.Show("Ders Tipi Eklendi");
-                text_tipekle.Clear();
+                MessageBox.Show("Ders başarıyla eklendi.");
 
-                DersTipleriniYukle();
+                text_eklead.Clear();
+                cmb_eklebolum.SelectedIndex = -1;
+                cmb_ekletip.SelectedIndex = -1;
+                nmup_eklekredi.Value = 0;
+                nmup_eklesure.Value = 0;
+                nmup_eklesayi.Value = 0;
             }
             else
             {
-                MessageBox.Show("Hata");
-            }
-
-        }
-
-        private void cmb_ekletip_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmb_ekletip.SelectedIndex == -1)
-                return;
-            DataBaseClass db = new DataBaseClass(connectionString);
-            string tad = cmb_ekletip.Text.Trim();
-            string query1 = "SELECT DersTipiID FROM DersTipi WHERE TipAd=@t_ad";
-            SqlParameter[] parameters = new SqlParameter[] {
-             new SqlParameter("@t_ad", tad)
-            };
-            DataTable dt1 = db.ExecuteQuery(query1, parameters);
-            if (dt1.Rows.Count > 0)
-            {
-                tip_id = Convert.ToInt32(dt1.Rows[0][0]);
+                MessageBox.Show("Ders eklenemedi (eşleşen veri yok olabilir).");
             }
         }
 
-        private void cmb_ekleseviye_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_eklebolum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmb_eklebolum.SelectedIndex == -1)
-            {
-                MessageBox.Show("Lütfen önce bölüm seçiniz.");
-                return;
-            }
+            if (cmb_eklebolum.SelectedValue == null) return;
+            if (cmb_eklebolum.SelectedValue is DataRowView) return;
 
-            if (cmb_ekleseviye.SelectedIndex == -1)
-                return;
+            bolum_id = Convert.ToInt32(cmb_eklebolum.SelectedValue);
 
             DataBaseClass db = new DataBaseClass(connectionString);
-            string sno = cmb_ekleseviye.Text.Trim();
-            string query3 = "SELECT SinifSeviyeID FROM SinifSeviyesi WHERE SeviyeNo=@s_no AND BolumID=@bid";
-            SqlParameter[] parameters = new SqlParameter[] {
-             new SqlParameter("s_no", sno),
-             new SqlParameter("@bid", bolum_id)
-            };
-            DataTable dt2 = db.ExecuteQuery(query3, parameters);
-            if (dt2.Rows.Count > 0)
+
+            DataTable dt = db.ExecuteQuery(
+                "SELECT SinifSeviyeID, SeviyeNo FROM SinifSeviyesi WHERE BolumID=@id",
+                new SqlParameter[] { new SqlParameter("@id", bolum_id) }
+            );
+
+            cmb_ekleseviye.DataSource = dt;
+            cmb_ekleseviye.DisplayMember = "SeviyeNo";
+            cmb_ekleseviye.ValueMember = "SinifSeviyeID";
+        }
+
+        private void btn_sil_Click(object sender, EventArgs e)
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            DialogResult mesaj = MessageBox.Show(
+                "Bu dersi silmek istediğinize emin misiniz?",
+                "Uyarı",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (mesaj == DialogResult.Yes)
             {
-                seviye_id = Convert.ToInt32(dt2.Rows[0][0]);
+                string query = "DELETE FROM Ders WHERE DersID = @id";
+
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@id", secilenDersId)
+                };
+
+                int sonuc = db.ExecuteNonQuery(query, parameters);
+
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Ders silindi");
+
+                    text_silad.Clear();
+                    text_silbolum.Clear();
+                    text_siltip.Clear();
+                    text_silseviye.Clear();
+                    text_silkredi.Clear();
+                    text_silsure.Clear();
+                    text_silmevcud.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Silme işlemi başarısız");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silme işlemi iptal edildi");
+            }
+        }
+
+        private void text_silad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                DersArama darm = new DersArama();
+                darm.islemTipi = "sil";
+                darm.Show();
+                this.Hide();
+            }
+        }
+
+
+        private void btn_guncelle_Click(object sender, EventArgs e)
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            DialogResult mesaj = MessageBox.Show(
+                "Bu dersi güncellemek istediğinize emin misiniz?",
+                "Uyarı",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (mesaj == DialogResult.Yes)
+            {
+                string dersAd = text_guncellead.Text.Trim();
+                int bolumId = Convert.ToInt32(cmb_guncellebolum.SelectedValue);
+                int tipId = Convert.ToInt32(cmb_guncelletip.SelectedValue);
+                int seviyeId = Convert.ToInt32(cmb_guncelleseviye.SelectedValue);
+                int kredi = (int)nmup_guncellekredi.Value;
+                int sure = (int)nmup_guncellesure.Value;
+                int ogrsayi = (int)nmup_guncelleogrsayisi.Value;
+
+                string query = @"
+                UPDATE Ders
+                SET 
+                   DersAdi = @ad,
+                   BolumID = @bid,
+                   DersTipiID = @tid,
+                   SinifSeviyeID = @sid,
+                   Kredi = @kredi,
+                   SinavSuresi = @sure,
+                   DersiAlanOgrenciSayisi = @ogr
+                WHERE DersID = @id";
+
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@ad", dersAd),
+                    new SqlParameter("@bid", bolumId),
+                    new SqlParameter("@tid", tipId),
+                    new SqlParameter("@sid", seviyeId),
+
+                    new SqlParameter("@kredi", kredi),
+                    new SqlParameter("@sure", sure),
+                    new SqlParameter("@ogr", ogrsayi),
+                    new SqlParameter("@id", secilenDersId)
+                };
+
+                int sonuc = db.ExecuteNonQuery(query, parameters);
+
+                if (sonuc > 0)
+                {
+                    MessageBox.Show("Ders güncellendi");
+                }
+                else
+                {
+                    MessageBox.Show("Güncelleme başarısız");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Güncelleme işlemi iptal edildi");
+
+            }
+        }
+
+        private void cmb_guncellebolum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_guncellebolum.SelectedValue == null)
+                return;
+
+            if (!int.TryParse(cmb_guncellebolum.SelectedValue.ToString(), out bolum_id))
+                return;
+
+            DataBaseClass db = new DataBaseClass(connectionString);
+
+            string query = @"
+            SELECT 
+               SinifSeviyeID,
+               SeviyeNo
+            FROM SinifSeviyesi
+            WHERE BolumID=@id";
+
+            SqlParameter[] p =
+            {
+                new SqlParameter("@id", bolum_id)
+            };
+
+            DataTable dt = db.ExecuteQuery(query, p);
+
+            cmb_guncelleseviye.DataSource = dt;
+            cmb_guncelleseviye.DisplayMember = "SeviyeNo";
+            cmb_guncelleseviye.ValueMember = "SinifSeviyeID";
+        }
+
+        private void text_guncellead_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                DersArama darm = new DersArama();
+                darm.islemTipi = "guncelle";
+                darm.Show();
+                this.Hide();
             }
 
         }
+
+
+
 
         private void btn_listele_Click(object sender, EventArgs e)
         {
@@ -289,6 +394,81 @@ namespace LoginModulForm
             ymdl.Show();
         }
 
+        
+
+        
+
+        
+        
+
+        
+
+        private void cmb_guncelletip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_guncelletip.SelectedValue == null)
+                return;
+
+            if (cmb_guncelletip.SelectedValue is DataRowView)
+                return;
+
+            if (int.TryParse(cmb_guncelletip.SelectedValue.ToString(), out int result))
+            {
+                tip_id = result;
+            }
+        }
+
+        private void cmb_guncelleseviye_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_guncelleseviye.SelectedValue == null) return;
+            if (cmb_guncelleseviye.SelectedValue is DataRowView) return;
+
+            if (int.TryParse(cmb_guncelleseviye.SelectedValue.ToString(), out int id))
+            {
+                seviye_id = id;
+            }
+        }
+
+        private void cmb_ekleseviye_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_ekleseviye.SelectedValue == null) return;
+            if (cmb_ekleseviye.SelectedValue is DataRowView) return;
+
+            seviye_id = Convert.ToInt32(cmb_ekleseviye.SelectedValue);
+        }
+
+
+        private void btn_tipekle_Click(object sender, EventArgs e)
+        {
+            DataBaseClass db = new DataBaseClass(connectionString);
+            string t_ad_ek = text_tipekle.Text.Trim();
+            string query = "INSERT INTO DersTipi(TipAd) VALUES (@tadi)";
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@tadi", t_ad_ek)
+            };
+            int sonuc = db.ExecuteNonQuery(query, parameters);
+            if (sonuc > 0)
+            {
+                MessageBox.Show("Ders Tipi Eklendi");
+                text_tipekle.Clear();
+
+                DersTipleriniYukle();
+            }
+            else
+            {
+                MessageBox.Show("Hata");
+            }
+
+        }
+
+        private void cmb_ekletip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_ekletip.SelectedValue == null) return;
+            if (cmb_ekletip.SelectedValue is DataRowView) return;
+
+            tip_id = Convert.ToInt32(cmb_ekletip.SelectedValue);
+        }
+
         private void btn_tipguncelle_Click(object sender, EventArgs e)
         {
             DataBaseClass db = new DataBaseClass(connectionString);
@@ -313,7 +493,7 @@ namespace LoginModulForm
                 {
                     MessageBox.Show("Hata");
                 }
-            }           
+            }
         }
 
         private void text_tipguncelle_KeyDown(object sender, KeyEventArgs e)
@@ -343,7 +523,7 @@ namespace LoginModulForm
             DataBaseClass db = new DataBaseClass(connectionString);
             DialogResult mesaj = MessageBox.Show(" Bu kaydı silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (mesaj == DialogResult.Yes)
-            { 
+            {
                 string t_ad = text_tipsil.Text.Trim();
                 string query = "DELETE FROM DersTipi WHERE TipAd=@t_ad";
                 SqlParameter[] parameters = new SqlParameter[] {
@@ -361,241 +541,6 @@ namespace LoginModulForm
                 {
                     MessageBox.Show("Hata");
                 }
-            }
-        }
-
-        private void btn_sil_Click(object sender, EventArgs e)
-        {
-            DataBaseClass db = new DataBaseClass(connectionString);
-
-            DialogResult mesaj = MessageBox.Show(
-                "Bu dersi silmek istediğinize emin misiniz?",
-                "Uyarı",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (mesaj == DialogResult.Yes)
-            {
-                string d_ad = text_silad.Text.Trim();
-                string b_ad = text_silbolum.Text.Trim();
-                string t_ad = text_siltip.Text.Trim();
-                string s_no = text_silseviye.Text.Trim();
-
-                string query = @"
-                DELETE d
-                FROM Ders d
-                INNER JOIN Bolum b 
-                  ON d.BolumID = b.BolumID
-                INNER JOIN DersTipi dt
-                  ON d.DersTipiID = dt.DersTipiID
-                INNER JOIN SinifSeviyesi ss
-                  ON d.SinifSeviyeID = ss.SinifSeviyeID
-                WHERE d.DersAdi = @dad
-                AND b.BolumAd = @bad
-                AND dt.TipAd = @tad
-                AND ss.SeviyeNo = @sno";
-
-                SqlParameter[] parameters =
-                {
-                    new SqlParameter("@dad", d_ad),
-                    new SqlParameter("@bad", b_ad),
-                    new SqlParameter("@tad", t_ad),
-                    new SqlParameter("@sno", s_no)
-                };
-
-                int sonuc = db.ExecuteNonQuery(query, parameters);
-
-                if (sonuc > 0)
-                {
-                    MessageBox.Show("Ders silindi");
-
-                    text_silad.Clear();
-                    text_silbolum.Clear();
-                    text_siltip.Clear();
-                    text_silseviye.Clear();
-                    text_silkredi.Clear();
-                    text_silsure.Clear();
-                    text_silmevcud.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Silme işlemi başarısız");
-                }
-            }
-        }
-
-        private void btn_guncelle_Click(object sender, EventArgs e)
-        {
-            DataBaseClass db = new DataBaseClass(connectionString);
-
-            DialogResult mesaj = MessageBox.Show(
-                "Bu dersi güncellemek istediğinize emin misiniz?",
-                "Uyarı",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (mesaj == DialogResult.Yes)
-            {
-                string d_ad = text_guncellead.Text.Trim();
-                string b_ad = cmb_guncellebolum.Text.Trim();
-                string t_ad = cmb_guncelletip.Text.Trim();
-                string s_no = cmb_guncelleseviye.Text.Trim();
-
-                int kredi = (int)nmup_guncellekredi.Value;
-                int sure = (int)nmup_guncellesure.Value;
-                int ogrsayi = (int)nmup_guncelleogrsayisi.Value;
-
-                string query = @"
-                UPDATE Ders
-                SET 
-                   DersAdi = @ad,
-                   BolumID = @bolumId,
-                   DersTipiID = @tipId,
-                   SinifSeviyeID = @seviyeId,
-                   Kredi = @kredi,
-                   SinavSuresi = @sure,
-                   DersiAlanOgrenciSayisi = @ogr
-                WHERE DersID = @id";
-
-                SqlParameter[] parameters =
-                {
-                    new SqlParameter("@ad", text_guncellead.Text.Trim()),
-                    new SqlParameter("@bolumId", bolum_id),
-                    new SqlParameter("@tipId", tip_id),
-                    new SqlParameter("@seviyeId", seviye_id),
-
-                    new SqlParameter("@kredi", (int)nmup_guncellekredi.Value),
-                    new SqlParameter("@sure", (int)nmup_guncellesure.Value),
-                    new SqlParameter("@ogr", (int)nmup_guncelleogrsayisi.Value),
-                    new SqlParameter("@id", secilenDersId)
-                };
-
-                int sonuc = db.ExecuteNonQuery(query, parameters);
-
-                if (sonuc > 0)
-                {
-                    MessageBox.Show("Ders güncellendi");
-                }
-                else
-                {
-                    MessageBox.Show("Güncelleme başarısız");
-                }
-            }
-        }
-
-        private void text_guncellead_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F4)
-            {
-                DersArama darm = new DersArama();
-                darm.islemTipi = "guncelle";
-                darm.Show();
-                this.Hide();
-            }
-
-        }
-
-        private void text_silad_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F4)
-            {
-                DersArama darm = new DersArama();
-                darm.islemTipi = "sil";
-                darm.Show();
-                this.Hide();
-            }
-        }
-
-        private void cmb_guncellebolum_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmb_guncellebolum.SelectedIndex == -1)
-                return;
-
-            DataBaseClass db = new DataBaseClass(connectionString);
-
-            string b_ad = cmb_guncellebolum.Text.Trim();
-
-            string query = "SELECT BolumID FROM Bolum WHERE BolumAd=@ad";
-
-            SqlParameter[] parameters =
-            {
-                new SqlParameter("@ad", b_ad)
-            };
-
-            DataTable dt = db.ExecuteQuery(query, parameters);
-
-            if (dt.Rows.Count > 0)
-            {
-                bolum_id = Convert.ToInt32(dt.Rows[0][0]);
-            }
-
-            cmb_guncelleseviye.Items.Clear();
-
-            string query2 = "SELECT SeviyeNo FROM SinifSeviyesi WHERE BolumID=@id";
-
-            SqlParameter[] p =
-            {
-                new SqlParameter("@id", bolum_id)
-            };
-
-            DataTable dt2 = db.ExecuteQuery(query2, p);
-
-            for (int i = 0; i < dt2.Rows.Count; i++)
-            {
-                cmb_guncelleseviye.Items.Add(dt2.Rows[i][0].ToString());
-            }
-        }
-
-        private void cmb_guncelletip_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmb_guncelletip.SelectedIndex == -1)
-                return;
-
-            DataBaseClass db = new DataBaseClass(connectionString);
-
-            string t_ad = cmb_guncelletip.Text.Trim();
-
-            string query = "SELECT DersTipiID FROM DersTipi WHERE TipAd=@ad";
-
-            SqlParameter[] parameters =
-            {
-                new SqlParameter("@ad", t_ad)
-            };
-
-            DataTable dt = db.ExecuteQuery(query, parameters);
-
-            if (dt.Rows.Count > 0)
-            {
-                tip_id = Convert.ToInt32(dt.Rows[0][0]);
-            }
-        }
-
-        private void cmb_guncelleseviye_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmb_guncelleseviye.SelectedIndex == -1)
-                return;
-
-            DataBaseClass db = new DataBaseClass(connectionString);
-
-            string sno = cmb_guncelleseviye.Text.Trim();
-
-            string query = @"
-
-            SELECT SinifSeviyeID 
-            FROM SinifSeviyesi 
-            WHERE SeviyeNo=@s AND BolumID=@bid";
-
-            SqlParameter[] parameters =
-            {
-                new SqlParameter("@s", sno),
-                new SqlParameter("@bid", bolum_id)
-            };
-
-            DataTable dt = db.ExecuteQuery(query, parameters);
-
-            if (dt.Rows.Count > 0)
-            {
-                seviye_id = Convert.ToInt32(dt.Rows[0][0]);
             }
         }
     }

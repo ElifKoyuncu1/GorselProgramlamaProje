@@ -24,5 +24,16 @@ namespace LoginModulForm
             HocaDersler hd =new HocaDersler(gelenBolumID);
             hd.Show();
         }
+
+        private void btn_programım_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_programolustur_Click(object sender, EventArgs e)
+        {
+            SinavProgramiOlustur frm = new SinavProgramiOlustur(gelenBolumID);
+            frm.Show();
+        }
     }
 }

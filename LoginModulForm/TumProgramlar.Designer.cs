@@ -33,9 +33,9 @@
             this.dgw_programlar = new System.Windows.Forms.DataGridView();
             this.btn_dosya_indir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_programlar)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,6 +61,9 @@
             // 
             // btn_dosya_indir
             // 
+            this.btn_dosya_indir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dosya_indir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_dosya_indir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_dosya_indir.Location = new System.Drawing.Point(271, 6);
             this.btn_dosya_indir.Name = "btn_dosya_indir";
             this.btn_dosya_indir.Size = new System.Drawing.Size(271, 23);
@@ -79,6 +82,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 51);
             this.panel1.TabIndex = 3;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label25.Location = new System.Drawing.Point(12, 9);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(34, 26);
+            this.label25.TabIndex = 47;
+            this.label25.Text = "←";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // panel2
             // 
@@ -99,19 +115,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(804, 452);
             this.panel3.TabIndex = 5;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label25.Location = new System.Drawing.Point(12, 9);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(34, 26);
-            this.label25.TabIndex = 47;
-            this.label25.Text = "←";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // TumProgramlar
             // 

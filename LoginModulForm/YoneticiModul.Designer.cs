@@ -36,6 +36,7 @@
             this.btn_bolum = new System.Windows.Forms.Button();
             this.btn_kullanici = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_zaman_takvim
@@ -50,7 +51,7 @@
             this.btn_zaman_takvim.Name = "btn_zaman_takvim";
             this.btn_zaman_takvim.Size = new System.Drawing.Size(238, 70);
             this.btn_zaman_takvim.TabIndex = 11;
-            this.btn_zaman_takvim.Text = "Takvim ve Zaman Dilimi";
+            this.btn_zaman_takvim.Text = "Zaman Yönetimi";
             this.btn_zaman_takvim.UseVisualStyleBackColor = false;
             this.btn_zaman_takvim.Click += new System.EventHandler(this.btn_zaman_takvim_Click);
             // 
@@ -78,7 +79,7 @@
             this.btn_programlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_programlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)), true);
             this.btn_programlar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_programlar.Location = new System.Drawing.Point(161, 314);
+            this.btn_programlar.Location = new System.Drawing.Point(287, 300);
             this.btn_programlar.Name = "btn_programlar";
             this.btn_programlar.Size = new System.Drawing.Size(238, 70);
             this.btn_programlar.TabIndex = 9;
@@ -150,6 +151,22 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)), true);
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(43, 300);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(238, 70);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Akademik Takvim Yönetimi";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // YoneticiModul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +174,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(589, 426);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_zaman_takvim);
             this.Controls.Add(this.btn_derslik);
@@ -180,5 +198,6 @@
         private System.Windows.Forms.Button btn_bolum;
         private System.Windows.Forms.Button btn_kullanici;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

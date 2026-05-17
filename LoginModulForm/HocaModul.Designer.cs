@@ -48,6 +48,7 @@
             this.btn_programolustur.TabIndex = 9;
             this.btn_programolustur.Text = "Sınav Programı Oluştur";
             this.btn_programolustur.UseVisualStyleBackColor = false;
+            this.btn_programolustur.Click += new System.EventHandler(this.btn_programolustur_Click);
             // 
             // btn_programım
             // 
@@ -63,6 +64,7 @@
             this.btn_programım.TabIndex = 8;
             this.btn_programım.Text = "Programım";
             this.btn_programım.UseVisualStyleBackColor = false;
+            this.btn_programım.Click += new System.EventHandler(this.btn_programım_Click);
             // 
             // btn_derslerim
             // 
