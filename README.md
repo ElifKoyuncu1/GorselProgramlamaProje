@@ -25,9 +25,6 @@
 
 Bu proje ile bölüm, ders, sınıf, derslik, akademik takvim ve zaman dilimi bilgileri kullanılarak sınav programları oluşturulabilir, listelenebilir ve Excel uyumlu formatta dışa aktarılabilir.
 
-Kısacası bu sistem:
-
-> “Hocam sınav programı nerede, hangi ders hangi saatte, hangi sınıfta, hangi derslikte?” karmaşasını alır ve yerine düzenli bir otomasyon bırakır. 😎
 
 ---
 
